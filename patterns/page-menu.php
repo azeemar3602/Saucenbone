@@ -23,5 +23,4 @@
 </div>
 <!-- /wp:html -->
 
-<!-- wp:pattern {"slug":"saucenbone/menu-product-detail"} /-->
 <!-- wp:pattern {"slug":"saucenbone/loyalty-strip"} /-->

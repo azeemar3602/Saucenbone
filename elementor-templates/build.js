@@ -344,7 +344,6 @@ const home = template("Sauce N' Bone — Home", [
 const menu = template("Sauce N' Bone — Menu", [
 	section(menuHero),
 	twoColSection(menuLeftContent, menuRightContent),
-	section(menuDetail),
 	section(loyalty),
 ]);
 

@@ -401,6 +401,39 @@ function snb_cart_intro() {
 	echo '<section class="snb-section snb-section--black" style="padding-block:2rem;"><div class="snb-container"><span class="snb-eyebrow">Your Cart</span><h1>Your <span class="snb-accent">Cart.</span></h1><p style="color:var(--snb-cream-soft);margin-top:0.5rem;">Bold flavors. Real ingredients. No shortcuts.</p><a href="' . esc_url( wc_get_page_permalink( 'shop' ) ) . '" style="color:var(--snb-sauce-red);display:inline-flex;align-items:center;gap:0.4rem;margin-top:0.75rem;font-family:var(--snb-font-display);letter-spacing:0.1em;text-transform:uppercase;">← Continue Shopping</a></div></section>';
 }
 
+/**
+ * Empty cart state — SNB hero + recommended add-ons, since the standard
+ * Woo empty cart message + Return-to-Shop button isn't enough.
+ */
+add_action( 'woocommerce_cart_is_empty', 'snb_cart_empty_state', 20 );
+function snb_cart_empty_state() {
+	?>
+	<section class="snb-section snb-section--black" style="padding-block:1rem 3rem;">
+		<div class="snb-container" style="text-align:center;">
+			<div style="font-size:4rem;margin-bottom:1rem;">🛒</div>
+			<h2>Your cart is empty.</h2>
+			<p style="color:var(--snb-cream-dim);max-width:480px;margin:0.5rem auto 1.5rem;">Pick a flavor and let's get saucy. Bold wings, real ingredients, no shortcuts.</p>
+			<a href="<?php echo esc_url( home_url( '/menu/' ) ); ?>" class="snb-btn"><span class="snb-flame"></span>Order Now</a>
+		</div>
+	</section>
+
+	<section class="snb-section snb-section--charcoal">
+		<div class="snb-container">
+			<h2 class="snb-cat-title" style="margin-top:0;">Fan Favorites.</h2>
+			<p style="color:var(--snb-cream-dim);margin-top:-0.5rem;">Start with these and you can't go wrong.</p>
+			<?php echo do_shortcode( '[snb_products limit="6" columns="3" exclude_category="merch,apparel,accessories"]' ); ?>
+		</div>
+	</section>
+
+	<div class="snb-promise-bar" style="margin-top:0;">
+		<span class="snb-promise-bar__item">🔥 Bold Flavors.</span>
+		<span class="snb-promise-bar__item">🌿 Real Ingredients.</span>
+		<span class="snb-promise-bar__item">✕ No Shortcuts.</span>
+		<span class="snb-promise-bar__tag">That's the Sauce N' Bone promise.</span>
+	</div>
+	<?php
+}
+
 add_action( 'woocommerce_before_cart_totals', 'snb_cart_pickup_delivery' );
 function snb_cart_pickup_delivery() {
 	?>
