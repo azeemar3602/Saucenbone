@@ -1,0 +1,260 @@
+{
+  "version": "0.4",
+  "title": "Sauce N' Bone — Home",
+  "type": "page",
+  "content": [
+    {
+      "id": "ef442ee",
+      "elType": "section",
+      "settings": {
+        "stretch_section": "section-stretched",
+        "content_width": {
+          "unit": "px",
+          "size": ""
+        },
+        "gap": "no",
+        "background_background": "classic",
+        "background_color": "#0B0B0B"
+      },
+      "elements": [
+        {
+          "id": "e005d76",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": null
+          },
+          "elements": [
+            {
+              "id": "99b1894",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<section class=\"snb-hero\">\n\t<div class=\"snb-hero__grid\">\n\t\t<div class=\"snb-hero__copy-col\">\n\t\t\t<span class=\"snb-eyebrow\">Bold Flavors. No Shortcuts.</span>\n\t\t\t<h1 class=\"snb-hero__title\">Flavor First.<br><span class=\"snb-accent\">No Shortcuts.</span></h1>\n\t\t\t<p class=\"snb-hero__copy\">Bold wings, real ingredients, and sauces built to hit hard. Pick your style, choose your heat, and get ready for flavor that does not play safe.</p>\n\t\t\t<div class=\"snb-hero__cta\">\n\t\t\t\t<a href=\"/menu/\" class=\"snb-btn\">Order Now</a>\n\t\t\t\t<a href=\"/menu/\" class=\"snb-btn snb-btn--ghost\">View Menu</a>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"snb-hero__media\" aria-hidden=\"true\"></div>\n\t</div>\n</section>\n<span class=\"snb-drip\" aria-hidden=\"true\"></span>"
+              }
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "b951fc7",
+      "elType": "section",
+      "settings": {
+        "stretch_section": "section-stretched",
+        "content_width": {
+          "unit": "px",
+          "size": ""
+        },
+        "gap": "no",
+        "background_background": "classic",
+        "background_color": "#0B0B0B"
+      },
+      "elements": [
+        {
+          "id": "3507200",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": null
+          },
+          "elements": [
+            {
+              "id": "fe24020",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<section class=\"snb-section snb-section--black\">\n\t<div class=\"snb-container\">\n\t\t<div class=\"snb-section__head\">\n\t\t\t<span class=\"snb-eyebrow\">Choose Your Bite</span>\n\t\t\t<h2>Pick Your Style</h2>\n\t\t\t<p>Three ways to get saucy. Same promise: Flavor First. No Shortcuts.</p>\n\t\t</div>\n\t\t<div class=\"snb-grid snb-grid--3\">\n\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">Bone-In Wings</h3><p class=\"snb-card__copy\">Classic, crispy, flavor-loaded.</p><a href=\"/menu/?style=bone-in\" class=\"snb-btn snb-card__cta\">Choose Wings</a></article>\n\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">Boneless Wings</h3><p class=\"snb-card__copy\">Big flavor, easy bite.</p><a href=\"/menu/?style=boneless\" class=\"snb-btn snb-card__cta\">Choose Boneless</a></article>\n\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">Tenders</h3><p class=\"snb-card__copy\">Juicy, bold, and built for dipping.</p><a href=\"/menu/?style=tenders\" class=\"snb-btn snb-card__cta\">Choose Tenders</a></article>\n\t\t</div>\n\t</div>\n</section>"
+              }
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "aa617a2",
+      "elType": "section",
+      "settings": {
+        "stretch_section": "section-stretched",
+        "content_width": {
+          "unit": "px",
+          "size": ""
+        },
+        "gap": "no",
+        "background_background": "classic",
+        "background_color": "#0B0B0B"
+      },
+      "elements": [
+        {
+          "id": "f1f386f",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": null
+          },
+          "elements": [
+            {
+              "id": "151ed96",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<section class=\"snb-section snb-section--charcoal\">\n\t<div class=\"snb-container\">\n\t\t<div class=\"snb-section__head\">\n\t\t\t<span class=\"snb-eyebrow\">The Originals</span>\n\t\t\t<h2>Signature Flavors</h2>\n\t\t\t<p>Our originals. Made from real ingredients. Built for flavor.</p>\n\t\t</div>\n\t\t<div class=\"snb-grid snb-grid--3\">\n\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">Strawberry Hot</h3><p class=\"snb-card__copy\">Sweet heat with a bold berry kick.</p></article>\n\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">Mango Habanero</h3><p class=\"snb-card__copy\">Tropical up front, fire on the finish.</p></article>\n\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">Pineapple Jalape&ntilde;o</h3><p class=\"snb-card__copy\">Bright, juicy, and spicy.</p></article>\n\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">Sweet &amp; Tangy</h3><p class=\"snb-card__copy\">Smooth, sticky, crowd favorite.</p></article>\n\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">Garlic Parmesan</h3><p class=\"snb-card__copy\">Savory, buttery, and loaded.</p></article>\n\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">Classic Hot</h3><p class=\"snb-card__copy\">Real wing-shop heat.</p></article>\n\t\t</div>\n\t\t<div class=\"snb-text-center snb-mt-2\"><a href=\"/menu/\" class=\"snb-btn snb-btn--ghost\">View All Flavors</a></div>\n\t</div>\n</section>"
+              }
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "e75abd3",
+      "elType": "section",
+      "settings": {
+        "stretch_section": "section-stretched",
+        "content_width": {
+          "unit": "px",
+          "size": ""
+        },
+        "gap": "no",
+        "background_background": "classic",
+        "background_color": "#0B0B0B"
+      },
+      "elements": [
+        {
+          "id": "215ec92",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": null
+          },
+          "elements": [
+            {
+              "id": "ad10d7a",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<section class=\"snb-section snb-section--black\">\n\t<div class=\"snb-container\">\n\t\t<div class=\"snb-section__head\">\n\t\t\t<span class=\"snb-eyebrow\">Fan Favorites</span>\n\t\t\t<h2>Viral Flavors</h2>\n\t\t\t<p>Bold. Unexpected. Built to break the internet.</p>\n\t\t</div>\n\t\t<div class=\"snb-grid snb-grid--4\">\n\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">Blueberry Blaze</h3><p class=\"snb-card__copy\">Berry-rich heat with a smoky finish.</p></article>\n\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">Grape Inferno</h3><p class=\"snb-card__copy\">Bold flavor. No mercy.</p></article>\n\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">Orange Chili Rush</h3><p class=\"snb-card__copy\">Citrus punch with chili fire.</p></article>\n\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">Real Heat</h3><p class=\"snb-card__copy\">For serious spice lovers.</p></article>\n\t\t</div>\n\t</div>\n</section>"
+              }
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "1968055",
+      "elType": "section",
+      "settings": {
+        "stretch_section": "section-stretched",
+        "content_width": {
+          "unit": "px",
+          "size": ""
+        },
+        "gap": "no",
+        "background_background": "classic",
+        "background_color": "#0B0B0B"
+      },
+      "elements": [
+        {
+          "id": "f887c8a",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": null
+          },
+          "elements": [
+            {
+              "id": "97df038",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<section class=\"snb-section snb-section--charcoal\">\n\t<div class=\"snb-container\">\n\t\t<div class=\"snb-section__head\">\n\t\t\t<span class=\"snb-eyebrow\">Round Out The Order</span>\n\t\t\t<h2>Sides. Drinks. Sweet.</h2>\n\t\t</div>\n\t\t<div class=\"snb-grid snb-grid--3\">\n\t\t\t<article class=\"snb-card\"><h3 class=\"snb-card__title\">Sides</h3><ul style=\"list-style:none;padding:0;margin:0;color:var(--snb-cream-dim);line-height:1.9;\"><li>Corn Ribs</li><li>Fries</li><li>Loaded Fries</li><li>Mac &amp; Cheese</li></ul></article>\n\t\t\t<article class=\"snb-card\"><h3 class=\"snb-card__title\">Drinks</h3><ul style=\"list-style:none;padding:0;margin:0;color:var(--snb-cream-dim);line-height:1.9;\"><li>Strawberry Lemonade</li><li>Mango Lemonade</li><li>Blue Raspberry Lemonade</li></ul></article>\n\t\t\t<article class=\"snb-card\"><h3 class=\"snb-card__title\">Sweet</h3><ul style=\"list-style:none;padding:0;margin:0;color:var(--snb-cream-dim);line-height:1.9;\"><li>Caramel Popcorn Bites</li></ul></article>\n\t\t</div>\n\t</div>\n</section>"
+              }
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "8c66fe2",
+      "elType": "section",
+      "settings": {
+        "stretch_section": "section-stretched",
+        "content_width": {
+          "unit": "px",
+          "size": ""
+        },
+        "gap": "no",
+        "background_background": "classic",
+        "background_color": "#0B0B0B"
+      },
+      "elements": [
+        {
+          "id": "1cb20d0",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": null
+          },
+          "elements": [
+            {
+              "id": "503dd4c",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<section class=\"snb-section snb-section--black\">\n\t<div class=\"snb-container\">\n\t\t<div class=\"snb-section__head\">\n\t\t\t<span class=\"snb-eyebrow\">Brand Culture</span>\n\t\t\t<h2>Rep the Culture</h2>\n\t\t\t<p>Rep the culture with hoodies, tees, hats, and everyday merch made for real ones who put Flavor First.</p>\n\t\t\t<div class=\"snb-text-center\" style=\"margin-top:1.5rem;\"><a href=\"/shop/\" class=\"snb-btn\">Shop Merch</a></div>\n\t\t</div>\n\t\t<div class=\"snb-grid snb-grid--4\">\n\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">Hoodie</h3><p class=\"snb-card__copy\">Premium black hoodie, sauce-red drip.</p></article>\n\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">T-Shirt</h3><p class=\"snb-card__copy\">Clean everyday black tee.</p></article>\n\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">Snapback</h3><p class=\"snb-card__copy\">Sauce-red SNB monogram.</p></article>\n\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">Tote Bag</h3><p class=\"snb-card__copy\">Flavor First. No Shortcuts.</p></article>\n\t\t</div>\n\t</div>\n</section>"
+              }
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "3b81282",
+      "elType": "section",
+      "settings": {
+        "stretch_section": "section-stretched",
+        "content_width": {
+          "unit": "px",
+          "size": ""
+        },
+        "gap": "no",
+        "background_background": "classic",
+        "background_color": "#0B0B0B"
+      },
+      "elements": [
+        {
+          "id": "756ae1e",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": null
+          },
+          "elements": [
+            {
+              "id": "8b298dc",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<section class=\"snb-loyalty\">\n\t<div class=\"snb-container\">\n\t\t<span class=\"snb-eyebrow\" style=\"color:var(--snb-cream);border-color:rgba(244,238,223,0.5);\">Flavor Pays Back</span>\n\t\t<h2>Buy 8. Get 1 Free.</h2>\n\t\t<p>Flavor pays back.</p>\n\t\t<a href=\"/loyalty/\" class=\"snb-btn snb-btn--gold\">Join Loyalty</a>\n\t</div>\n</section>"
+              }
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    }
+  ],
+  "page_settings": []
+}
