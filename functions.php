@@ -474,10 +474,11 @@ function snb_checkout_intro() {
 	<?php
 }
 
+// SECTION 2 — Delivery or Pickup (rendered first, before contact details)
 add_action( 'woocommerce_checkout_before_customer_details', 'snb_checkout_pickup_delivery' );
 function snb_checkout_pickup_delivery() {
 	?>
-	<div class="snb-numhead"><span class="snb-numhead__num">1</span><h3>Delivery or Pickup</h3></div>
+	<div class="snb-numhead"><span class="snb-numhead__num">2</span><h3>Delivery or Pickup</h3></div>
 	<div class="snb-toggle-group" data-snb="pickup-delivery">
 		<label class="snb-toggle is-active">
 			<span class="snb-toggle__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7h14l-1 13H6z"/><path d="M9 7V4h6v3"/></svg></span>
@@ -494,19 +495,47 @@ function snb_checkout_pickup_delivery() {
 	<div class="snb-card" style="display:grid;grid-template-columns:80px 1fr auto;gap:1.25rem;align-items:center;margin-bottom:1.5rem;">
 		<div style="width:80px;height:80px;background:var(--snb-charcoal-2);border-radius:var(--snb-radius-sm);display:grid;place-items:center;color:var(--snb-cream-dim);">SNB</div>
 		<div>
-			<strong style="display:block;font-family:var(--snb-font-display);letter-spacing:0.04em;text-transform:uppercase;color:var(--snb-cream);font-size:1.1rem;">Sauce N' Bone — Downtown</strong>
+			<strong style="display:block;font-family:var(--snb-font-display);letter-spacing:0.04em;text-transform:uppercase;color:var(--snb-cream);font-size:1.1rem;">Sauce N' Bone &mdash; Downtown</strong>
 			<span style="color:var(--snb-cream-dim);font-size:0.9rem;">123 Flavor Way, Nashville, TN 37203</span><br>
 			<a href="#" style="color:var(--snb-sauce-red);font-size:0.85rem;">Change Location</a>
 		</div>
 		<div style="text-align:right;">
 			<span class="snb-eyebrow" style="margin:0;">Est. Pickup Time</span>
-			<div style="font-family:var(--snb-font-display);color:var(--snb-sauce-red);font-size:1.5rem;letter-spacing:0.04em;">25–35 MIN</div>
+			<div style="font-family:var(--snb-font-display);color:var(--snb-sauce-red);font-size:1.5rem;letter-spacing:0.04em;">25&ndash;35 MIN</div>
 		</div>
 	</div>
+
+	<div class="snb-numhead"><span class="snb-numhead__num">1</span><h3>Contact Information</h3></div>
 	<?php
 }
 
-add_action( 'woocommerce_after_checkout_billing_form', 'snb_checkout_after_billing' );
+// Move contact heading to a more usable section; rename Woo billing label.
+add_filter( 'woocommerce_checkout_fields', 'snb_checkout_field_labels' );
+function snb_checkout_field_labels( $fields ) {
+	if ( isset( $fields['billing']['billing_first_name'] ) ) {
+		$fields['billing']['billing_first_name']['placeholder'] = 'Full Name';
+		$fields['billing']['billing_first_name']['label'] = 'Full Name';
+	}
+	if ( isset( $fields['billing']['billing_email'] ) ) {
+		$fields['billing']['billing_email']['placeholder'] = 'Email Address';
+	}
+	if ( isset( $fields['billing']['billing_phone'] ) ) {
+		$fields['billing']['billing_phone']['placeholder'] = 'Phone Number';
+	}
+	return $fields;
+}
+
+// SECTION 3 — Pickup Information (Pickup Name field)
+add_action( 'woocommerce_after_checkout_billing_form', 'snb_checkout_pickup_info', 5 );
+function snb_checkout_pickup_info() {
+	?>
+	<div class="snb-numhead"><span class="snb-numhead__num">3</span><h3>Pickup Information</h3></div>
+	<input type="text" class="snb-input" name="snb_pickup_name" placeholder="Pickup Name (Optional)" style="margin-bottom:1rem;">
+	<?php
+}
+
+// SECTION 4 — Special Instructions
+add_action( 'woocommerce_after_checkout_billing_form', 'snb_checkout_after_billing', 10 );
 function snb_checkout_after_billing() {
 	?>
 	<div class="snb-numhead"><span class="snb-numhead__num">4</span><h3>Special Instructions (Optional)</h3></div>
@@ -515,6 +544,15 @@ function snb_checkout_after_billing() {
 	<?php
 }
 
+// SECTION 5 — Payment Method header (visually leads into Woo's payment_methods)
+add_action( 'woocommerce_review_order_before_payment', 'snb_checkout_payment_head' );
+function snb_checkout_payment_head() {
+	?>
+	<div class="snb-numhead"><span class="snb-numhead__num">5</span><h3>Payment Method</h3></div>
+	<?php
+}
+
+// SECTION 6 — Tip (already exists, ensure number is 6)
 add_action( 'woocommerce_review_order_before_submit', 'snb_checkout_tip_selector' );
 function snb_checkout_tip_selector() {
 	?>
@@ -538,5 +576,97 @@ function snb_checkout_reassurance() {
 		<div class="snb-trust"><span class="snb-trust__icon">🛍️</span><div><strong>Easy Pickup</strong><span>Skip the line. Grab and go.</span></div></div>
 		<div class="snb-trust"><span class="snb-trust__icon">❤</span><div><strong>Love It or Let Us Know</strong><span>We'll make it right.</span></div></div>
 	</div>
+	<?php
+}
+
+/* ============================================================
+   THANK-YOU: Delivery To + Need Help cards
+   ============================================================ */
+add_action( 'woocommerce_thankyou', 'snb_thankyou_info_cards', 15 );
+function snb_thankyou_info_cards( $order_id ) {
+	$order = wc_get_order( $order_id );
+	if ( ! $order ) { return; }
+	$first = $order->get_billing_first_name();
+	$last  = $order->get_billing_last_name();
+	$name  = trim( $first . ' ' . $last );
+	$addr  = $order->get_formatted_billing_address();
+	$phone = $order->get_billing_phone();
+	$email = $order->get_billing_email();
+	$is_delivery = false; // wire to your real fulfillment field later
+	?>
+	<section class="snb-section snb-section--black" style="padding-block:1rem 2rem;">
+		<div class="snb-container">
+			<div class="snb-grid snb-grid--2" style="gap:1.25rem;">
+
+				<div class="snb-card">
+					<div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:0.75rem;">
+						<h3 class="snb-card__title" style="display:flex;align-items:center;gap:0.5rem;">
+							<?php echo $is_delivery ? '🛵 Deliver To' : '🛍️ Pickup Info'; ?>
+						</h3>
+						<a href="#" class="snb-btn snb-btn--ghost snb-btn--sm"><span style="margin-right:0.4rem;">📍</span>Track on Map</a>
+					</div>
+					<?php if ( $name ) : ?><div style="color:var(--snb-cream);font-family:var(--snb-font-display);letter-spacing:0.04em;font-size:1.1rem;text-transform:uppercase;"><?php echo esc_html( $name ); ?></div><?php endif; ?>
+					<?php if ( $addr ) : ?><div style="color:var(--snb-cream-dim);font-size:0.9rem;margin-top:0.25rem;"><?php echo wp_kses_post( $addr ); ?></div><?php endif; ?>
+					<?php if ( $phone ) : ?><div style="color:var(--snb-cream-dim);font-size:0.9rem;"><?php echo esc_html( $phone ); ?></div><?php endif; ?>
+
+					<?php if ( $is_delivery ) : ?>
+						<hr style="border:none;border-top:1px solid var(--snb-line);margin:1rem 0;">
+						<span class="snb-eyebrow" style="margin-bottom:0.25rem;">Delivery Instructions</span>
+						<p style="color:var(--snb-cream-soft);margin:0 0 0.75rem;font-size:0.9rem;">Leave at front door. Ring doorbell, thanks!</p>
+					<?php endif; ?>
+
+					<span class="snb-eyebrow" style="margin-bottom:0.25rem;">Order Updates</span>
+					<p style="color:var(--snb-cream-soft);margin:0;font-size:0.9rem;">We'll send updates to <?php echo esc_html( $email ); ?><?php if ( $phone ) echo ' and ' . esc_html( $phone ); ?>.</p>
+				</div>
+
+				<div class="snb-card">
+					<h3 class="snb-card__title" style="margin-bottom:0.5rem;">Need Help?</h3>
+					<p style="color:var(--snb-cream-dim);margin:0 0 1rem;font-size:0.9rem;">We're here for you.</p>
+					<div class="snb-grid snb-grid--2" style="gap:0.75rem;">
+						<a href="tel:+16155557626" class="snb-toggle">
+							<span class="snb-toggle__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.92z"/></svg></span>
+							<div><strong>Call Us</strong><span>(615) 555-SNBN</span></div>
+						</a>
+						<a href="sms:+16155557626" class="snb-toggle">
+							<span class="snb-toggle__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+							<div><strong>Text Us</strong><span>(615) 555-7626</span></div>
+						</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<?php
+}
+
+/* ============================================================
+   MY-ACCOUNT page — branded hero + dark theme overrides
+   ============================================================ */
+add_action( 'woocommerce_before_account_navigation', 'snb_account_hero' );
+function snb_account_hero() {
+	$user = wp_get_current_user();
+	$name = $user && $user->display_name ? $user->display_name : 'Wing Lover';
+	?>
+	<section class="snb-section snb-section--black" style="padding-block:2rem;padding-top:0;">
+		<div class="snb-container">
+			<span class="snb-eyebrow">Account</span>
+			<h1>Hey, <span class="snb-accent"><?php echo esc_html( $name ); ?>.</span></h1>
+			<p style="color:var(--snb-cream-soft);margin-top:0.5rem;">Manage your orders, addresses, and loyalty in one place.</p>
+		</div>
+	</section>
+	<?php
+}
+
+add_action( 'woocommerce_before_customer_login_form', 'snb_account_login_hero' );
+function snb_account_login_hero() {
+	?>
+	<section class="snb-section snb-section--black" style="padding-block:2rem;padding-top:0;">
+		<div class="snb-container">
+			<span class="snb-eyebrow">Members Only</span>
+			<h1>Sign In to Get <span class="snb-accent">Saucy.</span></h1>
+			<p style="color:var(--snb-cream-soft);margin-top:0.5rem;">Track orders, save favorites, and stack loyalty stamps.</p>
+		</div>
+	</section>
 	<?php
 }
