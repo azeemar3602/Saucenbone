@@ -6,7 +6,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'SNB_THEME_VERSION', '1.5.0' );
+define( 'SNB_THEME_VERSION', '1.7.0' );
 
 /**
  * Enqueue parent + child styles, fonts, and JS.
@@ -266,6 +266,18 @@ function snb_minicart_fragment( $fragments ) {
 	echo snb_shortcode_minicart();
 	$fragments['#snb-minicart'] = ob_get_clean();
 	return $fragments;
+}
+
+/**
+ * Append exactly ONE trailing arrow to every shop loop button
+ * ("Add to cart", "Select options", etc.).
+ * The CSS ::after pseudo-elements are intentionally disabled so this
+ * is the sole source of the arrow — no double-arrows.
+ */
+add_filter( 'woocommerce_product_add_to_cart_text', 'snb_add_to_cart_arrow' );
+function snb_add_to_cart_arrow( $text ) {
+	// Strip any pre-existing arrow (safety net), then add exactly one.
+	return preg_replace( '/\s*→\s*$/', '', $text ) . ' →';
 }
 
 /* ============================================================

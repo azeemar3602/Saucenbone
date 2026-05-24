@@ -1356,6 +1356,9 @@ p { line-height: 1.65; color: var(--snb-cream-dim); margin: 0 0 0.75em; }
 }
 
 /* Shop / product archive cards: cream-on-dark per Sauce N' Bone shop mockup. */
+.woocommerce ul.products {
+  align-items: stretch !important;
+}
 .woocommerce ul.products li.product {
   background: var(--snb-cream) !important;
   border: 1px solid var(--snb-line);
@@ -1363,6 +1366,9 @@ p { line-height: 1.65; color: var(--snb-cream-dim); margin: 0 0 0.75em; }
   padding: 1.25rem !important;
   color: var(--snb-charcoal) !important;
   transition: transform 200ms ease, box-shadow 200ms ease;
+  /* equal-height cards: flex column so price+button sit at bottom */
+  display: flex !important;
+  flex-direction: column;
 }
 .woocommerce ul.products li.product:hover {
   transform: translateY(-3px);
@@ -1372,15 +1378,26 @@ p { line-height: 1.65; color: var(--snb-cream-dim); margin: 0 0 0.75em; }
   border-radius: var(--snb-radius-sm);
   margin-bottom: 0.75rem;
 }
+/* Product link area grows so price+button stay at the bottom of every card */
+.woocommerce ul.products li.product > a.woocommerce-LoopProduct-link {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-decoration: none;
+}
 .woocommerce ul.products li.product h2,
 .woocommerce ul.products li.product .woocommerce-loop-product__title {
   font-family: var(--snb-font-display) !important;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   font-size: 1.15rem !important;
+  line-height: 1.1;
   color: var(--snb-gold-dim) !important;
   padding: 0 !important;
   margin: 0.25rem 0 0.5rem !important;
+  /* min-height = 2 lines; keeps all title areas the same depth */
+  min-height: 2.6rem;
+  flex: 1;
 }
 .woocommerce ul.products li.product .price {
   color: var(--snb-gold) !important;
@@ -1412,8 +1429,12 @@ p { line-height: 1.65; color: var(--snb-cream-dim); margin: 0 0 0.75em; }
   color: var(--snb-orange) !important;
   transform: none;
 }
+/* Kill any CSS-based arrows (parent theme may add them too).
+   The single trailing → is injected via PHP filter instead. */
+.woocommerce ul.products li.product .button::before,
+.woocommerce ul.products li.product .added_to_cart::before { content: none !important; display: none !important; }
 .woocommerce ul.products li.product .button::after,
-.woocommerce ul.products li.product .added_to_cart::after { content: " →"; }
+.woocommerce ul.products li.product .added_to_cart::after  { content: none !important; display: none !important; }
 
 .woocommerce #respond input#submit,
 .woocommerce a.button,
