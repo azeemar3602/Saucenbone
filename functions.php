@@ -109,12 +109,13 @@ function snb_shortcode_products( $atts ) {
 		return '<p style="color:#B8B0A0;font-size:0.9rem;">WooCommerce is not active.</p>';
 	}
 	$atts = shortcode_atts( array(
-		'limit'    => 3,
-		'category' => '',
-		'columns'  => 3,
-		'heading'  => '',
-		'anchor'   => '',
-		'offset'   => 0,
+		'limit'           => 3,
+		'category'        => '',
+		'exclude_category'=> 'merch,apparel,accessories',
+		'columns'         => 3,
+		'heading'         => '',
+		'anchor'          => '',
+		'offset'          => 0,
 	), $atts, 'snb_products' );
 
 	$args = array(
@@ -125,18 +126,36 @@ function snb_shortcode_products( $atts ) {
 		'orderby'        => 'menu_order',
 		'order'          => 'ASC',
 	);
-	if ( $atts['category'] ) {
-		$args['tax_query'] = array( array(
-			'taxonomy' => 'product_cat',
-			'field'    => 'slug',
-			'terms'    => array_map( 'trim', explode( ',', $atts['category'] ) ),
-		) );
-	}
 
-	$q = new WP_Query( $args );
+	$build_query = function( $args, $category, $exclude_category ) {
+		$tax_query = array();
+		if ( $category ) {
+			$tax_query[] = array(
+				'taxonomy' => 'product_cat',
+				'field'    => 'slug',
+				'terms'    => array_map( 'trim', explode( ',', $category ) ),
+			);
+		} elseif ( $exclude_category ) {
+			$tax_query[] = array(
+				'taxonomy' => 'product_cat',
+				'field'    => 'slug',
+				'terms'    => array_map( 'trim', explode( ',', $exclude_category ) ),
+				'operator' => 'NOT IN',
+			);
+		}
+		if ( ! empty( $tax_query ) ) { $args['tax_query'] = $tax_query; }
+		return $args;
+	};
+
+	$q = new WP_Query( $build_query( $args, $atts['category'], $atts['exclude_category'] ) );
+	// Fallback: if the requested category returned nothing, fall back to "all non-merch"
+	if ( $atts['category'] && ! $q->have_posts() ) {
+		wp_reset_postdata();
+		$q = new WP_Query( $build_query( $args, '', $atts['exclude_category'] ) );
+	}
 	if ( ! $q->have_posts() ) {
 		wp_reset_postdata();
-		return '<p style="color:#B8B0A0;font-size:0.9rem;">No products found.</p>';
+		return '';
 	}
 
 	$cols = max( 2, min( 4, intval( $atts['columns'] ) ) );
@@ -418,7 +437,7 @@ function snb_cart_recommended() {
 		<div class="snb-container">
 			<h2 class="snb-cat-title" style="margin-top:0;">Make It Even Better.</h2>
 			<p style="color:var(--snb-cream-dim);margin-top:-0.5rem;">Add these fan favorites to complete your order.</p>
-			<?php echo do_shortcode( '[snb_products limit="6" columns="3"]' ); ?>
+			<?php echo do_shortcode( '[snb_products limit="6" columns="3" exclude_category="merch,apparel,accessories"]' ); ?>
 		</div>
 	</section>
 
