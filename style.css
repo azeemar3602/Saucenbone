@@ -237,7 +237,9 @@ p { line-height: 1.65; color: var(--snb-cream-dim); margin: 0 0 0.75em; }
   color: var(--snb-black) !important;
 }
 .snb-btn--block { width: 100%; }
-.snb-btn--sm { padding: 0.55rem 1.1rem; font-size: 0.85rem; }
+.snb-btn--sm { padding: 0.55rem 1.1rem; font-size: 0.85rem; white-space: nowrap; }
+/* All SNB buttons: never wrap their label text */
+.snb-btn { white-space: nowrap; }
 .snb-btn--icon-only {
   width: 36px; height: 36px; padding: 0;
   border-radius: 50%;
@@ -1348,6 +1350,11 @@ p { line-height: 1.65; color: var(--snb-cream-dim); margin: 0 0 0.75em; }
    WOOCOMMERCE OVERRIDES (compact — most cart/checkout is custom)
    ============================================================ */
 .woocommerce, .woocommerce-page { color: var(--snb-cream); }
+
+/* Hide the default WP/Kadence page-title on cart + checkout — we
+   render our own headings via hooks in functions.php             */
+.woocommerce-cart .entry-title,
+.woocommerce-checkout .entry-title { display: none !important; }
 .woocommerce div.product p.price,
 .woocommerce div.product span.price {
   color: var(--snb-orange) !important;
@@ -1456,6 +1463,36 @@ p { line-height: 1.65; color: var(--snb-cream-dim); margin: 0 0 0.75em; }
 .woocommerce a.button:hover, .woocommerce button.button:hover {
   background: var(--snb-orange-dark);
   border-color: var(--snb-orange-dark);
+}
+
+/* Single-product "Add to Cart" button — kill Kadence's blue focus ring */
+.woocommerce div.product form.cart .single_add_to_cart_button {
+  background: var(--snb-orange) !important;
+  border: 2px solid var(--snb-orange) !important;
+  color: var(--snb-cream) !important;
+  box-shadow: none !important;
+}
+.woocommerce div.product form.cart .single_add_to_cart_button:hover,
+.woocommerce div.product form.cart .single_add_to_cart_button:focus,
+.woocommerce div.product form.cart .single_add_to_cart_button:focus-visible,
+.woocommerce div.product form.cart .single_add_to_cart_button:active {
+  background: var(--snb-orange-dark) !important;
+  border-color: var(--snb-orange-dark) !important;
+  color: var(--snb-cream) !important;
+  box-shadow: none !important;
+  outline: 2px solid var(--snb-orange) !important;
+  outline-offset: 3px !important;
+}
+/* Kill blue focus rings on ALL WooCommerce buttons globally */
+.woocommerce a.button:focus,
+.woocommerce button.button:focus,
+.woocommerce input.button:focus,
+.woocommerce a.button:focus-visible,
+.woocommerce button.button:focus-visible,
+.woocommerce input.button:focus-visible {
+  box-shadow: none !important;
+  outline: 2px solid var(--snb-orange) !important;
+  outline-offset: 3px !important;
 }
 
 .woocommerce form .form-row input.input-text,

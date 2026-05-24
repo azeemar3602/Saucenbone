@@ -6,7 +6,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'SNB_THEME_VERSION', '1.7.0' );
+define( 'SNB_THEME_VERSION', '1.8.0' );
 
 /**
  * Enqueue parent + child styles, fonts, and JS.
