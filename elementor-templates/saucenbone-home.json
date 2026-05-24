@@ -4,7 +4,7 @@
   "type": "page",
   "content": [
     {
-      "id": "723d723",
+      "id": "23df919",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -18,7 +18,7 @@
       },
       "elements": [
         {
-          "id": "bac34f0",
+          "id": "2659c6a",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -26,7 +26,7 @@
           },
           "elements": [
             {
-              "id": "b7fec6d",
+              "id": "4089012",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -40,7 +40,7 @@
       "isInner": false
     },
     {
-      "id": "2729387",
+      "id": "821ec54",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -54,7 +54,7 @@
       },
       "elements": [
         {
-          "id": "f0701f9",
+          "id": "725d293",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -62,7 +62,7 @@
           },
           "elements": [
             {
-              "id": "78a2fca",
+              "id": "ab7145e",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -76,7 +76,7 @@
       "isInner": false
     },
     {
-      "id": "6b282de",
+      "id": "3a5db1b",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -90,7 +90,7 @@
       },
       "elements": [
         {
-          "id": "b24e302",
+          "id": "52a9bac",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -98,7 +98,7 @@
           },
           "elements": [
             {
-              "id": "290d30c",
+              "id": "016b36c",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -112,7 +112,7 @@
       "isInner": false
     },
     {
-      "id": "4d96805",
+      "id": "55cde3b",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -126,7 +126,7 @@
       },
       "elements": [
         {
-          "id": "9773e0d",
+          "id": "ab53b44",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -134,7 +134,7 @@
           },
           "elements": [
             {
-              "id": "b8ceba6",
+              "id": "2bdd7fc",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -148,7 +148,7 @@
       "isInner": false
     },
     {
-      "id": "975d18b",
+      "id": "dcd7de5",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -162,7 +162,7 @@
       },
       "elements": [
         {
-          "id": "e5f4ba9",
+          "id": "ddce4c9",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -170,7 +170,7 @@
           },
           "elements": [
             {
-              "id": "e42080c",
+              "id": "6d11fb3",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -184,7 +184,7 @@
       "isInner": false
     },
     {
-      "id": "a1b6a86",
+      "id": "3c33db4",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -198,7 +198,7 @@
       },
       "elements": [
         {
-          "id": "ec7d7b4",
+          "id": "4dc10a2",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -206,7 +206,7 @@
           },
           "elements": [
             {
-              "id": "de3a38b",
+              "id": "28027b1",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -220,7 +220,7 @@
       "isInner": false
     },
     {
-      "id": "f310d9c",
+      "id": "ecafd81",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -234,7 +234,7 @@
       },
       "elements": [
         {
-          "id": "0ee23ef",
+          "id": "ff58b23",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -242,7 +242,7 @@
           },
           "elements": [
             {
-              "id": "ad3ff4f",
+              "id": "c969f90",
               "elType": "widget",
               "widgetType": "html",
               "settings": {

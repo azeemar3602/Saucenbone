@@ -40,6 +40,52 @@ function section(html) {
 	};
 }
 
+/**
+ * Two-column section: a 65/35 split with a content widget on the left
+ * and a sticky mini-cart widget on the right.
+ */
+function twoColSection(leftHtml, rightHtml) {
+	return {
+		id: id(),
+		elType: "section",
+		settings: {
+			structure: "20",
+			stretch_section: "section-stretched",
+			content_width: { unit: "px", size: 1320 },
+			gap: "default",
+			background_background: "classic",
+			background_color: "#0B0B0B",
+		},
+		elements: [
+			{
+				id: id(),
+				elType: "column",
+				settings: { _column_size: 66, _inline_size: 66 },
+				elements: [{
+					id: id(),
+					elType: "widget",
+					widgetType: "html",
+					settings: { html: leftHtml.trim() },
+				}],
+				isInner: false,
+			},
+			{
+				id: id(),
+				elType: "column",
+				settings: { _column_size: 34, _inline_size: 34, sticky: "top", sticky_offset: 100 },
+				elements: [{
+					id: id(),
+					elType: "widget",
+					widgetType: "html",
+					settings: { html: rightHtml.trim() },
+				}],
+				isInner: false,
+			},
+		],
+		isInner: false,
+	};
+}
+
 function template(title, sections) {
 	return { version: "0.4", title, type: "page", content: sections, page_settings: [] };
 }
@@ -193,8 +239,12 @@ const menuHero = `
 	</div>
 </section>`;
 
-const menuLayoutOpen = `
-<div class="snb-menu-layout"><div>
+/**
+ * Combined left-column content for the menu page: tabs + product rows +
+ * flavor selectors + mix strip. Used inside twoColSection alongside the
+ * sticky mini-cart.
+ */
+const menuLeftContent = `
 <nav class="snb-tabs" aria-label="Menu categories">
 	<a href="#bone-in" class="snb-tab is-active"><span class="snb-tab__icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 4a4 4 0 1 1 4 4l-9 9-4 1 1-4z"/></svg></span>Bone-In Wings</a>
 	<a href="#boneless" class="snb-tab"><span class="snb-tab__icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg></span>Boneless Wings</a>
@@ -204,49 +254,46 @@ const menuLayoutOpen = `
 	<a href="#sweet" class="snb-tab"><span class="snb-tab__icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="6"/></svg></span>Sweet</a>
 	<a href="/shop/" class="snb-tab"><span class="snb-tab__icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3-4h12l3 4-9 13z"/></svg></span>Merch</a>
 </nav>
-[snb_products limit="3" heading="Wings &amp; Tenders" anchor="bone-in" columns="3"]
-[snb_products limit="4" heading="Sides &amp; More" anchor="sides" columns="4" offset="3"]
-[snb_products limit="3" heading="Drinks &amp; Sweet" anchor="drinks" columns="3" offset="7"]`;
 
-const menuFlavors = `
-<section class="snb-section snb-section--charcoal" style="padding-block:2.5rem;">
-	<div class="snb-container">
-		<div class="snb-grid snb-grid--2">
-			<div class="snb-card">
-				<h3 class="snb-card__title" style="margin-bottom:0.5rem;">Signature Flavors</h3>
-				<span class="snb-head__label-line" style="margin-bottom:1rem;"></span>
-				<div class="snb-flavor-list">
-					<div class="snb-flavor-row"><span class="snb-flavor-row__icon">🍓</span><span>Strawberry Hot</span><span class="snb-flavor-row__heat">🔥🔥</span></div>
-					<div class="snb-flavor-row"><span class="snb-flavor-row__icon">🧄</span><span>Garlic Parmesan</span><span class="snb-flavor-row__heat">🔥</span></div>
-					<div class="snb-flavor-row"><span class="snb-flavor-row__icon">🥭</span><span>Mango Habanero</span><span class="snb-flavor-row__heat">🔥🔥🔥</span></div>
-					<div class="snb-flavor-row"><span class="snb-flavor-row__icon">🌶️</span><span>Classic Hot</span><span class="snb-flavor-row__heat">🔥🔥</span></div>
-					<div class="snb-flavor-row"><span class="snb-flavor-row__icon">🍍</span><span>Pineapple Jalape&ntilde;o</span><span class="snb-flavor-row__heat">🔥🔥</span></div>
-					<div class="snb-flavor-row"><span class="snb-flavor-row__icon">🍯</span><span>Sweet &amp; Tangy</span><span class="snb-flavor-row__heat">🔥</span></div>
-				</div>
-				<div class="snb-text-center" style="margin-top:1rem;"><a href="#" class="snb-btn snb-btn--ghost snb-btn--sm">View All Flavors</a></div>
+[snb_products limit="3" heading="Wings &amp; Tenders" anchor="bone-in" columns="3" category="wings,bone-in,boneless,tenders"]
+[snb_products limit="4" heading="Sides &amp; More" anchor="sides" columns="4" category="sides"]
+[snb_products limit="3" heading="Drinks &amp; Sweet" anchor="drinks" columns="3" category="drinks,sweet"]
+
+<div style="margin-top:2.5rem;">
+	<div class="snb-grid snb-grid--2">
+		<div class="snb-card">
+			<h3 class="snb-card__title" style="margin-bottom:0.5rem;">Signature Flavors</h3>
+			<span class="snb-head__label-line" style="margin-bottom:1rem;"></span>
+			<div class="snb-flavor-list">
+				<div class="snb-flavor-row"><span class="snb-flavor-row__icon">🍓</span><span>Strawberry Hot</span><span class="snb-flavor-row__heat">🔥🔥</span></div>
+				<div class="snb-flavor-row"><span class="snb-flavor-row__icon">🧄</span><span>Garlic Parmesan</span><span class="snb-flavor-row__heat">🔥</span></div>
+				<div class="snb-flavor-row"><span class="snb-flavor-row__icon">🥭</span><span>Mango Habanero</span><span class="snb-flavor-row__heat">🔥🔥🔥</span></div>
+				<div class="snb-flavor-row"><span class="snb-flavor-row__icon">🌶️</span><span>Classic Hot</span><span class="snb-flavor-row__heat">🔥🔥</span></div>
+				<div class="snb-flavor-row"><span class="snb-flavor-row__icon">🍍</span><span>Pineapple Jalape&ntilde;o</span><span class="snb-flavor-row__heat">🔥🔥</span></div>
+				<div class="snb-flavor-row"><span class="snb-flavor-row__icon">🍯</span><span>Sweet &amp; Tangy</span><span class="snb-flavor-row__heat">🔥</span></div>
 			</div>
-			<div class="snb-card">
-				<h3 class="snb-card__title" style="margin-bottom:0.5rem;">Viral Flavors</h3>
-				<span class="snb-head__label-line" style="margin-bottom:1rem;"></span>
-				<div class="snb-flavor-list" style="grid-template-columns:1fr;">
-					<div class="snb-flavor-row"><span class="snb-flavor-row__icon">🫐</span><span>Blueberry Blaze</span><span class="snb-flavor-row__heat">🔥🔥</span></div>
-					<div class="snb-flavor-row"><span class="snb-flavor-row__icon">🍇</span><span>Grape Inferno</span><span class="snb-flavor-row__heat">🔥🔥🔥</span></div>
-					<div class="snb-flavor-row"><span class="snb-flavor-row__icon">🍊</span><span>Orange Chili Rush</span><span class="snb-flavor-row__heat">🔥🔥</span></div>
-					<div class="snb-flavor-row"><span class="snb-flavor-row__icon">💀</span><span>Real Heat</span><span class="snb-flavor-row__heat">🔥🔥🔥🔥</span></div>
-				</div>
-				<div class="snb-text-center" style="margin-top:1rem;"><a href="#" class="snb-btn snb-btn--ghost snb-btn--sm">View All Flavors</a></div>
-			</div>
+			<div class="snb-text-center" style="margin-top:1rem;"><a href="#" class="snb-btn snb-btn--ghost snb-btn--sm">View All Flavors</a></div>
 		</div>
-		<div class="snb-mix-strip">
-			<div class="snb-mix-strip__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l16 16M20 4L4 20"/></svg></div>
-			<div class="snb-mix-strip__copy"><strong>Not sure? Try a mix of flavors!</strong><span>Half one flavor, half another. Because variety is flavor.</span></div>
-			<a href="?mix=1" class="snb-btn snb-btn--sm">Mix Flavors</a>
+		<div class="snb-card">
+			<h3 class="snb-card__title" style="margin-bottom:0.5rem;">Viral Flavors</h3>
+			<span class="snb-head__label-line" style="margin-bottom:1rem;"></span>
+			<div class="snb-flavor-list" style="grid-template-columns:1fr;">
+				<div class="snb-flavor-row"><span class="snb-flavor-row__icon">🫐</span><span>Blueberry Blaze</span><span class="snb-flavor-row__heat">🔥🔥</span></div>
+				<div class="snb-flavor-row"><span class="snb-flavor-row__icon">🍇</span><span>Grape Inferno</span><span class="snb-flavor-row__heat">🔥🔥🔥</span></div>
+				<div class="snb-flavor-row"><span class="snb-flavor-row__icon">🍊</span><span>Orange Chili Rush</span><span class="snb-flavor-row__heat">🔥🔥</span></div>
+				<div class="snb-flavor-row"><span class="snb-flavor-row__icon">💀</span><span>Real Heat</span><span class="snb-flavor-row__heat">🔥🔥🔥🔥</span></div>
+			</div>
+			<div class="snb-text-center" style="margin-top:1rem;"><a href="#" class="snb-btn snb-btn--ghost snb-btn--sm">View All Flavors</a></div>
 		</div>
 	</div>
-</section>`;
+	<div class="snb-mix-strip" style="margin-top:1.5rem;">
+		<div class="snb-mix-strip__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l16 16M20 4L4 20"/></svg></div>
+		<div class="snb-mix-strip__copy"><strong>Not sure? Try a mix of flavors!</strong><span>Half one flavor, half another. Because variety is flavor.</span></div>
+		<a href="?mix=1" class="snb-btn snb-btn--sm">Mix Flavors</a>
+	</div>
+</div>`;
 
-const menuLayoutClose = `
-</div><aside>[snb_minicart]</aside></div>`;
+const menuRightContent = `[snb_minicart]`;
 
 const menuDetail = `
 <section class="snb-section snb-section--black">
@@ -296,9 +343,7 @@ const home = template("Sauce N' Bone — Home", [
 
 const menu = template("Sauce N' Bone — Menu", [
 	section(menuHero),
-	section(menuLayoutOpen),
-	section(menuFlavors),
-	section(menuLayoutClose),
+	twoColSection(menuLeftContent, menuRightContent),
 	section(menuDetail),
 	section(loyalty),
 ]);
