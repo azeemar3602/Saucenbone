@@ -1332,27 +1332,72 @@ p { line-height: 1.65; color: var(--snb-cream-dim); margin: 0 0 0.75em; }
    WOOCOMMERCE OVERRIDES (compact — most cart/checkout is custom)
    ============================================================ */
 .woocommerce, .woocommerce-page { color: var(--snb-cream); }
-.woocommerce ul.products li.product .price,
 .woocommerce div.product p.price,
 .woocommerce div.product span.price {
   color: var(--snb-sauce-red) !important;
   font-family: var(--snb-font-display);
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+}
+
+/* Shop / product archive cards: cream-on-dark per Sauce N' Bone shop mockup. */
+.woocommerce ul.products li.product {
+  background: var(--snb-cream) !important;
+  border: 1px solid var(--snb-line);
+  border-radius: var(--snb-radius);
+  padding: 1.25rem !important;
+  color: var(--snb-charcoal) !important;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.woocommerce ul.products li.product:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--snb-shadow-card);
+}
+.woocommerce ul.products li.product a img {
+  border-radius: var(--snb-radius-sm);
+  margin-bottom: 0.75rem;
 }
 .woocommerce ul.products li.product h2,
 .woocommerce ul.products li.product .woocommerce-loop-product__title {
-  font-family: var(--snb-font-display);
+  font-family: var(--snb-font-display) !important;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--snb-cream);
+  font-size: 1.15rem !important;
+  color: var(--snb-gold-dim) !important;
+  padding: 0 !important;
+  margin: 0.25rem 0 0.5rem !important;
 }
-.woocommerce ul.products li.product {
-  background: var(--snb-charcoal-2);
-  border: 1px solid var(--snb-line);
-  border-radius: var(--snb-radius);
-  padding: 1rem !important;
+.woocommerce ul.products li.product .price {
+  color: var(--snb-gold) !important;
+  font-family: var(--snb-font-display);
+  font-size: 1.5rem !important;
+  display: block;
+  margin-bottom: 0.75rem;
 }
-.woocommerce ul.products li.product .button { width: 100%; margin-top: 0.5rem; }
+.woocommerce ul.products li.product .button,
+.woocommerce ul.products li.product .added_to_cart {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent !important;
+  border: none !important;
+  color: var(--snb-gold-dim) !important;
+  padding: 0 !important;
+  font-family: var(--snb-font-display);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  text-decoration: none;
+  width: auto;
+  margin: 0 !important;
+}
+.woocommerce ul.products li.product .button:hover,
+.woocommerce ul.products li.product .added_to_cart:hover {
+  background: transparent !important;
+  color: var(--snb-sauce-red) !important;
+  transform: none;
+}
+.woocommerce ul.products li.product .button::after,
+.woocommerce ul.products li.product .added_to_cart::after { content: " →"; }
 
 .woocommerce #respond input#submit,
 .woocommerce a.button,
