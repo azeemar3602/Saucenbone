@@ -1252,20 +1252,21 @@ p { line-height: 1.65; color: var(--snb-cream-dim); margin: 0 0 0.75em; }
   padding-bottom: 1rem;
 }
 .snb-footer__mark {
+  display: inline-flex;
+  align-items: center;
   font-family: var(--snb-font-display);
   font-size: 2rem;
   color: var(--snb-sauce-red);
   letter-spacing: 0.04em;
-  position: relative;
+  text-decoration: none;
+  line-height: 1;
 }
-.snb-footer__mark::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 0; bottom: -6px;
-  height: 3px;
-  background: var(--snb-sauce-red);
-  border-radius: 2px;
-  box-shadow: 8px 3px 0 -1px var(--snb-sauce-red), 22px 5px 0 -2px var(--snb-sauce-red);
+.snb-footer__mark img {
+  display: block;
+  height: 64px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
 }
 .snb-footer__social { display: flex; align-items: center; gap: 1rem; }
 .snb-footer__social-label {

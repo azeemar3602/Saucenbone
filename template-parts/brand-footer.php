@@ -3,14 +3,27 @@
  * Sauce N' Bone — brand footer block injected before </body>.
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
+
+/**
+ * Footer logo URL. Falls back to the custom uploaded logo, then to the
+ * theme's site icon. Override via the `snb_footer_logo_url` filter.
+ */
+$snb_footer_logo = apply_filters(
+	'snb_footer_logo_url',
+	'/wp-content/uploads/2026/05/ChatGPT-Image-May-21-2026-01_25_02-PM-e1779629478727.png'
+);
 ?>
 <footer class="snb-footer" role="contentinfo">
 
 	<div class="snb-footer__top">
 
-		<div class="snb-footer__mark">
-			SNB
-		</div>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="snb-footer__mark" aria-label="Sauce N' Bone">
+			<?php if ( $snb_footer_logo ) : ?>
+				<img src="<?php echo esc_url( $snb_footer_logo ); ?>" alt="Sauce N' Bone">
+			<?php else : ?>
+				SNB
+			<?php endif; ?>
+		</a>
 
 		<div class="snb-footer__social">
 			<span class="snb-footer__social-label">Follow Us</span>
