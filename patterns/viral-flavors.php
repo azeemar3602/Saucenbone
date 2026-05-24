@@ -16,10 +16,10 @@
 			<div class="snb-head__content">
 				<div class="snb-grid snb-grid--4">
 
-					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E92A0A;">Blueberry Blaze</h3></article>
-					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E92A0A;">Grape Inferno</h3></article>
-					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E92A0A;">Orange Chili Rush</h3></article>
-					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E92A0A;">Real Heat</h3></article>
+					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E03602;">Blueberry Blaze</h3></article>
+					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E03602;">Grape Inferno</h3></article>
+					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E03602;">Orange Chili Rush</h3></article>
+					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E03602;">Real Heat</h3></article>
 
 				</div>
 			</div>

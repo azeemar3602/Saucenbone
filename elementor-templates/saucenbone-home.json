@@ -4,7 +4,7 @@
   "type": "page",
   "content": [
     {
-      "id": "523d750",
+      "id": "91f91cd",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -18,7 +18,7 @@
       },
       "elements": [
         {
-          "id": "c51c5c4",
+          "id": "afcdcc1",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -26,7 +26,7 @@
           },
           "elements": [
             {
-              "id": "7bbcf29",
+              "id": "042c935",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -40,7 +40,7 @@
       "isInner": false
     },
     {
-      "id": "d68f438",
+      "id": "00067ae",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -54,7 +54,7 @@
       },
       "elements": [
         {
-          "id": "f537a4d",
+          "id": "40e601a",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -62,7 +62,7 @@
           },
           "elements": [
             {
-              "id": "28a4573",
+              "id": "9344ac3",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -76,7 +76,7 @@
       "isInner": false
     },
     {
-      "id": "7298068",
+      "id": "e8397c8",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -90,7 +90,7 @@
       },
       "elements": [
         {
-          "id": "07cdd5c",
+          "id": "b21da54",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -98,11 +98,11 @@
           },
           "elements": [
             {
-              "id": "7ff9d27",
+              "id": "049402f",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "<section class=\"snb-section snb-section--charcoal\">\n\t<div class=\"snb-container\">\n\t\t<div class=\"snb-head\">\n\t\t\t<div class=\"snb-head__label\">\n\t\t\t\t<h2>SIGNATURE<br>FLAVORS</h2>\n\t\t\t\t<span class=\"snb-head__label-line\"></span>\n\t\t\t\t<p>Our originals. Made from real ingredients. Built for flavor.</p>\n\t\t\t</div>\n\t\t\t<div class=\"snb-head__content\">\n\t\t\t\t<div class=\"snb-grid snb-grid--3\">\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#E92A0A;\">Strawberry Hot</h3></article>\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#E92A0A;\">Mango Habanero</h3></article>\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#E92A0A;\">Pineapple Jalape&ntilde;o</h3></article>\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#E92A0A;\">Sweet &amp; Tangy</h3></article>\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#E92A0A;\">Garlic Parmesan</h3></article>\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#E92A0A;\">Classic Hot</h3></article>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>"
+                "html": "<section class=\"snb-section snb-section--charcoal\">\n\t<div class=\"snb-container\">\n\t\t<div class=\"snb-head\">\n\t\t\t<div class=\"snb-head__label\">\n\t\t\t\t<h2>SIGNATURE<br>FLAVORS</h2>\n\t\t\t\t<span class=\"snb-head__label-line\"></span>\n\t\t\t\t<p>Our originals. Made from real ingredients. Built for flavor.</p>\n\t\t\t</div>\n\t\t\t<div class=\"snb-head__content\">\n\t\t\t\t<div class=\"snb-grid snb-grid--3\">\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#E03602;\">Strawberry Hot</h3></article>\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#E03602;\">Mango Habanero</h3></article>\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#E03602;\">Pineapple Jalape&ntilde;o</h3></article>\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#E03602;\">Sweet &amp; Tangy</h3></article>\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#E03602;\">Garlic Parmesan</h3></article>\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#E03602;\">Classic Hot</h3></article>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>"
               }
             }
           ],
@@ -112,7 +112,7 @@
       "isInner": false
     },
     {
-      "id": "b2b0d58",
+      "id": "bc37433",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -126,7 +126,7 @@
       },
       "elements": [
         {
-          "id": "416a973",
+          "id": "83421a6",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -134,11 +134,11 @@
           },
           "elements": [
             {
-              "id": "a8ede07",
+              "id": "6f8cb2d",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "<section class=\"snb-section snb-section--black\">\n\t<div class=\"snb-container\">\n\t\t<div class=\"snb-head\">\n\t\t\t<div class=\"snb-head__label\">\n\t\t\t\t<h2>VIRAL<br>FLAVORS</h2>\n\t\t\t\t<span class=\"snb-head__label-line\"></span>\n\t\t\t\t<p>Bold. Unexpected. Fan favorites.</p>\n\t\t\t</div>\n\t\t\t<div class=\"snb-head__content\">\n\t\t\t\t<div class=\"snb-grid snb-grid--4\">\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#E92A0A;\">Blueberry Blaze</h3></article>\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#E92A0A;\">Grape Inferno</h3></article>\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#E92A0A;\">Orange Chili Rush</h3></article>\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#E92A0A;\">Real Heat</h3></article>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>"
+                "html": "<section class=\"snb-section snb-section--black\">\n\t<div class=\"snb-container\">\n\t\t<div class=\"snb-head\">\n\t\t\t<div class=\"snb-head__label\">\n\t\t\t\t<h2>VIRAL<br>FLAVORS</h2>\n\t\t\t\t<span class=\"snb-head__label-line\"></span>\n\t\t\t\t<p>Bold. Unexpected. Fan favorites.</p>\n\t\t\t</div>\n\t\t\t<div class=\"snb-head__content\">\n\t\t\t\t<div class=\"snb-grid snb-grid--4\">\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#E03602;\">Blueberry Blaze</h3></article>\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#E03602;\">Grape Inferno</h3></article>\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#E03602;\">Orange Chili Rush</h3></article>\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#E03602;\">Real Heat</h3></article>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>"
               }
             }
           ],
@@ -148,7 +148,7 @@
       "isInner": false
     },
     {
-      "id": "5cb6d0d",
+      "id": "6b16171",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -162,7 +162,7 @@
       },
       "elements": [
         {
-          "id": "a78b42e",
+          "id": "79cb531",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -170,7 +170,7 @@
           },
           "elements": [
             {
-              "id": "0b9cf3a",
+              "id": "3494a07",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -184,7 +184,7 @@
       "isInner": false
     },
     {
-      "id": "ef2fb45",
+      "id": "6e1b7d1",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -198,7 +198,7 @@
       },
       "elements": [
         {
-          "id": "c77d43c",
+          "id": "09c30a7",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -206,7 +206,7 @@
           },
           "elements": [
             {
-              "id": "cd52c48",
+              "id": "cb984e6",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -220,7 +220,7 @@
       "isInner": false
     },
     {
-      "id": "56aa7fe",
+      "id": "dd9dcb7",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -234,7 +234,7 @@
       },
       "elements": [
         {
-          "id": "118984a",
+          "id": "05c624b",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -242,7 +242,7 @@
           },
           "elements": [
             {
-              "id": "e4d613a",
+              "id": "d88746f",
               "elType": "widget",
               "widgetType": "html",
               "settings": {

@@ -6,7 +6,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'SNB_THEME_VERSION', '1.1.0' );
+define( 'SNB_THEME_VERSION', '1.5.0' );
 
 /**
  * Enqueue parent + child styles, fonts, and JS.
@@ -403,7 +403,7 @@ function snb_thankyou_actions( $order_id ) {
    ============================================================ */
 add_action( 'woocommerce_before_cart', 'snb_cart_intro', 5 );
 function snb_cart_intro() {
-	echo '<section class="snb-section snb-section--black" style="padding-block:2rem 1rem;"><div class="snb-container"><h1>YOUR <span class="snb-accent">CART.</span></h1><p style="color:var(--snb-cream-soft);margin-top:0.5rem;">Bold flavors. Real ingredients. No shortcuts.</p><a href="' . esc_url( wc_get_page_permalink( 'shop' ) ) . '" style="color:var(--snb-sauce-red);display:inline-flex;align-items:center;gap:0.4rem;margin-top:0.75rem;font-family:var(--snb-font-display);letter-spacing:0.1em;text-transform:uppercase;font-size:0.95rem;">← Continue Shopping</a></div></section>';
+	echo '<section class="snb-section snb-section--black" style="padding-block:2rem 1rem;"><div class="snb-container"><h1>YOUR <span class="snb-accent">CART.</span></h1><p style="color:var(--snb-cream-soft);margin-top:0.5rem;">Bold flavors. Real ingredients. No shortcuts.</p><a href="' . esc_url( wc_get_page_permalink( 'shop' ) ) . '" style="color:var(--snb-orange);display:inline-flex;align-items:center;gap:0.4rem;margin-top:0.75rem;font-family:var(--snb-font-display);letter-spacing:0.1em;text-transform:uppercase;font-size:0.95rem;">← Continue Shopping</a></div></section>';
 }
 
 /**
@@ -509,11 +509,11 @@ function snb_checkout_pickup_delivery() {
 		<div>
 			<strong style="display:block;font-family:var(--snb-font-display);letter-spacing:0.04em;text-transform:uppercase;color:var(--snb-cream);font-size:1.1rem;">Sauce N' Bone &mdash; Downtown</strong>
 			<span style="color:var(--snb-cream-dim);font-size:0.9rem;">123 Flavor Way, Nashville, TN 37203</span><br>
-			<a href="#" style="color:var(--snb-sauce-red);font-size:0.85rem;">Change Location</a>
+			<a href="#" style="color:var(--snb-orange);font-size:0.85rem;">Change Location</a>
 		</div>
 		<div style="text-align:right;">
 			<span class="snb-eyebrow" style="margin:0;">Est. Pickup Time</span>
-			<div style="font-family:var(--snb-font-display);color:var(--snb-sauce-red);font-size:1.5rem;letter-spacing:0.04em;">25&ndash;35 MIN</div>
+			<div style="font-family:var(--snb-font-display);color:var(--snb-orange);font-size:1.5rem;letter-spacing:0.04em;">25&ndash;35 MIN</div>
 		</div>
 	</div>
 
@@ -572,7 +572,7 @@ function snb_checkout_eta_card() {
 		<span class="snb-flame"></span>
 		<div>
 			<span class="snb-eyebrow" style="margin:0;">Estimated Pickup Time</span>
-			<div style="font-family:var(--snb-font-display);color:var(--snb-sauce-red);font-size:1.6rem;letter-spacing:0.04em;line-height:1;margin:0.25rem 0;">25&ndash;35 MIN</div>
+			<div style="font-family:var(--snb-font-display);color:var(--snb-orange);font-size:1.6rem;letter-spacing:0.04em;line-height:1;margin:0.25rem 0;">25&ndash;35 MIN</div>
 			<span style="color:var(--snb-cream-soft);font-size:0.85rem;">Today, 6:45 PM</span>
 		</div>
 	</div>

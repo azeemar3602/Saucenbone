@@ -36,7 +36,7 @@
 					<option>🍊 Orange Chili Rush 🔥🔥</option>
 					<option>💀 Real Heat 🔥🔥🔥🔥</option>
 				</select>
-				<a href="#" style="display:inline-flex;align-items:center;gap:0.4rem;color:var(--snb-sauce-red);margin-top:0.75rem;font-size:0.85rem;letter-spacing:0.12em;text-transform:uppercase;font-family:var(--snb-font-display);">
+				<a href="#" style="display:inline-flex;align-items:center;gap:0.4rem;color:var(--snb-orange);margin-top:0.75rem;font-size:0.85rem;letter-spacing:0.12em;text-transform:uppercase;font-family:var(--snb-font-display);">
 					<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l16 16M20 4L4 20"/></svg>
 					Mix Flavors (Half &amp; Half)
 				</a>

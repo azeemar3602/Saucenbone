@@ -138,12 +138,12 @@ const signature = `
 			</div>
 			<div class="snb-head__content">
 				<div class="snb-grid snb-grid--3">
-					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E92A0A;">Strawberry Hot</h3></article>
-					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E92A0A;">Mango Habanero</h3></article>
-					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E92A0A;">Pineapple Jalape&ntilde;o</h3></article>
-					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E92A0A;">Sweet &amp; Tangy</h3></article>
-					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E92A0A;">Garlic Parmesan</h3></article>
-					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E92A0A;">Classic Hot</h3></article>
+					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E03602;">Strawberry Hot</h3></article>
+					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E03602;">Mango Habanero</h3></article>
+					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E03602;">Pineapple Jalape&ntilde;o</h3></article>
+					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E03602;">Sweet &amp; Tangy</h3></article>
+					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E03602;">Garlic Parmesan</h3></article>
+					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E03602;">Classic Hot</h3></article>
 				</div>
 			</div>
 		</div>
@@ -161,10 +161,10 @@ const viral = `
 			</div>
 			<div class="snb-head__content">
 				<div class="snb-grid snb-grid--4">
-					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E92A0A;">Blueberry Blaze</h3></article>
-					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E92A0A;">Grape Inferno</h3></article>
-					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E92A0A;">Orange Chili Rush</h3></article>
-					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E92A0A;">Real Heat</h3></article>
+					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E03602;">Blueberry Blaze</h3></article>
+					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E03602;">Grape Inferno</h3></article>
+					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E03602;">Orange Chili Rush</h3></article>
+					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E03602;">Real Heat</h3></article>
 				</div>
 			</div>
 		</div>
@@ -321,7 +321,7 @@ const menuRightContent = `
 			<option>🧄 Garlic Parmesan 🔥</option>
 			<option>🌶️ Classic Hot 🔥🔥</option>
 		</select>
-		<a href="#" style="display:inline-flex;align-items:center;gap:0.4rem;color:var(--snb-sauce-red);margin-top:0.5rem;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;font-family:var(--snb-font-display);">
+		<a href="#" style="display:inline-flex;align-items:center;gap:0.4rem;color:var(--snb-orange);margin-top:0.5rem;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;font-family:var(--snb-font-display);">
 			<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l16 16M20 4L4 20"/></svg>
 			Mix Flavors (Half &amp; Half)
 		</a>
