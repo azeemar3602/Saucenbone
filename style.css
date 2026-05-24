@@ -22,8 +22,6 @@ Text Domain: saucenbone-kadence
   --snb-cream-soft: #D8CFB8;
   --snb-gold: #C9A24A;
   --snb-gold-dim: #8C7030;
-  --snb-grape: #6F39BE;
-  --snb-green: #2BB673;
   --snb-line: rgba(201, 162, 74, 0.28);
   --snb-line-strong: rgba(201, 162, 74, 0.55);
 
@@ -535,6 +533,8 @@ p { line-height: 1.65; color: var(--snb-cream-dim); margin: 0 0 0.75em; }
 }
 .snb-chip-row { display: flex; flex-wrap: wrap; gap: 0.6rem; }
 
+/* (Removed .snb-chip--grape — brand palette is 4 colors only.) */
+
 /* ============================================================
    LOYALTY STAMP STRIP (Buy 8. Get 1 Free.)
    ============================================================ */
@@ -628,8 +628,8 @@ p { line-height: 1.65; color: var(--snb-cream-dim); margin: 0 0 0.75em; }
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  background: rgba(43, 182, 115, 0.15);
-  color: var(--snb-green);
+  background: rgba(233, 42, 10, 0.15);
+  color: var(--snb-sauce-red);
   padding: 0.3rem 0.7rem;
   border-radius: 999px;
   font-size: 0.85rem;
@@ -639,7 +639,7 @@ p { line-height: 1.65; color: var(--snb-cream-dim); margin: 0 0 0.75em; }
   content: "";
   width: 8px; height: 8px;
   border-radius: 50%;
-  background: var(--snb-green);
+  background: var(--snb-sauce-red);
 }
 @media (max-width: 900px) { .snb-order-strip { grid-template-columns: 1fr 1fr; } }
 
@@ -1720,7 +1720,7 @@ p { line-height: 1.65; color: var(--snb-cream-dim); margin: 0 0 0.75em; }
   padding: 0.85rem 1.1rem;
   margin-top: 1rem;
 }
-.snb-pay-line__icon { color: var(--snb-green); }
+.snb-pay-line__icon { color: var(--snb-gold); }
 .snb-pay-line__label {
   font-family: var(--snb-font-display);
   letter-spacing: 0.18em;
@@ -1739,7 +1739,7 @@ p { line-height: 1.65; color: var(--snb-cream-dim); margin: 0 0 0.75em; }
   letter-spacing: 0.12em;
   font-size: 0.85rem;
 }
-.snb-pay-line__status.is-paid { color: var(--snb-green); }
+.snb-pay-line__status.is-paid { color: var(--snb-gold); }
 
 .snb-receipt-box {
   width: 130px;

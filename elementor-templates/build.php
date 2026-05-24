@@ -253,8 +253,8 @@ $menu_flavors = <<<'HTML'
 		<div class="snb-text-center" style="margin-top:1.5rem;"><a href="#" class="snb-btn snb-btn--ghost">View All Flavors</a></div>
 		<div class="snb-section__head" style="margin-top:3rem;"><span class="snb-eyebrow">Viral Flavors</span><h2>Fan Favorites</h2></div>
 		<div class="snb-chip-row">
-			<button type="button" class="snb-chip snb-chip--grape">Blueberry Blaze</button>
-			<button type="button" class="snb-chip snb-chip--grape">Grape Inferno</button>
+			<button type="button" class="snb-chip">Blueberry Blaze</button>
+			<button type="button" class="snb-chip">Grape Inferno</button>
 			<button type="button" class="snb-chip">Orange Chili Rush</button>
 			<button type="button" class="snb-chip">Real Heat</button>
 		</div>

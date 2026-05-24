@@ -9,8 +9,7 @@
 				{ "slug": "snb-charcoal",  "name": "SNB Charcoal",  "color": "#11110F" },
 				{ "slug": "snb-sauce-red", "name": "Sauce Red",     "color": "#E92A0A" },
 				{ "slug": "snb-cream",     "name": "SNB Cream",     "color": "#F4EEDF" },
-				{ "slug": "snb-gold",      "name": "SNB Gold",      "color": "#C9A24A" },
-				{ "slug": "snb-grape",     "name": "SNB Grape",     "color": "#6F39BE" }
+				{ "slug": "snb-gold",      "name": "SNB Gold",      "color": "#C9A24A" }
 			]
 		},
 		"typography": {

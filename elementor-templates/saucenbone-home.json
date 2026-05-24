@@ -4,7 +4,7 @@
   "type": "page",
   "content": [
     {
-      "id": "1b820a6",
+      "id": "523d750",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -18,7 +18,7 @@
       },
       "elements": [
         {
-          "id": "0d08543",
+          "id": "c51c5c4",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -26,7 +26,7 @@
           },
           "elements": [
             {
-              "id": "d20f92b",
+              "id": "7bbcf29",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -40,7 +40,7 @@
       "isInner": false
     },
     {
-      "id": "387b127",
+      "id": "d68f438",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -54,7 +54,7 @@
       },
       "elements": [
         {
-          "id": "572989c",
+          "id": "f537a4d",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -62,7 +62,7 @@
           },
           "elements": [
             {
-              "id": "27e2950",
+              "id": "28a4573",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -76,7 +76,7 @@
       "isInner": false
     },
     {
-      "id": "e43a632",
+      "id": "7298068",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -90,7 +90,7 @@
       },
       "elements": [
         {
-          "id": "ba1161b",
+          "id": "07cdd5c",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -98,7 +98,7 @@
           },
           "elements": [
             {
-              "id": "29b8864",
+              "id": "7ff9d27",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -112,7 +112,7 @@
       "isInner": false
     },
     {
-      "id": "f0f9809",
+      "id": "b2b0d58",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -126,7 +126,7 @@
       },
       "elements": [
         {
-          "id": "117b829",
+          "id": "416a973",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -134,11 +134,11 @@
           },
           "elements": [
             {
-              "id": "29668d9",
+              "id": "a8ede07",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "<section class=\"snb-section snb-section--black\">\n\t<div class=\"snb-container\">\n\t\t<div class=\"snb-head\">\n\t\t\t<div class=\"snb-head__label\">\n\t\t\t\t<h2>VIRAL<br>FLAVORS</h2>\n\t\t\t\t<span class=\"snb-head__label-line\"></span>\n\t\t\t\t<p>Bold. Unexpected. Fan favorites.</p>\n\t\t\t</div>\n\t\t\t<div class=\"snb-head__content\">\n\t\t\t\t<div class=\"snb-grid snb-grid--4\">\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#6F39BE;\">Blueberry Blaze</h3></article>\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#6F39BE;\">Grape Inferno</h3></article>\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#E92A0A;\">Orange Chili Rush</h3></article>\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#E92A0A;\">Real Heat</h3></article>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>"
+                "html": "<section class=\"snb-section snb-section--black\">\n\t<div class=\"snb-container\">\n\t\t<div class=\"snb-head\">\n\t\t\t<div class=\"snb-head__label\">\n\t\t\t\t<h2>VIRAL<br>FLAVORS</h2>\n\t\t\t\t<span class=\"snb-head__label-line\"></span>\n\t\t\t\t<p>Bold. Unexpected. Fan favorites.</p>\n\t\t\t</div>\n\t\t\t<div class=\"snb-head__content\">\n\t\t\t\t<div class=\"snb-grid snb-grid--4\">\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#E92A0A;\">Blueberry Blaze</h3></article>\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#E92A0A;\">Grape Inferno</h3></article>\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#E92A0A;\">Orange Chili Rush</h3></article>\n\t\t\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\" style=\"color:#E92A0A;\">Real Heat</h3></article>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>"
               }
             }
           ],
@@ -148,7 +148,7 @@
       "isInner": false
     },
     {
-      "id": "514f11e",
+      "id": "5cb6d0d",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -162,7 +162,7 @@
       },
       "elements": [
         {
-          "id": "bb84b0d",
+          "id": "a78b42e",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -170,7 +170,7 @@
           },
           "elements": [
             {
-              "id": "a3a4593",
+              "id": "0b9cf3a",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -184,7 +184,7 @@
       "isInner": false
     },
     {
-      "id": "4ce3bc0",
+      "id": "ef2fb45",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -198,7 +198,7 @@
       },
       "elements": [
         {
-          "id": "5efc6ca",
+          "id": "c77d43c",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -206,7 +206,7 @@
           },
           "elements": [
             {
-              "id": "2ad73d7",
+              "id": "cd52c48",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -220,7 +220,7 @@
       "isInner": false
     },
     {
-      "id": "9dcb6c9",
+      "id": "56aa7fe",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -234,7 +234,7 @@
       },
       "elements": [
         {
-          "id": "d58ae2b",
+          "id": "118984a",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -242,7 +242,7 @@
           },
           "elements": [
             {
-              "id": "68a805c",
+              "id": "e4d613a",
               "elType": "widget",
               "widgetType": "html",
               "settings": {

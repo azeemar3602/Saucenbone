@@ -4,7 +4,7 @@
   "type": "page",
   "content": [
     {
-      "id": "1d03784",
+      "id": "ee4f3e2",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -18,7 +18,7 @@
       },
       "elements": [
         {
-          "id": "2493417",
+          "id": "d97e120",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -26,7 +26,7 @@
           },
           "elements": [
             {
-              "id": "d44a198",
+              "id": "dde5bf0",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -40,7 +40,7 @@
       "isInner": false
     },
     {
-      "id": "6bb6183",
+      "id": "c166e90",
       "elType": "section",
       "settings": {
         "structure": "20",
@@ -55,7 +55,7 @@
       },
       "elements": [
         {
-          "id": "580612f",
+          "id": "9031c9d",
           "elType": "column",
           "settings": {
             "_column_size": 66,
@@ -63,7 +63,7 @@
           },
           "elements": [
             {
-              "id": "188dc73",
+              "id": "50a6132",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -74,7 +74,7 @@
           "isInner": false
         },
         {
-          "id": "6653844",
+          "id": "2c7c1e9",
           "elType": "column",
           "settings": {
             "_column_size": 34,
@@ -84,7 +84,7 @@
           },
           "elements": [
             {
-              "id": "050b2da",
+              "id": "fc6443c",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -98,7 +98,7 @@
       "isInner": false
     },
     {
-      "id": "4d4476e",
+      "id": "cb722dd",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -112,7 +112,7 @@
       },
       "elements": [
         {
-          "id": "7b3ec10",
+          "id": "c1ac5d7",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -120,7 +120,7 @@
           },
           "elements": [
             {
-              "id": "d7fd601",
+              "id": "ac78a81",
               "elType": "widget",
               "widgetType": "html",
               "settings": {

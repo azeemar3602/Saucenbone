@@ -16,8 +16,8 @@
 			<div class="snb-head__content">
 				<div class="snb-grid snb-grid--4">
 
-					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#6F39BE;">Blueberry Blaze</h3></article>
-					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#6F39BE;">Grape Inferno</h3></article>
+					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E92A0A;">Blueberry Blaze</h3></article>
+					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E92A0A;">Grape Inferno</h3></article>
 					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E92A0A;">Orange Chili Rush</h3></article>
 					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E92A0A;">Real Heat</h3></article>
 
