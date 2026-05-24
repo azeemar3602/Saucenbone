@@ -368,13 +368,9 @@ function snb_thankyou_actions( $order_id ) {
 	</section>
 
 	<section class="snb-loyalty" style="margin-top:2rem;">
-		<div class="snb-loyalty__inner">
+		<div class="snb-loyalty__inner" style="grid-template-columns:auto 1fr auto;">
 			<div class="snb-loyalty__badge">LOYALTY<br>CARD</div>
-			<div style="display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;justify-content:center;">
-				<div class="snb-loyalty__copy">
-					<h2>BOLD FLAVOR.<br><span class="snb-accent">BIG REWARDS.</span></h2>
-					<p>Earn a stamp for this order — you're one step closer to a free item.</p>
-				</div>
+			<div style="display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;">
 				<div class="snb-loyalty__stamps">
 					<span class="snb-stamp is-filled">✓</span>
 					<span class="snb-stamp"></span>
@@ -386,19 +382,28 @@ function snb_thankyou_actions( $order_id ) {
 					<span class="snb-stamp"></span>
 					<span class="snb-stamp is-free">FREE</span>
 				</div>
+				<div class="snb-loyalty__copy">
+					<h2>BOLD FLAVOR.<br><span class="snb-accent">BIG REWARDS.</span></h2>
+					<p style="margin-top:0.4rem;">Earn a stamp for this order — you're one step closer to a free item.</p>
+					<a href="/loyalty/" class="snb-btn" style="margin-top:0.75rem;">Join Loyalty</a>
+				</div>
 			</div>
-			<a href="/loyalty/" class="snb-btn">Join Loyalty</a>
+			<div class="snb-receipt-box" aria-hidden="true">
+				<div class="snb-receipt-box__mark">SAUCE<span class="snb-accent">N'</span>BONE</div>
+				<div class="snb-receipt-box__tag">FLAVOR FIRST.</div>
+			</div>
 		</div>
 	</section>
 	<?php
 }
 
 /* ============================================================
-   CART: extras (pickup/delivery toggle, recommended addons)
+   CART: intro hero + recommended add-ons (most styling is in
+   woocommerce/cart/cart.php template override)
    ============================================================ */
 add_action( 'woocommerce_before_cart', 'snb_cart_intro', 5 );
 function snb_cart_intro() {
-	echo '<section class="snb-section snb-section--black" style="padding-block:2rem;"><div class="snb-container"><span class="snb-eyebrow">Your Cart</span><h1>Your <span class="snb-accent">Cart.</span></h1><p style="color:var(--snb-cream-soft);margin-top:0.5rem;">Bold flavors. Real ingredients. No shortcuts.</p><a href="' . esc_url( wc_get_page_permalink( 'shop' ) ) . '" style="color:var(--snb-sauce-red);display:inline-flex;align-items:center;gap:0.4rem;margin-top:0.75rem;font-family:var(--snb-font-display);letter-spacing:0.1em;text-transform:uppercase;">← Continue Shopping</a></div></section>';
+	echo '<section class="snb-section snb-section--black" style="padding-block:2rem 1rem;"><div class="snb-container"><h1>YOUR <span class="snb-accent">CART.</span></h1><p style="color:var(--snb-cream-soft);margin-top:0.5rem;">Bold flavors. Real ingredients. No shortcuts.</p><a href="' . esc_url( wc_get_page_permalink( 'shop' ) ) . '" style="color:var(--snb-sauce-red);display:inline-flex;align-items:center;gap:0.4rem;margin-top:0.75rem;font-family:var(--snb-font-display);letter-spacing:0.1em;text-transform:uppercase;font-size:0.95rem;">← Continue Shopping</a></div></section>';
 }
 
 /**
@@ -434,34 +439,8 @@ function snb_cart_empty_state() {
 	<?php
 }
 
-add_action( 'woocommerce_before_cart_totals', 'snb_cart_pickup_delivery' );
-function snb_cart_pickup_delivery() {
-	?>
-	<span class="snb-eyebrow" style="display:block;margin-bottom:0.5rem;">Get It Your Way</span>
-	<div class="snb-toggle-group" data-snb="pickup-delivery">
-		<label class="snb-toggle is-active">
-			<span class="snb-toggle__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7h14l-1 13H6z"/><path d="M9 7V4h6v3"/></svg></span>
-			<div><strong>Pickup</strong><span>Ready in 25–30 mins. Pick up at your nearest Sauce N' Bone.</span></div>
-			<input type="radio" name="snb_fulfillment" value="pickup" checked hidden>
-		</label>
-		<label class="snb-toggle">
-			<span class="snb-toggle__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 13l4-8h10l4 8M3 13v5h18v-5"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span>
-			<div><strong>Delivery</strong><span>Deliver to your door. Available in select areas.</span></div>
-			<input type="radio" name="snb_fulfillment" value="delivery" hidden>
-		</label>
-	</div>
-	<?php
-}
-
-add_action( 'woocommerce_after_cart_totals', 'snb_cart_secure' );
-function snb_cart_secure() {
-	?>
-	<div class="snb-trust" style="margin-top:1rem;">
-		<span class="snb-trust__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V8a4 4 0 1 1 8 0v3"/></svg></span>
-		<div><strong>Secure Checkout</strong><span>Your info is safe with us. 100% secure and encrypted.</span></div>
-	</div>
-	<?php
-}
+// Cart pickup/delivery + secure-checkout cards are now rendered inline
+// inside woocommerce/cart/cart.php instead of via hooks.
 
 add_action( 'woocommerce_after_cart', 'snb_cart_recommended', 20 );
 function snb_cart_recommended() {
@@ -585,6 +564,21 @@ function snb_checkout_payment_head() {
 	<?php
 }
 
+// Estimated pickup time card in the right summary, just before Place Order
+add_action( 'woocommerce_review_order_before_submit', 'snb_checkout_eta_card', 5 );
+function snb_checkout_eta_card() {
+	?>
+	<div class="snb-eta-card">
+		<span class="snb-flame"></span>
+		<div>
+			<span class="snb-eyebrow" style="margin:0;">Estimated Pickup Time</span>
+			<div style="font-family:var(--snb-font-display);color:var(--snb-sauce-red);font-size:1.6rem;letter-spacing:0.04em;line-height:1;margin:0.25rem 0;">25&ndash;35 MIN</div>
+			<span style="color:var(--snb-cream-soft);font-size:0.85rem;">Today, 6:45 PM</span>
+		</div>
+	</div>
+	<?php
+}
+
 // SECTION 6 — Tip (already exists, ensure number is 6)
 add_action( 'woocommerce_review_order_before_submit', 'snb_checkout_tip_selector' );
 function snb_checkout_tip_selector() {
@@ -608,6 +602,25 @@ function snb_checkout_reassurance() {
 		<div class="snb-trust"><span class="snb-trust__icon">🔥</span><div><strong>Made Fresh to Order</strong><span>Never frozen. Always bold.</span></div></div>
 		<div class="snb-trust"><span class="snb-trust__icon">🛍️</span><div><strong>Easy Pickup</strong><span>Skip the line. Grab and go.</span></div></div>
 		<div class="snb-trust"><span class="snb-trust__icon">❤</span><div><strong>Love It or Let Us Know</strong><span>We'll make it right.</span></div></div>
+	</div>
+	<?php
+}
+
+/* ============================================================
+   THANK-YOU: payment status line beneath the order table
+   ============================================================ */
+add_action( 'woocommerce_order_details_after_order_table', 'snb_thankyou_payment_line', 5 );
+function snb_thankyou_payment_line( $order ) {
+	if ( ! $order || ! is_a( $order, 'WC_Order' ) ) { return; }
+	$method = $order->get_payment_method_title();
+	$status = $order->get_status();
+	$is_paid = in_array( $status, array( 'processing', 'completed' ), true );
+	?>
+	<div class="snb-pay-line">
+		<span class="snb-pay-line__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg></span>
+		<span class="snb-pay-line__label">PAYMENT</span>
+		<span class="snb-pay-line__method"><?php echo esc_html( $method ?: 'Card' ); ?></span>
+		<span class="snb-pay-line__status<?php echo $is_paid ? ' is-paid' : ''; ?>"><?php echo esc_html( $is_paid ? 'PAID' : strtoupper( wc_get_order_status_name( $status ) ) ); ?></span>
 	</div>
 	<?php
 }

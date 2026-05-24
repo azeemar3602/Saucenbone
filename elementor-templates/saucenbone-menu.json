@@ -4,7 +4,7 @@
   "type": "page",
   "content": [
     {
-      "id": "b79a12a",
+      "id": "1d03784",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -18,7 +18,7 @@
       },
       "elements": [
         {
-          "id": "2708b4a",
+          "id": "2493417",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -26,7 +26,7 @@
           },
           "elements": [
             {
-              "id": "53ab11f",
+              "id": "d44a198",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -40,7 +40,7 @@
       "isInner": false
     },
     {
-      "id": "87d3403",
+      "id": "6bb6183",
       "elType": "section",
       "settings": {
         "structure": "20",
@@ -55,7 +55,7 @@
       },
       "elements": [
         {
-          "id": "acb13e5",
+          "id": "580612f",
           "elType": "column",
           "settings": {
             "_column_size": 66,
@@ -63,7 +63,7 @@
           },
           "elements": [
             {
-              "id": "a8e466f",
+              "id": "188dc73",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -74,7 +74,7 @@
           "isInner": false
         },
         {
-          "id": "e4cf5cd",
+          "id": "6653844",
           "elType": "column",
           "settings": {
             "_column_size": 34,
@@ -84,11 +84,11 @@
           },
           "elements": [
             {
-              "id": "473dc5e",
+              "id": "050b2da",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "[snb_minicart]"
+                "html": "[snb_minicart]\n\n<div class=\"snb-detail\" style=\"margin-top:1rem;\">\n\t<div class=\"snb-detail__media\"></div>\n\t<h2 class=\"snb-detail__title\" style=\"font-size:1.6rem;\">Bone-In Wings</h2>\n\t<p class=\"snb-detail__copy\" style=\"font-size:0.9rem;\">Classic, crispy, and packed with bold flavor.</p>\n\n\t<div class=\"snb-detail__field\">\n\t\t<label class=\"snb-detail__label\">Choose Size</label>\n\t\t<div class=\"snb-pill-row\">\n\t\t\t<span class=\"snb-pill\">6 pc<span class=\"snb-pill__sub\">$10.99</span></span>\n\t\t\t<span class=\"snb-pill is-active\">10 pc<span class=\"snb-pill__sub\">$17.99</span></span>\n\t\t\t<span class=\"snb-pill\">15 pc<span class=\"snb-pill__sub\">$24.99</span></span>\n\t\t\t<span class=\"snb-pill\">20 pc<span class=\"snb-pill__sub\">$31.99</span></span>\n\t\t</div>\n\t</div>\n\n\t<div class=\"snb-detail__field\">\n\t\t<label class=\"snb-detail__label\" for=\"snb-mflavor\">Choose Your Flavor</label>\n\t\t<select id=\"snb-mflavor\" class=\"snb-select\">\n\t\t\t<option>🍓 Strawberry Hot 🔥🔥</option>\n\t\t\t<option>🥭 Mango Habanero 🔥🔥🔥</option>\n\t\t\t<option>🍍 Pineapple Jalape&ntilde;o 🔥🔥</option>\n\t\t\t<option>🍯 Sweet &amp; Tangy 🔥</option>\n\t\t\t<option>🧄 Garlic Parmesan 🔥</option>\n\t\t\t<option>🌶️ Classic Hot 🔥🔥</option>\n\t\t</select>\n\t\t<a href=\"#\" style=\"display:inline-flex;align-items:center;gap:0.4rem;color:var(--snb-sauce-red);margin-top:0.5rem;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;font-family:var(--snb-font-display);\">\n\t\t\t<svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M4 4l16 16M20 4L4 20\"/></svg>\n\t\t\tMix Flavors (Half &amp; Half)\n\t\t</a>\n\t</div>\n\n\t<div class=\"snb-detail__field\">\n\t\t<label class=\"snb-detail__label\">Add-Ons</label>\n\t\t<div class=\"snb-addon-list\">\n\t\t\t<label><input type=\"checkbox\"> Ranch <span class=\"snb-addon-price\">$0.75</span></label>\n\t\t\t<label><input type=\"checkbox\"> Garlic Parmesan <span class=\"snb-addon-price\">$1.00</span></label>\n\t\t\t<label><input type=\"checkbox\"> Extra Sauce <span class=\"snb-addon-price\">$1.00</span></label>\n\t\t</div>\n\t</div>\n\n\t<div class=\"snb-detail__field\" style=\"display:flex;align-items:center;justify-content:space-between;gap:1rem;\">\n\t\t<label class=\"snb-detail__label\" style=\"margin:0;\">Quantity</label>\n\t\t<div class=\"snb-qty\">\n\t\t\t<button type=\"button\" data-snb-qty=\"decrement\">−</button>\n\t\t\t<span class=\"snb-qty__value\">1</span>\n\t\t\t<button type=\"button\" data-snb-qty=\"increment\">+</button>\n\t\t</div>\n\t</div>\n\n\t<a href=\"#\" class=\"snb-btn snb-btn--block\" style=\"margin-top:0.75rem;\">Add to Cart &nbsp; <span style=\"opacity:0.85;\">$17.99</span></a>\n</div>"
               }
             }
           ],
@@ -98,7 +98,7 @@
       "isInner": false
     },
     {
-      "id": "9cc5aea",
+      "id": "4d4476e",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -112,7 +112,7 @@
       },
       "elements": [
         {
-          "id": "a48c1c8",
+          "id": "7b3ec10",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -120,7 +120,7 @@
           },
           "elements": [
             {
-              "id": "612f057",
+              "id": "d7fd601",
               "elType": "widget",
               "widgetType": "html",
               "settings": {

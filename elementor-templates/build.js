@@ -293,7 +293,60 @@ const menuLeftContent = `
 	</div>
 </div>`;
 
-const menuRightContent = `[snb_minicart]`;
+const menuRightContent = `
+[snb_minicart]
+
+<div class="snb-detail" style="margin-top:1rem;">
+	<div class="snb-detail__media"></div>
+	<h2 class="snb-detail__title" style="font-size:1.6rem;">Bone-In Wings</h2>
+	<p class="snb-detail__copy" style="font-size:0.9rem;">Classic, crispy, and packed with bold flavor.</p>
+
+	<div class="snb-detail__field">
+		<label class="snb-detail__label">Choose Size</label>
+		<div class="snb-pill-row">
+			<span class="snb-pill">6 pc<span class="snb-pill__sub">$10.99</span></span>
+			<span class="snb-pill is-active">10 pc<span class="snb-pill__sub">$17.99</span></span>
+			<span class="snb-pill">15 pc<span class="snb-pill__sub">$24.99</span></span>
+			<span class="snb-pill">20 pc<span class="snb-pill__sub">$31.99</span></span>
+		</div>
+	</div>
+
+	<div class="snb-detail__field">
+		<label class="snb-detail__label" for="snb-mflavor">Choose Your Flavor</label>
+		<select id="snb-mflavor" class="snb-select">
+			<option>🍓 Strawberry Hot 🔥🔥</option>
+			<option>🥭 Mango Habanero 🔥🔥🔥</option>
+			<option>🍍 Pineapple Jalape&ntilde;o 🔥🔥</option>
+			<option>🍯 Sweet &amp; Tangy 🔥</option>
+			<option>🧄 Garlic Parmesan 🔥</option>
+			<option>🌶️ Classic Hot 🔥🔥</option>
+		</select>
+		<a href="#" style="display:inline-flex;align-items:center;gap:0.4rem;color:var(--snb-sauce-red);margin-top:0.5rem;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;font-family:var(--snb-font-display);">
+			<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l16 16M20 4L4 20"/></svg>
+			Mix Flavors (Half &amp; Half)
+		</a>
+	</div>
+
+	<div class="snb-detail__field">
+		<label class="snb-detail__label">Add-Ons</label>
+		<div class="snb-addon-list">
+			<label><input type="checkbox"> Ranch <span class="snb-addon-price">$0.75</span></label>
+			<label><input type="checkbox"> Garlic Parmesan <span class="snb-addon-price">$1.00</span></label>
+			<label><input type="checkbox"> Extra Sauce <span class="snb-addon-price">$1.00</span></label>
+		</div>
+	</div>
+
+	<div class="snb-detail__field" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
+		<label class="snb-detail__label" style="margin:0;">Quantity</label>
+		<div class="snb-qty">
+			<button type="button" data-snb-qty="decrement">−</button>
+			<span class="snb-qty__value">1</span>
+			<button type="button" data-snb-qty="increment">+</button>
+		</div>
+	</div>
+
+	<a href="#" class="snb-btn snb-btn--block" style="margin-top:0.75rem;">Add to Cart &nbsp; <span style="opacity:0.85;">$17.99</span></a>
+</div>`;
 
 const menuDetail = `
 <section class="snb-section snb-section--black">
