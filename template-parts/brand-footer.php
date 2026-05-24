@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
  */
 $snb_footer_logo = apply_filters(
 	'snb_footer_logo_url',
-	'/wp-content/uploads/2026/05/ChatGPT-Image-May-21-2026-01_25_02-PM-e1779629478727.png'
+	'/wp-content/uploads/2026/05/Logo.png'
 );
 ?>
 <footer class="snb-footer" role="contentinfo">
