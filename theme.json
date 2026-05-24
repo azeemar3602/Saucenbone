@@ -1,0 +1,46 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"settings": {
+		"color": {
+			"defaultPalette": false,
+			"palette": [
+				{ "slug": "snb-black",     "name": "SNB Black",     "color": "#0B0B0B" },
+				{ "slug": "snb-charcoal",  "name": "SNB Charcoal",  "color": "#11110F" },
+				{ "slug": "snb-sauce-red", "name": "Sauce Red",     "color": "#E92A0A" },
+				{ "slug": "snb-cream",     "name": "SNB Cream",     "color": "#F4EEDF" },
+				{ "slug": "snb-gold",      "name": "SNB Gold",      "color": "#C9A24A" },
+				{ "slug": "snb-grape",     "name": "SNB Grape",     "color": "#6F39BE" }
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"slug": "snb-display",
+					"name": "SNB Display",
+					"fontFamily": "\"Bebas Neue\", Anton, Oswald, Impact, sans-serif"
+				},
+				{
+					"slug": "snb-body",
+					"name": "SNB Body",
+					"fontFamily": "Montserrat, Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif"
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--snb-black)",
+			"text": "var(--wp--preset--color--snb-cream)"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--snb-body)"
+		},
+		"elements": {
+			"h1": { "typography": { "fontFamily": "var(--wp--preset--font-family--snb-display)" } },
+			"h2": { "typography": { "fontFamily": "var(--wp--preset--font-family--snb-display)" } },
+			"h3": { "typography": { "fontFamily": "var(--wp--preset--font-family--snb-display)" } },
+			"h4": { "typography": { "fontFamily": "var(--wp--preset--font-family--snb-display)" } }
+		}
+	}
+}
