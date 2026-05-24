@@ -1,58 +1,30 @@
 <?php
 /**
  * Title: Home — Signature Flavors
- * Description: The six signature sauces.
+ * Description: Side-labeled section with 6 signature flavor cards.
  */
 ?>
 <!-- wp:html -->
 <section class="snb-section snb-section--charcoal">
 	<div class="snb-container">
-		<div class="snb-section__head">
-			<span class="snb-eyebrow">The Originals</span>
-			<h2>Signature Flavors</h2>
-			<p>Our originals. Made from real ingredients. Built for flavor.</p>
-		</div>
-		<div class="snb-grid snb-grid--3">
+		<div class="snb-head">
+			<div class="snb-head__label">
+				<h2>SIGNATURE<br>FLAVORS</h2>
+				<span class="snb-head__label-line"></span>
+				<p>Our originals. Made from real ingredients. Built for flavor.</p>
+			</div>
+			<div class="snb-head__content">
+				<div class="snb-grid snb-grid--3">
 
-			<article class="snb-card">
-				<div class="snb-card__media"></div>
-				<h3 class="snb-card__title">Strawberry Hot</h3>
-				<p class="snb-card__copy">Sweet heat with a bold berry kick.</p>
-			</article>
+					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E92A0A;">Strawberry Hot</h3></article>
+					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E92A0A;">Mango Habanero</h3></article>
+					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E92A0A;">Pineapple Jalape&ntilde;o</h3></article>
+					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E92A0A;">Sweet &amp; Tangy<br><small style="font-size:0.7rem;color:#C9A24A;letter-spacing:0.18em;">(Jacksonville Favorite)</small></h3></article>
+					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E92A0A;">Garlic Parmesan</h3></article>
+					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E92A0A;">Classic Hot</h3></article>
 
-			<article class="snb-card">
-				<div class="snb-card__media"></div>
-				<h3 class="snb-card__title">Mango Habanero</h3>
-				<p class="snb-card__copy">Tropical up front, fire on the finish.</p>
-			</article>
-
-			<article class="snb-card">
-				<div class="snb-card__media"></div>
-				<h3 class="snb-card__title">Pineapple Jalape&ntilde;o</h3>
-				<p class="snb-card__copy">Bright, juicy, and spicy.</p>
-			</article>
-
-			<article class="snb-card">
-				<div class="snb-card__media"></div>
-				<h3 class="snb-card__title">Sweet &amp; Tangy</h3>
-				<p class="snb-card__copy">Smooth, sticky, crowd favorite.</p>
-			</article>
-
-			<article class="snb-card">
-				<div class="snb-card__media"></div>
-				<h3 class="snb-card__title">Garlic Parmesan</h3>
-				<p class="snb-card__copy">Savory, buttery, and loaded.</p>
-			</article>
-
-			<article class="snb-card">
-				<div class="snb-card__media"></div>
-				<h3 class="snb-card__title">Classic Hot</h3>
-				<p class="snb-card__copy">Real wing-shop heat.</p>
-			</article>
-
-		</div>
-		<div class="snb-text-center snb-mt-2">
-			<a href="/menu/" class="snb-btn snb-btn--ghost">View All Flavors</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>

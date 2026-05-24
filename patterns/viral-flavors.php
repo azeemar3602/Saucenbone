@@ -1,43 +1,28 @@
 <?php
 /**
  * Title: Home — Viral Flavors
- * Description: The four viral / unexpected sauce flavors.
+ * Description: Side-labeled section with 4 viral flavor cards.
  */
 ?>
 <!-- wp:html -->
 <section class="snb-section snb-section--black">
 	<div class="snb-container">
-		<div class="snb-section__head">
-			<span class="snb-eyebrow">Fan Favorites</span>
-			<h2>Viral Flavors</h2>
-			<p>Bold. Unexpected. Built to break the internet.</p>
-		</div>
-		<div class="snb-grid snb-grid--4">
+		<div class="snb-head">
+			<div class="snb-head__label">
+				<h2>VIRAL<br>FLAVORS</h2>
+				<span class="snb-head__label-line"></span>
+				<p>Bold. Unexpected. Fan favorites.</p>
+			</div>
+			<div class="snb-head__content">
+				<div class="snb-grid snb-grid--4">
 
-			<article class="snb-card">
-				<div class="snb-card__media"></div>
-				<h3 class="snb-card__title">Blueberry Blaze</h3>
-				<p class="snb-card__copy">Berry-rich heat with a smoky finish.</p>
-			</article>
+					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#6F39BE;">Blueberry Blaze</h3></article>
+					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#6F39BE;">Grape Inferno</h3></article>
+					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E92A0A;">Orange Chili Rush</h3></article>
+					<article class="snb-card"><div class="snb-card__media"></div><h3 class="snb-card__title" style="color:#E92A0A;">Real Heat</h3></article>
 
-			<article class="snb-card">
-				<div class="snb-card__media"></div>
-				<h3 class="snb-card__title">Grape Inferno</h3>
-				<p class="snb-card__copy">Bold flavor. No mercy.</p>
-			</article>
-
-			<article class="snb-card">
-				<div class="snb-card__media"></div>
-				<h3 class="snb-card__title">Orange Chili Rush</h3>
-				<p class="snb-card__copy">Citrus punch with chili fire.</p>
-			</article>
-
-			<article class="snb-card">
-				<div class="snb-card__media"></div>
-				<h3 class="snb-card__title">Real Heat</h3>
-				<p class="snb-card__copy">For serious spice lovers.</p>
-			</article>
-
+				</div>
+			</div>
 		</div>
 	</div>
 </section>

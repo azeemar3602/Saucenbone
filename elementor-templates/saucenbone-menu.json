@@ -4,7 +4,7 @@
   "type": "page",
   "content": [
     {
-      "id": "72c6d1b",
+      "id": "0f1e360",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -18,7 +18,7 @@
       },
       "elements": [
         {
-          "id": "761cf96",
+          "id": "7b7ec59",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -26,11 +26,11 @@
           },
           "elements": [
             {
-              "id": "7eb54d3",
+              "id": "743501a",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "<section class=\"snb-hero\" style=\"padding-block:5rem;\">\n\t<div class=\"snb-hero__grid\" style=\"grid-template-columns:1fr;text-align:center;\">\n\t\t<div>\n\t\t\t<span class=\"snb-eyebrow\">The Menu</span>\n\t\t\t<h1 class=\"snb-hero__title\" style=\"margin-inline:auto;\">Pick Your <span class=\"snb-accent\">Flavor.</span></h1>\n\t\t\t<p class=\"snb-hero__copy\" style=\"margin-inline:auto;\">Real ingredients. Bold flavors. Built for flavor that hits hard. Choose your style, your flavor, and get it your way.</p>\n\t\t</div>\n\t</div>\n</section>\n<span class=\"snb-drip\" aria-hidden=\"true\"></span>"
+                "html": "<section class=\"snb-hero\" style=\"padding-block:3rem;\">\n\t<div class=\"snb-hero__grid\">\n\t\t<div><h1 class=\"snb-hero__title\" style=\"font-size:clamp(3rem,8vw,7rem);\">PICK YOUR<br><span class=\"snb-accent\">FLAVOR.</span></h1></div>\n\t\t<div style=\"display:grid;grid-template-columns:1fr 1.1fr;gap:1.5rem;align-items:center;\">\n\t\t\t<div>\n\t\t\t\t<p style=\"color:#F4EEDF;font-family:var(--snb-font-display);letter-spacing:0.04em;font-size:1.2rem;line-height:1.2;margin:0 0 0.75rem;\">Real ingredients. Bold flavors.<br>Built for flavor that hits hard.</p>\n\t\t\t\t<p class=\"snb-hero__copy\" style=\"margin:0;font-size:0.95rem;\">Choose your style, your flavor, and get it your way.</p>\n\t\t\t</div>\n\t\t\t<div class=\"snb-hero__media\" aria-hidden=\"true\"><span class=\"snb-hero__media-placeholder\">WINGS</span></div>\n\t\t</div>\n\t</div>\n</section>"
               }
             }
           ],
@@ -40,7 +40,7 @@
       "isInner": false
     },
     {
-      "id": "c75cf18",
+      "id": "0a90919",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -54,7 +54,7 @@
       },
       "elements": [
         {
-          "id": "8d7f086",
+          "id": "172ea5e",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -62,11 +62,11 @@
           },
           "elements": [
             {
-              "id": "58fdb81",
+              "id": "71c46b0",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "<div class=\"snb-container\">\n\t<nav class=\"snb-tabs\" aria-label=\"Menu categories\">\n\t\t<a href=\"#bone-in\" class=\"snb-tab is-active\">Bone-In Wings</a>\n\t\t<a href=\"#boneless\" class=\"snb-tab\">Boneless Wings</a>\n\t\t<a href=\"#tenders\" class=\"snb-tab\">Tenders</a>\n\t\t<a href=\"#sides\" class=\"snb-tab\">Sides</a>\n\t\t<a href=\"#drinks\" class=\"snb-tab\">Drinks</a>\n\t\t<a href=\"#sweet\" class=\"snb-tab\">Sweet</a>\n\t\t<a href=\"/shop/\" class=\"snb-tab\">Merch</a>\n\t</nav>\n</div>"
+                "html": "<div class=\"snb-menu-layout\"><div>\n<nav class=\"snb-tabs\" aria-label=\"Menu categories\">\n\t<a href=\"#bone-in\" class=\"snb-tab is-active\"><span class=\"snb-tab__icon\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M14 4a4 4 0 1 1 4 4l-9 9-4 1 1-4z\"/></svg></span>Bone-In Wings</a>\n\t<a href=\"#boneless\" class=\"snb-tab\"><span class=\"snb-tab__icon\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/></svg></span>Boneless Wings</a>\n\t<a href=\"#tenders\" class=\"snb-tab\"><span class=\"snb-tab__icon\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M3 7c4 0 6 10 9 10s5-10 9-10\"/></svg></span>Tenders</a>\n\t<a href=\"#sides\" class=\"snb-tab\"><span class=\"snb-tab__icon\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"6\" y=\"3\" width=\"12\" height=\"18\" rx=\"2\"/></svg></span>Sides</a>\n\t<a href=\"#drinks\" class=\"snb-tab\"><span class=\"snb-tab__icon\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M7 4h10l-1 16H8z\"/></svg></span>Drinks</a>\n\t<a href=\"#sweet\" class=\"snb-tab\"><span class=\"snb-tab__icon\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"6\"/></svg></span>Sweet</a>\n\t<a href=\"/shop/\" class=\"snb-tab\"><span class=\"snb-tab__icon\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M3 8l3-4h12l3 4-9 13z\"/></svg></span>Merch</a>\n</nav>\n[snb_products limit=\"3\" heading=\"Wings &amp; Tenders\" anchor=\"bone-in\" columns=\"3\"]\n[snb_products limit=\"4\" heading=\"Sides &amp; More\" anchor=\"sides\" columns=\"4\" offset=\"3\"]\n[snb_products limit=\"3\" heading=\"Drinks &amp; Sweet\" anchor=\"drinks\" columns=\"3\" offset=\"7\"]"
               }
             }
           ],
@@ -76,7 +76,7 @@
       "isInner": false
     },
     {
-      "id": "71d05bb",
+      "id": "84ff5b4",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -90,7 +90,7 @@
       },
       "elements": [
         {
-          "id": "dfbf508",
+          "id": "2d84b27",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -98,11 +98,11 @@
           },
           "elements": [
             {
-              "id": "5842487",
+              "id": "dd174dc",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "<section class=\"snb-section snb-section--black\">\n\t<div class=\"snb-container\">\n\t\t<h2 id=\"bone-in\" style=\"margin-bottom:1.5rem;\">Wings &amp; Tenders</h2>\n\t\t<div class=\"snb-grid snb-grid--3\">\n\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">Bone-In Wings</h3><p class=\"snb-card__copy\">Classic, crispy, flavor-loaded.</p><span class=\"snb-card__price\">$15.99+</span><a href=\"?product=bone-in\" class=\"snb-btn snb-card__cta\">Add to Cart</a></article>\n\t\t\t<article class=\"snb-card\" id=\"boneless\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">Boneless Wings</h3><p class=\"snb-card__copy\">Big flavor, easy bite.</p><span class=\"snb-card__price\">$15.99+</span><a href=\"?product=boneless\" class=\"snb-btn snb-card__cta\">Add to Cart</a></article>\n\t\t\t<article class=\"snb-card\" id=\"tenders\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">Tenders</h3><p class=\"snb-card__copy\">Juicy, bold, and built for dipping.</p><span class=\"snb-card__price\">$15.99+</span><a href=\"?product=tenders\" class=\"snb-btn snb-card__cta\">Add to Cart</a></article>\n\t\t</div>\n\t\t<h2 id=\"sides\" style=\"margin:3rem 0 1.5rem;\">Sides</h2>\n\t\t<div class=\"snb-grid snb-grid--4\">\n\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">Corn Ribs</h3><p class=\"snb-card__copy\">Crispy. Seasoned. Obsessed.</p><span class=\"snb-card__price\">$6.49</span><a href=\"?product=corn-ribs\" class=\"snb-btn snb-card__cta\">Add</a></article>\n\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">Fries</h3><p class=\"snb-card__copy\">Crispy and perfectly seasoned.</p><span class=\"snb-card__price\">$4.49</span><a href=\"?product=fries\" class=\"snb-btn snb-card__cta\">Add</a></article>\n\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">Loaded Fries</h3><p class=\"snb-card__copy\">Fries, cheese sauce, bacon, and ranch.</p><span class=\"snb-card__price\">$7.49</span><a href=\"?product=loaded-fries\" class=\"snb-btn snb-card__cta\">Add</a></article>\n\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">Mac &amp; Cheese</h3><p class=\"snb-card__copy\">Creamy, cheesy, and always a win.</p><span class=\"snb-card__price\">$6.49</span><a href=\"?product=mac-cheese\" class=\"snb-btn snb-card__cta\">Add</a></article>\n\t\t</div>\n\t\t<h2 id=\"drinks\" style=\"margin:3rem 0 1.5rem;\">Drinks</h2>\n\t\t<div class=\"snb-grid snb-grid--3\">\n\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">Strawberry Lemonade</h3><span class=\"snb-card__price\">$3.49</span><a href=\"?product=strawberry-lemonade\" class=\"snb-btn snb-card__cta\">Add</a></article>\n\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">Mango Lemonade</h3><span class=\"snb-card__price\">$3.49</span><a href=\"?product=mango-lemonade\" class=\"snb-btn snb-card__cta\">Add</a></article>\n\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">Blue Raspberry Lemonade</h3><span class=\"snb-card__price\">$3.49</span><a href=\"?product=blue-raspberry-lemonade\" class=\"snb-btn snb-card__cta\">Add</a></article>\n\t\t</div>\n\t\t<h2 id=\"sweet\" style=\"margin:3rem 0 1.5rem;\">Sweet</h2>\n\t\t<div class=\"snb-grid snb-grid--3\">\n\t\t\t<article class=\"snb-card\"><div class=\"snb-card__media\"></div><h3 class=\"snb-card__title\">Caramel Popcorn Bites</h3><p class=\"snb-card__copy\">Sweet, crunchy, and totally addictive.</p><span class=\"snb-card__price\">$4.49</span><a href=\"?product=popcorn-bites\" class=\"snb-btn snb-card__cta\">Add</a></article>\n\t\t</div>\n\t</div>\n</section>"
+                "html": "<section class=\"snb-section snb-section--charcoal\" style=\"padding-block:2.5rem;\">\n\t<div class=\"snb-container\">\n\t\t<div class=\"snb-grid snb-grid--2\">\n\t\t\t<div class=\"snb-card\">\n\t\t\t\t<h3 class=\"snb-card__title\" style=\"margin-bottom:0.5rem;\">Signature Flavors</h3>\n\t\t\t\t<span class=\"snb-head__label-line\" style=\"margin-bottom:1rem;\"></span>\n\t\t\t\t<div class=\"snb-flavor-list\">\n\t\t\t\t\t<div class=\"snb-flavor-row\"><span class=\"snb-flavor-row__icon\">🍓</span><span>Strawberry Hot</span><span class=\"snb-flavor-row__heat\">🔥🔥</span></div>\n\t\t\t\t\t<div class=\"snb-flavor-row\"><span class=\"snb-flavor-row__icon\">🧄</span><span>Garlic Parmesan</span><span class=\"snb-flavor-row__heat\">🔥</span></div>\n\t\t\t\t\t<div class=\"snb-flavor-row\"><span class=\"snb-flavor-row__icon\">🥭</span><span>Mango Habanero</span><span class=\"snb-flavor-row__heat\">🔥🔥🔥</span></div>\n\t\t\t\t\t<div class=\"snb-flavor-row\"><span class=\"snb-flavor-row__icon\">🌶️</span><span>Classic Hot</span><span class=\"snb-flavor-row__heat\">🔥🔥</span></div>\n\t\t\t\t\t<div class=\"snb-flavor-row\"><span class=\"snb-flavor-row__icon\">🍍</span><span>Pineapple Jalape&ntilde;o</span><span class=\"snb-flavor-row__heat\">🔥🔥</span></div>\n\t\t\t\t\t<div class=\"snb-flavor-row\"><span class=\"snb-flavor-row__icon\">🍯</span><span>Sweet &amp; Tangy</span><span class=\"snb-flavor-row__heat\">🔥</span></div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"snb-text-center\" style=\"margin-top:1rem;\"><a href=\"#\" class=\"snb-btn snb-btn--ghost snb-btn--sm\">View All Flavors</a></div>\n\t\t\t</div>\n\t\t\t<div class=\"snb-card\">\n\t\t\t\t<h3 class=\"snb-card__title\" style=\"margin-bottom:0.5rem;\">Viral Flavors</h3>\n\t\t\t\t<span class=\"snb-head__label-line\" style=\"margin-bottom:1rem;\"></span>\n\t\t\t\t<div class=\"snb-flavor-list\" style=\"grid-template-columns:1fr;\">\n\t\t\t\t\t<div class=\"snb-flavor-row\"><span class=\"snb-flavor-row__icon\">🫐</span><span>Blueberry Blaze</span><span class=\"snb-flavor-row__heat\">🔥🔥</span></div>\n\t\t\t\t\t<div class=\"snb-flavor-row\"><span class=\"snb-flavor-row__icon\">🍇</span><span>Grape Inferno</span><span class=\"snb-flavor-row__heat\">🔥🔥🔥</span></div>\n\t\t\t\t\t<div class=\"snb-flavor-row\"><span class=\"snb-flavor-row__icon\">🍊</span><span>Orange Chili Rush</span><span class=\"snb-flavor-row__heat\">🔥🔥</span></div>\n\t\t\t\t\t<div class=\"snb-flavor-row\"><span class=\"snb-flavor-row__icon\">💀</span><span>Real Heat</span><span class=\"snb-flavor-row__heat\">🔥🔥🔥🔥</span></div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"snb-text-center\" style=\"margin-top:1rem;\"><a href=\"#\" class=\"snb-btn snb-btn--ghost snb-btn--sm\">View All Flavors</a></div>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"snb-mix-strip\">\n\t\t\t<div class=\"snb-mix-strip__icon\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M4 4l16 16M20 4L4 20\"/></svg></div>\n\t\t\t<div class=\"snb-mix-strip__copy\"><strong>Not sure? Try a mix of flavors!</strong><span>Half one flavor, half another. Because variety is flavor.</span></div>\n\t\t\t<a href=\"?mix=1\" class=\"snb-btn snb-btn--sm\">Mix Flavors</a>\n\t\t</div>\n\t</div>\n</section>"
               }
             }
           ],
@@ -112,7 +112,7 @@
       "isInner": false
     },
     {
-      "id": "c0e2218",
+      "id": "310141e",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -126,7 +126,7 @@
       },
       "elements": [
         {
-          "id": "b67b6d5",
+          "id": "c81210d",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -134,11 +134,11 @@
           },
           "elements": [
             {
-              "id": "6c1d164",
+              "id": "5054d0d",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "<section class=\"snb-section snb-section--charcoal\">\n\t<div class=\"snb-container\">\n\t\t<div class=\"snb-section__head\"><span class=\"snb-eyebrow\">Signature Flavors</span><h2>The Originals</h2></div>\n\t\t<div class=\"snb-chip-row\">\n\t\t\t<button type=\"button\" class=\"snb-chip\">Strawberry Hot</button>\n\t\t\t<button type=\"button\" class=\"snb-chip\">Mango Habanero</button>\n\t\t\t<button type=\"button\" class=\"snb-chip\">Pineapple Jalape&ntilde;o</button>\n\t\t\t<button type=\"button\" class=\"snb-chip\">Sweet &amp; Tangy</button>\n\t\t\t<button type=\"button\" class=\"snb-chip\">Garlic Parmesan</button>\n\t\t\t<button type=\"button\" class=\"snb-chip\">Classic Hot</button>\n\t\t</div>\n\t\t<div class=\"snb-text-center\" style=\"margin-top:1.5rem;\"><a href=\"#\" class=\"snb-btn snb-btn--ghost\">View All Flavors</a></div>\n\t\t<div class=\"snb-section__head\" style=\"margin-top:3rem;\"><span class=\"snb-eyebrow\">Viral Flavors</span><h2>Fan Favorites</h2></div>\n\t\t<div class=\"snb-chip-row\">\n\t\t\t<button type=\"button\" class=\"snb-chip snb-chip--grape\">Blueberry Blaze</button>\n\t\t\t<button type=\"button\" class=\"snb-chip snb-chip--grape\">Grape Inferno</button>\n\t\t\t<button type=\"button\" class=\"snb-chip\">Orange Chili Rush</button>\n\t\t\t<button type=\"button\" class=\"snb-chip\">Real Heat</button>\n\t\t</div>\n\t\t<div class=\"snb-text-center\" style=\"margin-top:1.5rem;\"><a href=\"#\" class=\"snb-btn snb-btn--ghost\">View All Flavors</a></div>\n\t\t<div class=\"snb-mix-strip\" style=\"margin-top:3rem;\">\n\t\t\t<div><h3>Not sure? Try a mix of flavors!</h3><p>Half one flavor, half another. Because variety is flavor.</p></div>\n\t\t\t<a href=\"?mix=1\" class=\"snb-btn\">Mix Flavors</a>\n\t\t</div>\n\t</div>\n</section>"
+                "html": "</div><aside>[snb_minicart]</aside></div>"
               }
             }
           ],
@@ -148,7 +148,7 @@
       "isInner": false
     },
     {
-      "id": "8826aa9",
+      "id": "641a914",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -162,7 +162,7 @@
       },
       "elements": [
         {
-          "id": "1df7195",
+          "id": "753c1dd",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -170,11 +170,11 @@
           },
           "elements": [
             {
-              "id": "038e2df",
+              "id": "39f89c2",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "<section class=\"snb-section snb-section--black\">\n\t<div class=\"snb-container\">\n\t\t<div class=\"snb-detail\">\n\t\t\t<div class=\"snb-detail__media\"></div>\n\t\t\t<div>\n\t\t\t\t<span class=\"snb-eyebrow\">Featured</span>\n\t\t\t\t<h2 style=\"margin:0.5rem 0 0.75rem;\">Bone-In Wings</h2>\n\t\t\t\t<p>Classic, crispy, and packed with bold flavor.</p>\n\t\t\t\t<div class=\"snb-detail__field\">\n\t\t\t\t\t<label>Choose size</label>\n\t\t\t\t\t<div class=\"snb-chip-row\" style=\"justify-content:flex-start;\">\n\t\t\t\t\t\t<button type=\"button\" class=\"snb-chip\">6 pc</button>\n\t\t\t\t\t\t<button type=\"button\" class=\"snb-chip\" aria-pressed=\"true\">10 pc</button>\n\t\t\t\t\t\t<button type=\"button\" class=\"snb-chip\">15 pc</button>\n\t\t\t\t\t\t<button type=\"button\" class=\"snb-chip\">20 pc</button>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"snb-detail__field\">\n\t\t\t\t\t<label for=\"snb-flavor\">Choose flavor</label>\n\t\t\t\t\t<select id=\"snb-flavor\" class=\"snb-select\">\n\t\t\t\t\t\t<option>Strawberry Hot</option><option>Mango Habanero</option><option>Pineapple Jalape&ntilde;o</option><option>Sweet &amp; Tangy</option><option>Garlic Parmesan</option><option>Classic Hot</option><option>Blueberry Blaze</option><option>Grape Inferno</option><option>Orange Chili Rush</option><option>Real Heat</option>\n\t\t\t\t\t</select>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"snb-detail__field\">\n\t\t\t\t\t<label>Mix it up</label>\n\t\t\t\t\t<div class=\"snb-chip-row\" style=\"justify-content:flex-start;\"><button type=\"button\" class=\"snb-chip\">Single Flavor</button><button type=\"button\" class=\"snb-chip\">Half &amp; Half</button><button type=\"button\" class=\"snb-chip\">Mix Flavors</button></div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"snb-detail__field\">\n\t\t\t\t\t<label>Add-ons</label>\n\t\t\t\t\t<div class=\"snb-chip-row\" style=\"justify-content:flex-start;\"><button type=\"button\" class=\"snb-chip\">+ Ranch</button><button type=\"button\" class=\"snb-chip\">+ Garlic Parmesan</button><button type=\"button\" class=\"snb-chip\">+ Extra Sauce</button></div>\n\t\t\t\t</div>\n\t\t\t\t<a href=\"#\" class=\"snb-btn snb-btn--block\" style=\"margin-top:1rem;\">Add to Cart &mdash; $17.99</a>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>"
+                "html": "<section class=\"snb-section snb-section--black\">\n\t<div class=\"snb-container\">\n\t\t<div class=\"snb-detail\">\n\t\t\t<div class=\"snb-detail__media\"></div>\n\t\t\t<h2 class=\"snb-detail__title\">Bone-In Wings</h2>\n\t\t\t<p class=\"snb-detail__copy\">Classic, crispy, and packed with bold flavor.</p>\n\t\t\t<div class=\"snb-detail__field\">\n\t\t\t\t<label class=\"snb-detail__label\">Choose Size</label>\n\t\t\t\t<div class=\"snb-pill-row\"><span class=\"snb-pill\">6 pc<span class=\"snb-pill__sub\">$10.99</span></span><span class=\"snb-pill is-active\">10 pc<span class=\"snb-pill__sub\">$17.99</span></span><span class=\"snb-pill\">15 pc<span class=\"snb-pill__sub\">$24.99</span></span><span class=\"snb-pill\">20 pc<span class=\"snb-pill__sub\">$31.99</span></span></div>\n\t\t\t</div>\n\t\t\t<div class=\"snb-detail__field\">\n\t\t\t\t<label class=\"snb-detail__label\" for=\"snb-flavor-select-2\">Choose Your Flavor</label>\n\t\t\t\t<select id=\"snb-flavor-select-2\" class=\"snb-select\">\n\t\t\t\t\t<option>🍓 Strawberry Hot 🔥🔥</option><option>🥭 Mango Habanero 🔥🔥🔥</option><option>🍍 Pineapple Jalape&ntilde;o 🔥🔥</option><option>🍯 Sweet &amp; Tangy 🔥</option><option>🧄 Garlic Parmesan 🔥</option><option>🌶️ Classic Hot 🔥🔥</option><option>🫐 Blueberry Blaze 🔥🔥</option><option>🍇 Grape Inferno 🔥🔥🔥</option><option>🍊 Orange Chili Rush 🔥🔥</option><option>💀 Real Heat 🔥🔥🔥🔥</option>\n\t\t\t\t</select>\n\t\t\t</div>\n\t\t\t<div class=\"snb-detail__field\">\n\t\t\t\t<label class=\"snb-detail__label\">Add-Ons</label>\n\t\t\t\t<div class=\"snb-addon-list\">\n\t\t\t\t\t<label><input type=\"checkbox\"> Ranch <span class=\"snb-addon-price\">$0.75</span></label>\n\t\t\t\t\t<label><input type=\"checkbox\"> Garlic Parmesan <span class=\"snb-addon-price\">$1.00</span></label>\n\t\t\t\t\t<label><input type=\"checkbox\"> Extra Sauce <span class=\"snb-addon-price\">$1.00</span></label>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"snb-detail__field\" style=\"display:flex;align-items:center;justify-content:space-between;gap:1rem;\">\n\t\t\t\t<label class=\"snb-detail__label\" style=\"margin:0;\">Quantity</label>\n\t\t\t\t<div class=\"snb-qty\"><button type=\"button\">−</button><span class=\"snb-qty__value\">1</span><button type=\"button\">+</button></div>\n\t\t\t</div>\n\t\t\t<a href=\"#\" class=\"snb-btn snb-btn--block\" style=\"margin-top:1rem;\">Add to Cart &nbsp; <span style=\"opacity:0.85;\">$17.99</span></a>\n\t\t</div>\n\t</div>\n</section>"
               }
             }
           ],
@@ -184,7 +184,7 @@
       "isInner": false
     },
     {
-      "id": "d0afe2c",
+      "id": "161eb69",
       "elType": "section",
       "settings": {
         "stretch_section": "section-stretched",
@@ -198,7 +198,7 @@
       },
       "elements": [
         {
-          "id": "7480a66",
+          "id": "f34091d",
           "elType": "column",
           "settings": {
             "_column_size": 100,
@@ -206,11 +206,11 @@
           },
           "elements": [
             {
-              "id": "eaf764e",
+              "id": "699ace7",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "<section class=\"snb-loyalty\">\n\t<div class=\"snb-container\">\n\t\t<span class=\"snb-eyebrow\" style=\"color:var(--snb-cream);border-color:rgba(244,238,223,0.5);\">Flavor Pays Back</span>\n\t\t<h2>Buy 8. Get 1 Free.</h2>\n\t\t<p>Flavor pays back.</p>\n\t\t<a href=\"/loyalty/\" class=\"snb-btn snb-btn--gold\">Join Loyalty</a>\n\t</div>\n</section>"
+                "html": "<section class=\"snb-loyalty\">\n\t<div class=\"snb-loyalty__inner\">\n\t\t<div class=\"snb-loyalty__badge\">LOYALTY<br>CARD</div>\n\t\t<div style=\"display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;justify-content:center;\">\n\t\t\t<div class=\"snb-loyalty__copy\">\n\t\t\t\t<h2>BUY 8. GET <span class=\"snb-accent\">1</span> FREE.</h2>\n\t\t\t\t<p>Flavor pays back.</p>\n\t\t\t</div>\n\t\t\t<div class=\"snb-loyalty__stamps\">\n\t\t\t\t<span class=\"snb-stamp\"></span><span class=\"snb-stamp\"></span><span class=\"snb-stamp\"></span><span class=\"snb-stamp\"></span><span class=\"snb-stamp\"></span><span class=\"snb-stamp\"></span><span class=\"snb-stamp\"></span><span class=\"snb-stamp\"></span><span class=\"snb-stamp is-free\">FREE</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<a href=\"/loyalty/\" class=\"snb-btn\">Join Loyalty</a>\n\t</div>\n</section>"
               }
             }
           ],
