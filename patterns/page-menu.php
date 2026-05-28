@@ -22,5 +22,3 @@
 	</aside>
 </div>
 <!-- /wp:html -->
-
-<!-- wp:pattern {"slug":"saucenbone/loyalty-strip"} /-->

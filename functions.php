@@ -6,7 +6,25 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'SNB_THEME_VERSION', '1.9.0' );
+define( 'SNB_THEME_VERSION', '2.0.0' );
+
+/**
+ * External ordering URL.
+ * ─────────────────────────────────────────────────────────────
+ * TODO: Replace '#order' with the client's real ordering URL
+ *       (e.g. a Toast, Square, or custom ordering system link)
+ *       once the platform is confirmed.
+ * ─────────────────────────────────────────────────────────────
+ */
+define( 'SNB_ORDER_URL', '#order' );
+
+/**
+ * External ordering mode.
+ *  TRUE  → cart/checkout/thank-you disabled; all "order" actions
+ *           redirect to SNB_ORDER_URL (external ordering system).
+ *  FALSE → restore the full on-site WooCommerce ordering flow.
+ */
+define( 'SNB_EXTERNAL_ORDERING', true );
 
 /**
  * Enqueue parent + child styles, fonts, and JS.
@@ -33,7 +51,8 @@ function snb_enqueue_styles() {
 		wp_localize_script( 'snb-script', 'SNB', array(
 			'ajaxUrl'  => admin_url( 'admin-ajax.php' ),
 			'nonce'    => wp_create_nonce( 'snb_nonce' ),
-			'cartUrl'  => function_exists( 'wc_get_cart_url' ) ? wc_get_cart_url() : home_url( '/cart/' ),
+			'cartUrl'  => SNB_EXTERNAL_ORDERING ? SNB_ORDER_URL : ( function_exists( 'wc_get_cart_url' ) ? wc_get_cart_url() : home_url( '/cart/' ) ),
+			'orderUrl' => SNB_ORDER_URL,
 		) );
 	}
 }
@@ -173,7 +192,6 @@ function snb_shortcode_products( $atts ) {
 				if ( ! $product ) { continue; }
 				$img = get_the_post_thumbnail_url( get_the_ID(), 'medium' );
 				$desc = $product->get_short_description() ?: wp_trim_words( strip_tags( $product->get_description() ), 12, '...' );
-				$add_url = '?add-to-cart=' . $product->get_id();
 				?>
 				<article class="snb-prod">
 					<div class="snb-prod__media">
@@ -188,7 +206,11 @@ function snb_shortcode_products( $atts ) {
 						<?php endif; ?>
 						<div class="snb-prod__foot">
 							<span class="snb-prod__price"><?php echo wp_kses_post( $product->get_price_html() ); ?></span>
-							<a href="<?php echo esc_url( $add_url ); ?>" class="snb-prod__add" aria-label="Add to cart">+</a>
+							<?php if ( SNB_EXTERNAL_ORDERING ) : ?>
+								<a href="<?php echo esc_url( SNB_ORDER_URL ); ?>" class="snb-prod__add snb-prod__add--order" target="_blank" rel="noopener noreferrer" aria-label="Order online">Order →</a>
+							<?php else : ?>
+								<a href="<?php echo esc_url( '?add-to-cart=' . $product->get_id() ); ?>" class="snb-prod__add" aria-label="Add to cart">+</a>
+							<?php endif; ?>
 						</div>
 					</div>
 				</article>
@@ -201,14 +223,49 @@ function snb_shortcode_products( $atts ) {
 }
 
 /* ============================================================
-   SHORTCODE: [snb_minicart] — sticky mini cart drawer
+   SHORTCODE: [snb_minicart]
+   External ordering mode  → "Order Online" CTA panel
+   On-site ordering mode   → full WooCommerce mini-cart drawer
    ============================================================ */
 add_shortcode( 'snb_minicart', 'snb_shortcode_minicart' );
 function snb_shortcode_minicart() {
+
+	/* ── External ordering mode ── */
+	if ( SNB_EXTERNAL_ORDERING ) {
+		ob_start();
+		?>
+		<aside id="snb-minicart" class="snb-minicart snb-minicart--order-cta">
+			<div class="snb-summary" style="position:sticky;top:90px;">
+				<h3 style="margin-bottom:0.5rem;">Ready to Order?</h3>
+				<p style="color:var(--snb-cream-dim);font-size:0.9rem;margin-bottom:1.5rem;line-height:1.55;">Browse our menu then place your order online for fast pickup or delivery.</p>
+
+				<a href="<?php echo esc_url( SNB_ORDER_URL ); ?>"
+				   class="snb-btn snb-btn--block"
+				   target="_blank" rel="noopener noreferrer">
+					<span class="snb-flame"></span>Order Online
+				</a>
+
+				<div class="snb-summary__divider" style="margin:1.25rem 0;"></div>
+
+				<div style="display:flex;gap:0.65rem;align-items:flex-start;margin-bottom:0.65rem;color:var(--snb-cream-dim);font-size:0.85rem;">
+					<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;margin-top:2px;color:var(--snb-orange);"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+					<span>Mon – Sun &nbsp;<strong style="color:var(--snb-cream);">11 AM – 10 PM</strong></span>
+				</div>
+				<div style="display:flex;gap:0.65rem;align-items:flex-start;color:var(--snb-cream-dim);font-size:0.85rem;">
+					<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;margin-top:2px;color:var(--snb-orange);"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.92z"/></svg>
+					<span>Questions? <a href="/contact/" style="color:var(--snb-orange);">Contact us</a></span>
+				</div>
+			</div>
+		</aside>
+		<?php
+		return ob_get_clean();
+	}
+
+	/* ── On-site WooCommerce mini-cart ── */
 	if ( ! function_exists( 'WC' ) ) {
 		return '<aside class="snb-minicart"><div class="snb-minicart__head">Your Order</div><p style="color:#B8B0A0;">Cart will appear once WooCommerce is active.</p></aside>';
 	}
-	$cart = WC()->cart;
+	$cart  = WC()->cart;
 	$items = $cart ? $cart->get_cart() : array();
 	$count = $cart ? $cart->get_cart_contents_count() : 0;
 
@@ -226,7 +283,7 @@ function snb_shortcode_minicart() {
 			<?php foreach ( $items as $key => $item ) :
 				$product = $item['data'];
 				if ( ! $product ) { continue; }
-				$thumb_id = $product->get_image_id();
+				$thumb_id  = $product->get_image_id();
 				$thumb_url = $thumb_id ? wp_get_attachment_image_url( $thumb_id, 'thumbnail' ) : '';
 				$line_total = $cart->get_product_subtotal( $product, $item['quantity'] );
 				?>
@@ -259,8 +316,10 @@ function snb_shortcode_minicart() {
 	return ob_get_clean();
 }
 
-// Refresh mini-cart fragment on cart change.
-add_filter( 'woocommerce_add_to_cart_fragments', 'snb_minicart_fragment' );
+// Refresh mini-cart fragment on cart change — on-site ordering only.
+if ( ! SNB_EXTERNAL_ORDERING ) {
+	add_filter( 'woocommerce_add_to_cart_fragments', 'snb_minicart_fragment' );
+}
 function snb_minicart_fragment( $fragments ) {
 	ob_start();
 	echo snb_shortcode_minicart();
@@ -268,21 +327,56 @@ function snb_minicart_fragment( $fragments ) {
 	return $fragments;
 }
 
-/**
- * Append exactly ONE trailing arrow to every shop loop button
- * ("Add to cart", "Select options", etc.).
- * The CSS ::after pseudo-elements are intentionally disabled so this
- * is the sole source of the arrow — no double-arrows.
- */
-add_filter( 'woocommerce_product_add_to_cart_text', 'snb_add_to_cart_arrow' );
+// Trailing arrow on shop loop add-to-cart text — on-site ordering only.
+// (External mode replaces the whole button via snb_loop_order_link below.)
+if ( ! SNB_EXTERNAL_ORDERING ) {
+	add_filter( 'woocommerce_product_add_to_cart_text', 'snb_add_to_cart_arrow' );
+}
 function snb_add_to_cart_arrow( $text ) {
-	// Strip any pre-existing arrow (safety net), then add exactly one.
 	return preg_replace( '/\s*→\s*$/', '', $text ) . ' →';
 }
 
 /* ============================================================
-   THANK-YOU: hero + status tracker + loyalty stamps
+   EXTERNAL ORDERING — redirects + button overrides
+   Active only when SNB_EXTERNAL_ORDERING = true.
    ============================================================ */
+if ( SNB_EXTERNAL_ORDERING ) {
+
+	// Redirect /cart/, /checkout/, /order-received/ to external URL.
+	// (is_cart/is_checkout run at template_redirect time — WooCommerce is loaded by then.)
+	add_action( 'template_redirect', 'snb_redirect_woo_pages' );
+	function snb_redirect_woo_pages() {
+		if ( ! function_exists( 'is_cart' ) ) { return; }
+		if ( is_cart() || is_checkout() || is_wc_endpoint_url( 'order-received' ) ) {
+			wp_redirect( SNB_ORDER_URL ?: home_url( '/' ), 302 );
+			exit;
+		}
+	}
+
+	// Replace WooCommerce shop-archive add-to-cart button with "Order Online" link.
+	add_filter( 'woocommerce_loop_add_to_cart_link', 'snb_loop_order_link', 10, 2 );
+	function snb_loop_order_link( $html, $product ) {
+		return sprintf(
+			'<a href="%s" class="button snb-order-btn" target="_blank" rel="noopener noreferrer">Order Online →</a>',
+			esc_url( SNB_ORDER_URL )
+		);
+	}
+
+	// Prevent any stray add-to-cart request from reaching the cart page.
+	add_filter( 'woocommerce_add_to_cart_redirect', function( $url ) {
+		return SNB_ORDER_URL ?: home_url( '/' );
+	} );
+
+}
+
+/* ============================================================
+   CART / CHECKOUT / THANK-YOU hooks
+   Registered only when on-site ordering is active
+   (SNB_EXTERNAL_ORDERING = false).
+   ============================================================ */
+if ( ! SNB_EXTERNAL_ORDERING ) :
+
+/* ── Thank-you: hero + order strip + status tracker ── */
 add_action( 'woocommerce_before_thankyou', 'snb_thankyou_hero', 5 );
 function snb_thankyou_hero( $order_id ) {
 	$order = wc_get_order( $order_id );
@@ -364,45 +458,16 @@ function snb_thankyou_hero( $order_id ) {
 }
 
 /**
- * Action buttons + loyalty card after order details.
+ * Action buttons after order details (loyalty removed).
  */
 add_action( 'woocommerce_thankyou', 'snb_thankyou_actions', 20 );
 function snb_thankyou_actions( $order_id ) {
 	?>
-	<section class="snb-section snb-section--black" style="padding-top:1rem;padding-bottom:0;">
+	<section class="snb-section snb-section--black" style="padding-top:1rem;padding-bottom:2rem;">
 		<div class="snb-container">
-			<div class="snb-grid snb-grid--3">
-				<a href="#" class="snb-btn"><span class="snb-flame"></span>Track Order</a>
+			<div class="snb-grid snb-grid--2">
 				<a href="/menu/" class="snb-btn snb-btn--cream">View Menu Again</a>
 				<a href="#" class="snb-btn snb-btn--cream">Download Receipt</a>
-			</div>
-		</div>
-	</section>
-
-	<section class="snb-loyalty" style="margin-top:2rem;">
-		<div class="snb-loyalty__inner" style="grid-template-columns:auto 1fr auto;">
-			<div class="snb-loyalty__badge">LOYALTY<br>CARD</div>
-			<div style="display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;">
-				<div class="snb-loyalty__stamps">
-					<span class="snb-stamp is-filled">✓</span>
-					<span class="snb-stamp"></span>
-					<span class="snb-stamp"></span>
-					<span class="snb-stamp"></span>
-					<span class="snb-stamp"></span>
-					<span class="snb-stamp"></span>
-					<span class="snb-stamp"></span>
-					<span class="snb-stamp"></span>
-					<span class="snb-stamp is-free">FREE</span>
-				</div>
-				<div class="snb-loyalty__copy">
-					<h2>BOLD FLAVOR.<br><span class="snb-accent">BIG REWARDS.</span></h2>
-					<p style="margin-top:0.4rem;">Earn a stamp for this order — you're one step closer to a free item.</p>
-					<a href="/loyalty/" class="snb-btn" style="margin-top:0.75rem;">Join Loyalty</a>
-				</div>
-			</div>
-			<div class="snb-receipt-box" aria-hidden="true">
-				<div class="snb-receipt-box__mark">SAUCE<span class="snb-accent">N'</span>BONE</div>
-				<div class="snb-receipt-box__tag">FLAVOR FIRST.</div>
 			</div>
 		</div>
 	</section>
@@ -698,6 +763,8 @@ function snb_thankyou_info_cards( $order_id ) {
 	<?php
 }
 
+endif; // ! SNB_EXTERNAL_ORDERING — end of cart/checkout/thankyou hooks
+
 /* ============================================================
    MY-ACCOUNT page — branded hero + dark theme overrides
    ============================================================ */
@@ -710,7 +777,7 @@ function snb_account_hero() {
 		<div class="snb-container">
 			<span class="snb-eyebrow">Account</span>
 			<h1>Hey, <span class="snb-accent"><?php echo esc_html( $name ); ?>.</span></h1>
-			<p style="color:var(--snb-cream-soft);margin-top:0.5rem;">Manage your orders, addresses, and loyalty in one place.</p>
+			<p style="color:var(--snb-cream-soft);margin-top:0.5rem;">Manage your orders and account details in one place.</p>
 		</div>
 	</section>
 	<?php
@@ -723,7 +790,7 @@ function snb_account_login_hero() {
 		<div class="snb-container">
 			<span class="snb-eyebrow">Members Only</span>
 			<h1>Sign In to Get <span class="snb-accent">Saucy.</span></h1>
-			<p style="color:var(--snb-cream-soft);margin-top:0.5rem;">Track orders, save favorites, and stack loyalty stamps.</p>
+			<p style="color:var(--snb-cream-soft);margin-top:0.5rem;">Sign in to view your orders and account details.</p>
 		</div>
 	</section>
 	<?php

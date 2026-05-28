@@ -26,5 +26,3 @@
 <!-- wp:shortcode -->
 [snb_products limit="12" heading="" columns="4" category="merch,apparel,accessories" exclude_category=""]
 <!-- /wp:shortcode -->
-
-<!-- wp:pattern {"slug":"saucenbone/loyalty-strip"} /-->

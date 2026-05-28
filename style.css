@@ -537,62 +537,7 @@ p { line-height: 1.65; color: var(--snb-cream-dim); margin: 0 0 0.75em; }
 
 /* (Removed .snb-chip--grape — brand palette is 4 colors only.) */
 
-/* ============================================================
-   LOYALTY STAMP STRIP (Buy 8. Get 1 Free.)
-   ============================================================ */
-.snb-loyalty {
-  background: var(--snb-charcoal);
-  border-top: 1px solid var(--snb-line);
-  border-bottom: 1px solid var(--snb-line);
-  padding: 1.75rem 2rem;
-}
-.snb-loyalty__inner {
-  max-width: 1320px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 2rem;
-  align-items: center;
-}
-.snb-loyalty__badge {
-  width: 88px; height: 88px;
-  border-radius: 50%;
-  border: 2px dashed var(--snb-orange);
-  display: grid; place-items: center;
-  text-align: center;
-  font-family: var(--snb-font-display);
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
-  color: var(--snb-orange);
-  line-height: 1.1;
-}
-.snb-loyalty__copy h2 {
-  font-size: clamp(1.6rem, 3vw, 2.6rem);
-  margin: 0 0 0.25rem;
-}
-.snb-loyalty__copy h2 .snb-accent { color: var(--snb-orange); }
-.snb-loyalty__copy p { margin: 0; color: var(--snb-cream-dim); font-size: 0.95rem; }
-.snb-loyalty__stamps {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-}
-.snb-stamp {
-  width: 38px; height: 38px;
-  border-radius: 50%;
-  border: 2px solid var(--snb-orange);
-  display: grid; place-items: center;
-  font-family: var(--snb-font-display);
-  font-size: 0.7rem;
-  color: var(--snb-orange);
-  letter-spacing: 0.08em;
-}
-.snb-stamp.is-filled { background: var(--snb-orange); color: var(--snb-cream); }
-.snb-stamp.is-free   { background: var(--snb-cream); color: var(--snb-orange); border-color: var(--snb-cream); font-weight: 700; }
-@media (max-width: 900px) {
-  .snb-loyalty__inner { grid-template-columns: 1fr; text-align: center; }
-  .snb-loyalty__stamps { justify-content: center; flex-wrap: wrap; }
-}
+/* Loyalty strip removed — not needed for current site scope. */
 
 /* ============================================================
    ORDER DETAILS STRIP + STATUS TRACKER
@@ -1802,42 +1747,7 @@ p { line-height: 1.65; color: var(--snb-cream-dim); margin: 0 0 0.75em; }
 }
 .snb-pay-line__status.is-paid { color: var(--snb-gold); }
 
-.snb-receipt-box {
-  width: 130px;
-  aspect-ratio: 3 / 2;
-  background: var(--snb-charcoal-2);
-  border: 1px solid var(--snb-line-strong);
-  border-radius: var(--snb-radius-sm);
-  display: grid; place-items: center;
-  padding: 0.75rem;
-  text-align: center;
-  position: relative;
-  transform: rotate(-3deg);
-}
-.snb-receipt-box::after {
-  content: "";
-  position: absolute;
-  inset: 4px;
-  border: 1px dashed var(--snb-line);
-  border-radius: 6px;
-  pointer-events: none;
-}
-.snb-receipt-box__mark {
-  font-family: var(--snb-font-display);
-  color: var(--snb-cream);
-  font-size: 1rem;
-  letter-spacing: 0.06em;
-}
-.snb-receipt-box__tag {
-  font-size: 0.6rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--snb-cream-dim);
-  margin-top: 0.3rem;
-}
-@media (max-width: 900px) {
-  .snb-receipt-box { display: none; }
-}
+/* Receipt box (loyalty thank-you decoration) removed. */
 
 /* ============================================================
    WOOCOMMERCE — CART page
@@ -2035,3 +1945,53 @@ p { line-height: 1.65; color: var(--snb-cream-dim); margin: 0 0 0.75em; }
   margin-right: 0.35rem;
   font-size: 0.95em;
 }
+
+/* ============================================================
+   EXTERNAL ORDERING — hide Kadence header cart + WC notices
+   ============================================================ */
+
+/* Kadence theme header cart widget (all common selectors) */
+.header-cart-open-btn,
+.kadence-header-cart-wrap,
+.header-cart-wrap,
+.site-header-item .header-cart,
+.kadence-woo-cart,
+.header-cart-total,
+.header-button-wrap .cart-link,
+.site-header .cart-contents {
+  display: none !important;
+}
+
+/* WooCommerce "Added to cart" / notice bar (shouldn't appear but just in case) */
+.woocommerce-notices-wrapper:empty { display: none; }
+
+/* "Order Online" button on shop/menu product archive cards */
+.snb-order-btn {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent !important;
+  border: none !important;
+  color: var(--snb-gold-dim) !important;
+  padding: 0 !important;
+  font-family: var(--snb-font-display);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.snb-order-btn:hover { color: var(--snb-orange) !important; }
+
+/* "Order →" link on snb-prod cards (custom menu grid) */
+.snb-prod__add--order {
+  font-family: var(--snb-font-display);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--snb-gold-dim);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 160ms ease;
+}
+.snb-prod__add--order:hover { color: var(--snb-orange); }

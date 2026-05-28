@@ -10,4 +10,3 @@
 <!-- wp:pattern {"slug":"saucenbone/viral-flavors"} /-->
 <!-- wp:pattern {"slug":"saucenbone/sides-drinks-sweet"} /-->
 <!-- wp:pattern {"slug":"saucenbone/merch"} /-->
-<!-- wp:pattern {"slug":"saucenbone/loyalty-strip"} /-->
