@@ -2,7 +2,7 @@
 Theme Name: SauceNBone Kadence
 Author: Sauce N' Bone
 Description: Sauce N' Bone child theme — dark, bold, sauce-heavy. Built on Kadence.
-Version: 1.1
+Version: 1.1.3
 Template: kadence
 Text Domain: saucenbone-kadence
 */
@@ -2284,5 +2284,127 @@ li.snb-btn.menu-item:hover > a {
   .snb-contact__inner {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+  }
+}
+
+/* ============================================================
+   MOBILE — HAMBURGER / NAV TOGGLE
+   ============================================================ */
+@media (max-width: 1024px) {
+  /* Strip the Kadence default cream-pill background from the toggle button */
+  #mobile-toggle,
+  button#mobile-toggle,
+  .menu-toggle-open,
+  button.menu-toggle-open,
+  .mobile-toggle-open-container button,
+  button[aria-label="Menu"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    padding: 6px 8px !important;
+    border-radius: 0 !important;
+  }
+
+  /* Hamburger icon lines — force cream color */
+  #mobile-toggle .menu-toggle-icon,
+  .menu-toggle-open .menu-toggle-icon,
+  #mobile-toggle .kadence-svg-iconset,
+  .menu-toggle-open .kadence-svg-iconset {
+    color: var(--snb-cream) !important;
+  }
+
+  #mobile-toggle .menu-toggle-icon span,
+  .menu-toggle-open .menu-toggle-icon span {
+    background-color: var(--snb-cream) !important;
+  }
+
+  #mobile-toggle svg,
+  .menu-toggle-open svg,
+  #mobile-toggle .menu-toggle-icon svg,
+  .menu-toggle-open .menu-toggle-icon svg {
+    fill: var(--snb-cream) !important;
+    color: var(--snb-cream) !important;
+    stroke: var(--snb-cream) !important;
+  }
+
+  /* Kadence burger bar spans (three lines) */
+  #mobile-toggle .menu-toggle-icon-bars span,
+  .menu-toggle-open .menu-toggle-icon-bars span,
+  .menu-toggle-icon-bars span {
+    background: var(--snb-cream) !important;
+  }
+}
+
+/* ============================================================
+   MOBILE — FOOTER
+   ============================================================ */
+@media (max-width: 768px) {
+  .snb-footer {
+    padding: 2rem 1.25rem 1.25rem;
+  }
+
+  /* Stack all top items in a column, centered */
+  .snb-footer__top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+    justify-content: center;
+  }
+
+  .snb-footer__mark img {
+    height: 52px;
+  }
+
+  /* Social row: centered */
+  .snb-footer__social {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .snb-social {
+    justify-content: center;
+  }
+
+  .snb-footer__promise {
+    text-align: center;
+    max-width: 100%;
+    font-size: 0.85rem;
+  }
+
+  /* Bottom bar: stack copyright + legal links */
+  .snb-footer__bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.6rem;
+  }
+
+  /* Legal links: keep them on one line, never break mid-word */
+  .snb-footer__legal {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem 1rem;
+  }
+
+  .snb-footer__legal a {
+    white-space: nowrap;
+    color: var(--snb-cream-dim) !important;
+    font-size: 0.78rem;
+  }
+
+  /* Colors: make sure all footer text stays correct on mobile */
+  .snb-footer__handle,
+  .snb-footer__site {
+    color: var(--snb-cream) !important;
+    font-size: 0.85rem;
+  }
+
+  .snb-footer__social-label {
+    color: var(--snb-cream) !important;
+    font-size: 0.85rem;
   }
 }
