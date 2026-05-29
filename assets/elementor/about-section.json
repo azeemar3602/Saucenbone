@@ -12,7 +12,7 @@
         "flex_align_items": "center",
         "content_width": "boxed",
         "background_background": "classic",
-        "background_color": "#1A1410",
+        "background_color": "#0B0B0B",
         "padding": {
           "unit": "px",
           "top": "80",
@@ -95,7 +95,7 @@
                   "elType": "container",
                   "settings": { "flex_direction": "column", "flex_gap": { "unit": "px", "size": 4 } },
                   "elements": [
-                    { "id": "snbas022", "elType": "widget", "widgetType": "heading", "settings": { "title": "50+", "header_size": "h3", "title_color": "#E03602", "typography_typography": "custom", "typography_font_family": "Bebas Neue", "typography_font_size": { "unit": "px", "size": 40 } } },
+                    { "id": "snbas022", "elType": "widget", "widgetType": "heading", "settings": { "title": "50+", "header_size": "h3", "title_color": "#C9A24A", "typography_typography": "custom", "typography_font_family": "Bebas Neue", "typography_font_size": { "unit": "px", "size": 40 } } },
                     { "id": "snbas023", "elType": "widget", "widgetType": "heading", "settings": { "title": "Sauce &amp; Flavor Options", "header_size": "p", "title_color": "#B8B0A0", "typography_typography": "custom", "typography_font_size": { "unit": "px", "size": 11 }, "typography_letter_spacing": { "unit": "px", "size": 1.5 }, "typography_text_transform": "uppercase" } }
                   ]
                 },
@@ -104,7 +104,7 @@
                   "elType": "container",
                   "settings": { "flex_direction": "column", "flex_gap": { "unit": "px", "size": 4 } },
                   "elements": [
-                    { "id": "snbas025", "elType": "widget", "widgetType": "heading", "settings": { "title": "100%", "header_size": "h3", "title_color": "#E03602", "typography_typography": "custom", "typography_font_family": "Bebas Neue", "typography_font_size": { "unit": "px", "size": 40 } } },
+                    { "id": "snbas025", "elType": "widget", "widgetType": "heading", "settings": { "title": "100%", "header_size": "h3", "title_color": "#C9A24A", "typography_typography": "custom", "typography_font_family": "Bebas Neue", "typography_font_size": { "unit": "px", "size": 40 } } },
                     { "id": "snbas026", "elType": "widget", "widgetType": "heading", "settings": { "title": "Fresh. Never Frozen.", "header_size": "p", "title_color": "#B8B0A0", "typography_typography": "custom", "typography_font_size": { "unit": "px", "size": 11 }, "typography_letter_spacing": { "unit": "px", "size": 1.5 }, "typography_text_transform": "uppercase" } }
                   ]
                 },
@@ -113,7 +113,7 @@
                   "elType": "container",
                   "settings": { "flex_direction": "column", "flex_gap": { "unit": "px", "size": 4 } },
                   "elements": [
-                    { "id": "snbas028", "elType": "widget", "widgetType": "heading", "settings": { "title": "1", "header_size": "h3", "title_color": "#E03602", "typography_typography": "custom", "typography_font_family": "Bebas Neue", "typography_font_size": { "unit": "px", "size": 40 } } },
+                    { "id": "snbas028", "elType": "widget", "widgetType": "heading", "settings": { "title": "1", "header_size": "h3", "title_color": "#C9A24A", "typography_typography": "custom", "typography_font_family": "Bebas Neue", "typography_font_size": { "unit": "px", "size": 40 } } },
                     { "id": "snbas029", "elType": "widget", "widgetType": "heading", "settings": { "title": "Rule: Flavor First.", "header_size": "p", "title_color": "#B8B0A0", "typography_typography": "custom", "typography_font_size": { "unit": "px", "size": 11 }, "typography_letter_spacing": { "unit": "px", "size": 1.5 }, "typography_text_transform": "uppercase" } }
                   ]
                 }

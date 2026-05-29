@@ -9,19 +9,33 @@ Text Domain: saucenbone-kadence
 
 /* ============================================================
    SAUCE N' BONE — BRAND TOKENS
+   ─────────────────────────────────────────────────────────────
+   4 official brand colors:
+     Black  #0B0B0B   --snb-black
+     Orange #E03602   --snb-orange
+     Cream  #F4EEDF   --snb-cream
+     Gold   #C9A24A   --snb-gold
+   All other tokens are practical tints / dark backgrounds
+   derived from these four. Never introduce new base colors.
    ============================================================ */
 :root {
+  /* ── Core brand palette ── */
   --snb-black: #0B0B0B;
+  --snb-orange: #E03602;
+  --snb-orange-dark: #E03602;  /* same — client: one orange only */
+  --snb-cream: #F4EEDF;
+  --snb-gold: #C9A24A;
+
+  /* ── Dark background tints (derived from black) ── */
   --snb-charcoal: #11110F;
   --snb-charcoal-2: #16140F;
   --snb-charcoal-3: #1E1A12;
-  --snb-orange: #E03602;
-  --snb-orange-dark: #E03602;
-  --snb-cream: #F4EEDF;
+
+  /* ── Cream tints (for body text / dividers) ── */
   --snb-cream-dim: #B8B0A0;
   --snb-cream-soft: #D8CFB8;
-  --snb-gold: #C9A24A;
-  --snb-gold-dim: #8C7030;
+
+  /* ── Gold tints (for borders / lines) ── */
   --snb-line: rgba(201, 162, 74, 0.28);
   --snb-line-strong: rgba(201, 162, 74, 0.55);
 

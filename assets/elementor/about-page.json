@@ -12,7 +12,7 @@
         "flex_align_items": "center",
         "content_width": "boxed",
         "background_background": "classic",
-        "background_color": "#11110F",
+        "background_color": "#0B0B0B",
         "padding": {
           "unit": "px",
           "top": "80",
@@ -83,7 +83,7 @@
         "flex_align_items": "center",
         "content_width": "boxed",
         "background_background": "classic",
-        "background_color": "#1A1410",
+        "background_color": "#0B0B0B",
         "padding": {
           "unit": "px",
           "top": "80",
@@ -176,7 +176,7 @@
                       "settings": {
                         "title": "50+",
                         "header_size": "h3",
-                        "title_color": "#E03602",
+                        "title_color": "#C9A24A",
                         "typography_typography": "custom",
                         "typography_font_family": "Bebas Neue",
                         "typography_font_size": { "unit": "px", "size": 40 }
@@ -213,7 +213,7 @@
                       "settings": {
                         "title": "100%",
                         "header_size": "h3",
-                        "title_color": "#E03602",
+                        "title_color": "#C9A24A",
                         "typography_typography": "custom",
                         "typography_font_family": "Bebas Neue",
                         "typography_font_size": { "unit": "px", "size": 40 }
@@ -250,7 +250,7 @@
                       "settings": {
                         "title": "1",
                         "header_size": "h3",
-                        "title_color": "#E03602",
+                        "title_color": "#C9A24A",
                         "typography_typography": "custom",
                         "typography_font_family": "Bebas Neue",
                         "typography_font_size": { "unit": "px", "size": 40 }
@@ -344,6 +344,6 @@
   ],
   "page_settings": {
     "hide_title": "yes",
-    "background_color": "#11110F"
+    "background_color": "#0B0B0B"
   }
 }
