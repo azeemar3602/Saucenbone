@@ -6,7 +6,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'SNB_THEME_VERSION', '2.2.9' );
+define( 'SNB_THEME_VERSION', '2.3.0' );
 
 /**
  * External ordering URL.

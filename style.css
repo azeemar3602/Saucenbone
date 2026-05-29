@@ -2068,14 +2068,14 @@ a.snb-order-btn:hover,
    ============================================================ */
 .snb-about {
   background: var(--snb-black);
-  padding: 5rem 2rem;
+  padding: clamp(3rem, 6vw, 5rem) 2rem;  /* matches .snb-section padding */
 }
 .snb-about__inner {
-  max-width: 1100px;
+  max-width: 1320px;                       /* matches .snb-container */
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  grid-template-columns: 55fr 45fr;        /* text wider, image narrower */
+  gap: 5rem;
   align-items: center;
 }
 .snb-about__label {
@@ -2103,7 +2103,7 @@ a.snb-order-btn:hover,
 .snb-about__stats {
   display: flex;
   gap: 2.5rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin: 0 0 2rem;
 }
 .snb-about__stat-num {
