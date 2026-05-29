@@ -2,7 +2,7 @@
 Theme Name: SauceNBone Kadence
 Author: Sauce N' Bone
 Description: Sauce N' Bone child theme — dark, bold, sauce-heavy. Built on Kadence.
-Version: 1.1.3
+Version: 1.1.5
 Template: kadence
 Text Domain: saucenbone-kadence
 */
@@ -2020,22 +2020,35 @@ li.snb-btn.menu-item:hover > a {
 .woocommerce-notices-wrapper:empty { display: none; }
 
 /* "Order Online" button on shop/menu product archive cards */
+/* ORDER → text link on product cards (no border, no background) */
+a.snb-order-btn,
 .snb-order-btn {
   display: inline-flex !important;
   align-items: center;
   gap: 0.4rem;
-  background: transparent !important;
+  background: none !important;
+  background-color: transparent !important;
   border: none !important;
-  color: var(--snb-gold-dim) !important;
+  box-shadow: none !important;
+  outline: none !important;
+  border-radius: 0 !important;
+  color: var(--snb-cream-dim) !important;
   padding: 0 !important;
+  margin: 0 !important;
   font-family: var(--snb-font-display);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-size: 0.85rem;
   text-decoration: none;
   white-space: nowrap;
+  transition: color 160ms ease;
 }
-.snb-order-btn:hover { color: var(--snb-orange) !important; }
+a.snb-order-btn:hover,
+.snb-order-btn:hover {
+  color: var(--snb-orange) !important;
+  background: none !important;
+  border: none !important;
+}
 
 /* "Order →" link on snb-prod cards (custom menu grid) */
 .snb-prod__add--order {

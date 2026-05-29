@@ -6,7 +6,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'SNB_THEME_VERSION', '2.2.3' );
+define( 'SNB_THEME_VERSION', '2.2.5' );
 
 /**
  * External ordering URL.
@@ -361,7 +361,7 @@ if ( SNB_EXTERNAL_ORDERING ) {
 	add_filter( 'woocommerce_loop_add_to_cart_link', 'snb_loop_order_link', 10, 2 );
 	function snb_loop_order_link( $html, $product ) {
 		return sprintf(
-			'<a href="%s" class="button snb-order-btn" target="_blank" rel="noopener noreferrer">Order Online →</a>',
+			'<a href="%s" class="snb-order-btn" target="_blank" rel="noopener noreferrer">Order →</a>',
 			esc_url( SNB_ORDER_URL )
 		);
 	}
