@@ -6,7 +6,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'SNB_THEME_VERSION', '2.2.8' );
+define( 'SNB_THEME_VERSION', '2.2.9' );
 
 /**
  * External ordering URL.
@@ -357,12 +357,37 @@ if ( SNB_EXTERNAL_ORDERING ) {
 		}
 	}
 
-	// Replace WooCommerce shop-archive add-to-cart button with "Order Online" link.
+	// Replace WooCommerce shop-archive add-to-cart button with "Order" text link.
+	// Inline styles are used so Kadence/WooCommerce parent-theme !important rules cannot override them.
 	add_filter( 'woocommerce_loop_add_to_cart_link', 'snb_loop_order_link', 10, 2 );
 	function snb_loop_order_link( $html, $product ) {
+		$style = implode( ';', array(
+			'display:inline-flex',
+			'align-items:center',
+			'gap:0.35rem',
+			'background:none',
+			'background-color:transparent',
+			'border:none',
+			'box-shadow:none',
+			'border-radius:0',
+			'outline:none',
+			'padding:0',
+			'margin:0',
+			'color:#B8B0A0',
+			'font-family:"Bebas Neue",sans-serif',
+			'letter-spacing:0.1em',
+			'text-transform:uppercase',
+			'font-size:0.85rem',
+			'text-decoration:none',
+			'white-space:nowrap',
+			'cursor:pointer',
+		) );
 		return sprintf(
-			'<a href="%s" class="snb-order-btn" target="_blank" rel="noopener noreferrer">Order →</a>',
-			esc_url( SNB_ORDER_URL )
+			'<a href="%s" class="snb-order-btn" style="%s" target="_blank" rel="noopener noreferrer"'
+			. ' onmouseover="this.style.color=\'#E03602\'"'
+			. ' onmouseout="this.style.color=\'#B8B0A0\'">Order &#x2192;</a>',
+			esc_url( SNB_ORDER_URL ),
+			esc_attr( $style )
 		);
 	}
 
