@@ -6,7 +6,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'SNB_THEME_VERSION', '2.3.5' );
+define( 'SNB_THEME_VERSION', '2.3.6' );
 
 /**
  * External ordering URL.
@@ -207,7 +207,7 @@ function snb_shortcode_products( $atts ) {
 						<div class="snb-prod__foot">
 							<span class="snb-prod__price"><?php echo wp_kses_post( $product->get_price_html() ); ?></span>
 							<?php if ( SNB_EXTERNAL_ORDERING ) : ?>
-								<a href="<?php echo esc_url( SNB_ORDER_URL ); ?>" class="snb-prod__add snb-prod__add--order" target="_blank" rel="noopener noreferrer" aria-label="Order online">Order →</a>
+								<a href="<?php echo esc_url( SNB_ORDER_URL ); ?>" class="snb-prod__add--order" style="width:auto;height:auto;border:none;border-radius:0;background:transparent;box-shadow:none;padding:0;display:inline-flex;align-items:center;gap:0.3rem;color:#B8B0A0;font-family:'Bebas Neue',sans-serif;letter-spacing:.08em;text-transform:uppercase;font-size:.85rem;text-decoration:none;white-space:nowrap;" onmouseover="this.style.color='#E03602'" onmouseout="this.style.color='#B8B0A0'" target="_blank" rel="noopener noreferrer" aria-label="Order online">Order &#x2192;</a>
 							<?php else : ?>
 								<a href="<?php echo esc_url( '?add-to-cart=' . $product->get_id() ); ?>" class="snb-prod__add" aria-label="Add to cart">+</a>
 							<?php endif; ?>

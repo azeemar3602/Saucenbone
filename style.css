@@ -2101,17 +2101,38 @@ a.snb-order-btn:hover,
 }
 
 /* "Order →" link on snb-prod cards (custom menu grid) */
+/* Override the circular .snb-prod__add base styles for the ORDER text link */
+a.snb-prod__add--order,
 .snb-prod__add--order {
+  /* Reset circular button styles from .snb-prod__add */
+  width: auto !important;
+  height: auto !important;
+  border-radius: 0 !important;
+  border: none !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  place-items: unset !important;
+  /* Text styles */
   font-family: var(--snb-font-display);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-size: 0.8rem;
-  color: var(--snb-gold-dim);
+  font-size: 0.85rem;
+  color: #B8B0A0 !important;
   text-decoration: none;
   white-space: nowrap;
+  gap: 0.3rem;
   transition: color 160ms ease;
 }
-.snb-prod__add--order:hover { color: var(--snb-orange); }
+a.snb-prod__add--order:hover,
+.snb-prod__add--order:hover {
+  color: #E03602 !important;
+  background: transparent !important;
+  border: none !important;
+}
 
 /* ============================================================
    ABOUT US — section (homepage inject + standalone page)
