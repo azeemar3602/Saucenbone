@@ -2020,6 +2020,22 @@ li.snb-btn.menu-item:hover > a {
 .woocommerce-notices-wrapper:empty { display: none; }
 
 /* "Order Online" button on shop/menu product archive cards */
+/* Strip Kadence/WooCommerce button wrappers around the ORDER link.
+   Kadence injects a parent element (div/span/form) that carries the
+   pill border — target the parent of .snb-order-btn specifically. */
+.woocommerce ul.products li.product .snb-order-btn,
+.woocommerce ul.products li.product .snb-order-btn *,
+.woocommerce ul.products li.product > *:has(> .snb-order-btn),
+.woocommerce ul.products li.product > *:has(.snb-order-btn) {
+  border: none !important;
+  border-radius: 0 !important;
+  background: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  outline: none !important;
+}
+
 /* ORDER → text link on product cards (no border, no background) */
 a.snb-order-btn,
 .snb-order-btn {

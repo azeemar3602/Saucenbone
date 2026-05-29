@@ -109,5 +109,27 @@
 			ta.addEventListener("input", update);
 			update();
 		});
+
+		// Strip border/background from any Kadence/WooCommerce wrapper injected
+		// around our ORDER button — the circle outline comes from a parent element,
+		// not the <a> tag itself (which already has inline styles applied).
+		var resetProps = {
+			border: 'none',
+			borderRadius: '0',
+			background: 'none',
+			backgroundColor: 'transparent',
+			boxShadow: 'none',
+			padding: '0',
+			outline: 'none'
+		};
+		document.querySelectorAll('.snb-order-btn').forEach(function (btn) {
+			// Walk up 3 levels, stripping any wrapper that has visible border or bg
+			var el = btn.parentElement;
+			for (var i = 0; i < 3; i++) {
+				if (!el || el.tagName === 'LI' || el.tagName === 'ARTICLE') { break; }
+				Object.assign(el.style, resetProps);
+				el = el.parentElement;
+			}
+		});
 	});
 })();
