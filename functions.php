@@ -6,7 +6,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'SNB_THEME_VERSION', '2.0.1' );
+define( 'SNB_THEME_VERSION', '2.1.0' );
 
 /**
  * External ordering URL.
@@ -800,4 +800,181 @@ function snb_account_login_hero() {
 		</div>
 	</section>
 	<?php
+}
+
+/* ============================================================
+   ABOUT US — shared render function + homepage inject
+   ============================================================ */
+
+/**
+ * Render the About Us section HTML.
+ * Used by:
+ *  • the homepage content filter (below)
+ *  • [snb_about] shortcode
+ */
+function snb_render_about_section() {
+	ob_start();
+	?>
+	<section class="snb-about" id="about">
+		<div class="snb-about__inner">
+
+			<!-- Text column -->
+			<div>
+				<p class="snb-about__label">Our Story</p>
+				<h2 class="snb-about__title">Bold Flavors.<br>Real People.</h2>
+				<p class="snb-about__body">
+					Sauce N' Bone started with one obsession — wings done right. Every bone-in, boneless,
+					and tender that leaves our kitchen is hand-tossed in house-made sauce and cooked fresh
+					to order. No heat lamps. No shortcuts. Just real food made with real ingredients for
+					people who demand flavor first.
+				</p>
+				<p class="snb-about__body" style="margin-top:-0.75rem;">
+					Whether you're stopping in for a quick bite, feeding the crew, or ordering online,
+					we're here to make sure every visit hits different. That's the Sauce N' Bone promise.
+				</p>
+
+				<!-- Stats row -->
+				<div class="snb-about__stats">
+					<div>
+						<span class="snb-about__stat-num">50+</span>
+						<span class="snb-about__stat-label">Sauce &amp; Flavor Options</span>
+					</div>
+					<div>
+						<span class="snb-about__stat-num">100%</span>
+						<span class="snb-about__stat-label">Fresh. Never Frozen.</span>
+					</div>
+					<div>
+						<span class="snb-about__stat-num">1</span>
+						<span class="snb-about__stat-label">Rule: Flavor First.</span>
+					</div>
+				</div>
+
+				<a href="<?php echo esc_url( home_url( '/menu/' ) ); ?>" class="snb-btn">
+					See Our Menu &rarr;
+				</a>
+			</div>
+
+			<!-- Image column -->
+			<div class="snb-about__img-wrap">
+				<?php
+				// Use a real image if set; otherwise show a branded placeholder.
+				// To set a real image: replace the src below with get_theme_mod() or an ACF field.
+				$about_img = get_theme_mod( 'snb_about_image', '' );
+				if ( $about_img ) :
+				?>
+					<img src="<?php echo esc_url( $about_img ); ?>"
+					     alt="Sauce N' Bone — Our Story"
+					     class="snb-about__img" />
+				<?php else : ?>
+					<div class="snb-about__img-placeholder" aria-hidden="true">
+						SAUCE N' BONE
+					</div>
+				<?php endif; ?>
+			</div>
+
+		</div>
+	</section>
+	<?php
+	return ob_get_clean();
+}
+
+// Register [snb_about] shortcode so it can be used anywhere.
+add_shortcode( 'snb_about', 'snb_render_about_section' );
+
+// Inject About section after Elementor content on the homepage.
+add_filter( 'the_content', 'snb_inject_about_on_homepage' );
+function snb_inject_about_on_homepage( $content ) {
+	if ( is_front_page() && ! is_admin() ) {
+		$content .= snb_render_about_section();
+	}
+	return $content;
+}
+
+/* ============================================================
+   CONTACT PAGE — [snb_contact_page] shortcode
+   ============================================================ */
+add_shortcode( 'snb_contact_page', 'snb_render_contact_page' );
+function snb_render_contact_page() {
+	ob_start();
+	?>
+	<!-- Contact hero -->
+	<section class="snb-hero" style="padding-block:3rem 2rem;">
+		<div class="snb-hero__grid">
+			<div>
+				<h1 class="snb-hero__title" style="font-size:clamp(2.2rem,5vw,4.5rem);">
+					LET'S<br><span class="snb-accent">TALK.</span>
+				</h1>
+			</div>
+			<div>
+				<p style="color:var(--snb-cream-soft);font-size:1rem;line-height:1.6;margin:0;">
+					Questions, catering requests, or just want to talk wings?<br>
+					Fill out the form and we'll get back to you fast.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact body -->
+	<section class="snb-contact">
+		<div class="snb-contact__inner">
+
+			<!-- Left: info -->
+			<div>
+				<p class="snb-contact__label">Find Us</p>
+				<h2 class="snb-contact__title">Get In<br>Touch.</h2>
+
+				<ul class="snb-contact__info-list">
+					<li class="snb-contact__info-item">
+						<span class="snb-icon">📍</span>
+						<div>
+							<strong>Location</strong>
+							Coming Soon — Stay Tuned
+						</div>
+					</li>
+					<li class="snb-contact__info-item">
+						<span class="snb-icon">📞</span>
+						<div>
+							<strong>Phone</strong>
+							Coming Soon
+						</div>
+					</li>
+					<li class="snb-contact__info-item">
+						<span class="snb-icon">✉️</span>
+						<div>
+							<strong>Email</strong>
+							info@saucenbone.com
+						</div>
+					</li>
+					<li class="snb-contact__info-item">
+						<span class="snb-icon">📱</span>
+						<div>
+							<strong>Social</strong>
+							@saucenbone
+						</div>
+					</li>
+				</ul>
+
+				<div class="snb-contact__hours">
+					<p class="snb-contact__hours-title">Hours</p>
+					<div class="snb-contact__hours-row">
+						<span>Monday – Friday</span><span>11 AM – 10 PM</span>
+					</div>
+					<div class="snb-contact__hours-row">
+						<span>Saturday</span><span>10 AM – 11 PM</span>
+					</div>
+					<div class="snb-contact__hours-row">
+						<span>Sunday</span><span>11 AM – 9 PM</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- Right: MetForm -->
+			<div class="snb-contact__form-wrap">
+				<?php echo do_shortcode( '[metform form_id="271"]' ); ?>
+			</div>
+
+		</div>
+	</section>
+	<?php
+	return ob_get_clean();
 }
