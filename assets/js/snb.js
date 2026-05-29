@@ -111,8 +111,7 @@
 		});
 
 		// Strip border/background from any Kadence/WooCommerce wrapper injected
-		// around our ORDER button — the circle outline comes from a parent element,
-		// not the <a> tag itself (which already has inline styles applied).
+		// around our ORDER button.
 		var resetProps = {
 			border: 'none',
 			borderRadius: '0',
@@ -123,7 +122,6 @@
 			outline: 'none'
 		};
 		document.querySelectorAll('.snb-order-btn').forEach(function (btn) {
-			// Walk up 3 levels, stripping any wrapper that has visible border or bg
 			var el = btn.parentElement;
 			for (var i = 0; i < 3; i++) {
 				if (!el || el.tagName === 'LI' || el.tagName === 'ARTICLE') { break; }
@@ -131,5 +129,42 @@
 				el = el.parentElement;
 			}
 		});
+
+		// ── Mobile hamburger button ──────────────────────────────────
+		// Kadence or a plugin applies background/bar-color inline or via
+		// a late-loading stylesheet that beats our CSS. JS inline styles
+		// are the absolute highest priority — nothing can override them.
+		var toggle = document.getElementById('mobile-toggle');
+		if (toggle) {
+			// Button itself: transparent background
+			toggle.style.setProperty('background', 'transparent', 'important');
+			toggle.style.setProperty('background-color', 'transparent', 'important');
+			toggle.style.setProperty('background-image', 'none', 'important');
+			toggle.style.setProperty('border', 'none', 'important');
+			toggle.style.setProperty('box-shadow', 'none', 'important');
+			toggle.style.setProperty('border-radius', '0', 'important');
+			toggle.style.setProperty('outline', 'none', 'important');
+
+			// All child elements: transparent bg, cream color
+			toggle.querySelectorAll('*').forEach(function (child) {
+				child.style.setProperty('background', 'transparent', 'important');
+				child.style.setProperty('background-color', 'transparent', 'important');
+				child.style.setProperty('background-image', 'none', 'important');
+				child.style.setProperty('color', '#F4EEDF', 'important');
+				child.style.setProperty('fill', '#F4EEDF', 'important');
+				child.style.setProperty('stroke', '#F4EEDF', 'important');
+				child.style.setProperty('border', 'none', 'important');
+				child.style.setProperty('box-shadow', 'none', 'important');
+			});
+
+			// Hamburger bar spans specifically: cream background (they are the bars)
+			toggle.querySelectorAll('span').forEach(function (span) {
+				// Only target tiny bar spans (not text-containing spans)
+				if (!span.textContent.trim()) {
+					span.style.setProperty('background', '#F4EEDF', 'important');
+					span.style.setProperty('background-color', '#F4EEDF', 'important');
+				}
+			});
+		}
 	});
 })();
