@@ -2365,52 +2365,73 @@ a.snb-order-btn:hover,
 }
 
 /* ============================================================
-   MOBILE — HAMBURGER / NAV TOGGLE
+   MOBILE — HAMBURGER / NAV TOGGLE  (nuclear reset)
    ============================================================ */
+
+/* ID selector = highest CSS specificity — beats any class-based rule */
+#mobile-toggle {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  border-radius: 0 !important;
+  padding: 6px 8px !important;
+  color: #F4EEDF !important;
+}
+
+/* Every child of the button — wipe any inherited background/color */
+#mobile-toggle *,
+#mobile-toggle::before,
+#mobile-toggle::after {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #F4EEDF !important;
+  fill: #F4EEDF !important;
+  stroke: #F4EEDF !important;
+}
+
+/* Hamburger bar SPANS (three lines style) */
+#mobile-toggle span,
+#mobile-toggle .menu-toggle-icon-bars span,
+#mobile-toggle .hamburger-inner,
+#mobile-toggle .hamburger-inner::before,
+#mobile-toggle .hamburger-inner::after {
+  background-color: #F4EEDF !important;
+  background: #F4EEDF !important;
+}
+
+/* SVG icon style */
+#mobile-toggle svg {
+  fill: #F4EEDF !important;
+  color: #F4EEDF !important;
+  stroke: #F4EEDF !important;
+  display: block !important;
+}
+
+/* Also cover class-based selectors as fallback */
 @media (max-width: 1024px) {
-  /* Strip the Kadence default cream-pill background from the toggle button */
-  #mobile-toggle,
-  button#mobile-toggle,
-  .menu-toggle-open,
   button.menu-toggle-open,
-  .mobile-toggle-open-container button,
-  button[aria-label="Menu"] {
+  button.drawer-toggle,
+  .mobile-toggle-open-container > button {
     background: transparent !important;
     background-color: transparent !important;
     border: none !important;
     box-shadow: none !important;
-    outline: none !important;
-    padding: 6px 8px !important;
     border-radius: 0 !important;
   }
-
-  /* Hamburger icon lines — force cream color */
-  #mobile-toggle .menu-toggle-icon,
-  .menu-toggle-open .menu-toggle-icon,
-  #mobile-toggle .kadence-svg-iconset,
-  .menu-toggle-open .kadence-svg-iconset {
-    color: var(--snb-cream) !important;
+  button.menu-toggle-open span,
+  button.drawer-toggle span {
+    background-color: #F4EEDF !important;
   }
-
-  #mobile-toggle .menu-toggle-icon span,
-  .menu-toggle-open .menu-toggle-icon span {
-    background-color: var(--snb-cream) !important;
-  }
-
-  #mobile-toggle svg,
-  .menu-toggle-open svg,
-  #mobile-toggle .menu-toggle-icon svg,
-  .menu-toggle-open .menu-toggle-icon svg {
-    fill: var(--snb-cream) !important;
-    color: var(--snb-cream) !important;
-    stroke: var(--snb-cream) !important;
-  }
-
-  /* Kadence burger bar spans (three lines) */
-  #mobile-toggle .menu-toggle-icon-bars span,
-  .menu-toggle-open .menu-toggle-icon-bars span,
-  .menu-toggle-icon-bars span {
-    background: var(--snb-cream) !important;
+  button.menu-toggle-open svg,
+  button.drawer-toggle svg {
+    fill: #F4EEDF !important;
+    stroke: #F4EEDF !important;
   }
 }
 

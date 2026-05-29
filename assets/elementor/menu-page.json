@@ -1,0 +1,67 @@
+{
+  "version": "0.4",
+  "title": "Sauce N' Bone — Menu Page",
+  "type": "page",
+  "content": [
+    {
+      "id": "snbmp_hero",
+      "elType": "section",
+      "settings": {
+        "layout": "full_width",
+        "stretch_section": "section-stretched",
+        "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true },
+        "background_background": "classic",
+        "background_color": "#0B0B0B"
+      },
+      "elements": [
+        {
+          "id": "snbmp_hero_col",
+          "elType": "column",
+          "settings": { "column_width": { "unit": "%", "size": 100 } },
+          "elements": [
+            {
+              "id": "snbmp_hero_html",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<section style=\"background:#0B0B0B;padding:4rem 2rem 2.5rem;\">\n  <div style=\"max-width:1320px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem;\">\n    <div>\n      <p style=\"font-family:'Bebas Neue',sans-serif;font-size:0.8rem;letter-spacing:3px;color:#E03602;text-transform:uppercase;margin:0 0 0.5rem;\">SAUCE N' BONE</p>\n      <h1 style=\"font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6vw,5rem);color:#F4EEDF;line-height:0.92;letter-spacing:2px;margin:0;\">OUR <span style=\"color:#E03602;\">MENU.</span></h1>\n    </div>\n    <div style=\"max-width:420px;\">\n      <p style=\"color:#B8B0A0;font-size:1rem;line-height:1.65;margin:0;\">Hand-tossed in house-made sauce. Cooked fresh to order.<br>No heat lamps. No shortcuts.</p>\n    </div>\n  </div>\n</section>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "snbmp_content",
+      "elType": "section",
+      "settings": {
+        "layout": "full_width",
+        "stretch_section": "section-stretched",
+        "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true },
+        "background_background": "classic",
+        "background_color": "#0B0B0B"
+      },
+      "elements": [
+        {
+          "id": "snbmp_content_col",
+          "elType": "column",
+          "settings": { "column_width": { "unit": "%", "size": 100 } },
+          "elements": [
+            {
+              "id": "snbmp_content_html",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<section style=\"background:#0B0B0B;padding:2rem 2rem 5rem;\">\n  <div style=\"max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1fr 320px;gap:3rem;align-items:start;\">\n\n    <!-- LEFT: Menu product grid -->\n    <div>\n      [snb_menu columns=\"3\" exclude_category=\"merch\"]\n    </div>\n\n    <!-- RIGHT: Order CTA / Mini-cart -->\n    <div>\n      [snb_minicart]\n    </div>\n\n  </div>\n</section>\n\n<style>\n@media (max-width: 900px) {\n  #snbmp_content_html section > div {\n    grid-template-columns: 1fr !important;\n  }\n}\n</style>"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": {
+    "hide_title": "yes",
+    "background_color": "#0B0B0B"
+  }
+}
