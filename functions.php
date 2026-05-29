@@ -6,7 +6,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'SNB_THEME_VERSION', '2.0.0' );
+define( 'SNB_THEME_VERSION', '2.0.1' );
 
 /**
  * External ordering URL.
@@ -348,7 +348,11 @@ if ( SNB_EXTERNAL_ORDERING ) {
 	function snb_redirect_woo_pages() {
 		if ( ! function_exists( 'is_cart' ) ) { return; }
 		if ( is_cart() || is_checkout() || is_wc_endpoint_url( 'order-received' ) ) {
-			wp_redirect( SNB_ORDER_URL ?: home_url( '/' ), 302 );
+			// Never redirect to a bare fragment (#...) — send to homepage as fallback.
+			$url = ( SNB_ORDER_URL && strpos( SNB_ORDER_URL, '#' ) !== 0 )
+				? SNB_ORDER_URL
+				: home_url( '/' );
+			wp_redirect( $url, 302 );
 			exit;
 		}
 	}
@@ -364,7 +368,9 @@ if ( SNB_EXTERNAL_ORDERING ) {
 
 	// Prevent any stray add-to-cart request from reaching the cart page.
 	add_filter( 'woocommerce_add_to_cart_redirect', function( $url ) {
-		return SNB_ORDER_URL ?: home_url( '/' );
+		return ( SNB_ORDER_URL && strpos( SNB_ORDER_URL, '#' ) !== 0 )
+			? SNB_ORDER_URL
+			: home_url( '/' );
 	} );
 
 }

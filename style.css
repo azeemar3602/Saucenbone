@@ -1747,7 +1747,16 @@ p { line-height: 1.65; color: var(--snb-cream-dim); margin: 0 0 0.75em; }
 }
 .snb-pay-line__status.is-paid { color: var(--snb-gold); }
 
-/* Receipt box (loyalty thank-you decoration) removed. */
+/* Loyalty section — removed from design.
+   Hide residual blocks still stored in the page (Elementor / DB).
+   • .elementor-element-1f86d12c  = the Elementor section on the homepage
+   • .snb-loyalty / .snb-stamp    = SNB custom classes if ever re-inserted  */
+.elementor-element-1f86d12c,
+.snb-loyalty,
+.snb-loyalty-strip,
+.snb-stamp-row,
+.snb-stamp,
+.snb-receipt-box { display: none !important; }
 
 /* ============================================================
    WOOCOMMERCE — CART page
