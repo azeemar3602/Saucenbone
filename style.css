@@ -1959,6 +1959,37 @@ p { line-height: 1.65; color: var(--snb-cream-dim); margin: 0 0 0.75em; }
    EXTERNAL ORDERING — hide Kadence header cart + WC notices
    ============================================================ */
 
+/* ── Header nav ORDER NOW button ────────────────────────────
+   The class .snb-btn sits on the <li>, but Kadence also adds
+   its default nav-link padding (~10px) to the inner <a>.
+   Zero the <a> padding so only our LI padding sets the height. */
+li.snb-btn.menu-item {
+  padding: 0.55rem 1.5rem !important;
+  align-self: center;
+  display: flex !important;
+  align-items: center;
+  border-radius: 999px;
+  background: var(--snb-orange);
+}
+li.snb-btn.menu-item > a {
+  padding: 0 !important;
+  margin: 0 !important;
+  color: var(--snb-cream) !important;
+  font-family: var(--snb-font-display);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  line-height: 1;
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+li.snb-btn.menu-item:hover {
+  background: var(--snb-orange-dark) !important;
+}
+li.snb-btn.menu-item:hover > a {
+  color: var(--snb-cream) !important;
+}
+
 /* Kadence theme header cart widget (all common selectors) */
 .header-cart-open-btn,
 .kadence-header-cart-wrap,
