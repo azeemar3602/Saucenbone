@@ -2043,10 +2043,21 @@ header .woocommerce-mini-cart-item,
 .woocommerce-notices-wrapper:empty { display: none; }
 
 /* "Order Online" button on shop/menu product archive cards */
-/* Strip Kadence/WooCommerce button wrappers around the ORDER link.
-   Kadence injects a parent element (div/span/form) that carries the
-   pill border — target the parent of .snb-order-btn specifically. */
-.woocommerce ul.products li.product .snb-order-btn,
+/* Hide the Kadence circular add-to-cart wrapper — all known class names.
+   Our ORDER link is now injected via woocommerce_after_shop_loop_item_title
+   outside this wrapper, so we can safely hide the whole thing. */
+.woocommerce ul.products li.product .loop-button-wrap,
+.woocommerce ul.products li.product .product-action-wrap,
+.woocommerce ul.products li.product .loop-add-to-cart,
+.woocommerce ul.products li.product .add-to-cart-wrap,
+.woocommerce ul.products li.product .kadence-loop-btn-wrap,
+.woocommerce ul.products li.product form.cart,
+.woocommerce ul.products li.product > a.button,
+.woocommerce ul.products li.product > .woocommerce-loop-product__link + a.button {
+  display: none !important;
+}
+
+/* Also suppress the old snb-order-btn wrapper approach (belt + suspenders) */
 .woocommerce ul.products li.product .snb-order-btn *,
 .woocommerce ul.products li.product > *:has(> .snb-order-btn),
 .woocommerce ul.products li.product > *:has(.snb-order-btn) {

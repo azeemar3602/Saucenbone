@@ -6,7 +6,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'SNB_THEME_VERSION', '2.3.2' );
+define( 'SNB_THEME_VERSION', '2.3.3' );
 
 /**
  * External ordering URL.
@@ -357,36 +357,37 @@ if ( SNB_EXTERNAL_ORDERING ) {
 		}
 	}
 
-	// Replace WooCommerce shop-archive add-to-cart button with "Order" text link.
-	// Inline styles are used so Kadence/WooCommerce parent-theme !important rules cannot override them.
-	add_filter( 'woocommerce_loop_add_to_cart_link', 'snb_loop_order_link', 10, 2 );
-	function snb_loop_order_link( $html, $product ) {
-		$style = implode( ';', array(
-			'display:inline-flex',
-			'align-items:center',
-			'gap:0.35rem',
-			'background:none',
-			'background-color:transparent',
-			'border:none',
-			'box-shadow:none',
-			'border-radius:0',
-			'outline:none',
-			'padding:0',
-			'margin:0',
-			'color:#B8B0A0',
-			'font-family:"Bebas Neue",sans-serif',
-			'letter-spacing:0.1em',
-			'text-transform:uppercase',
-			'font-size:0.85rem',
-			'text-decoration:none',
-			'white-space:nowrap',
-			'cursor:pointer',
-		) );
-		return sprintf(
-			'<a href="%s" class="snb-order-btn" style="%s" target="_blank" rel="noopener noreferrer"'
+	// ── ORDER button approach ──────────────────────────────────────
+	// Kadence wraps whatever woocommerce_loop_add_to_cart_link returns
+	// inside its own circular-styled wrapper element, so filtering that
+	// hook can never remove the circle.
+	//
+	// Instead:
+	//   1. Remove the default WooCommerce add-to-cart action entirely.
+	//   2. Inject our own clean ORDER link via woocommerce_after_shop_loop_item_title
+	//      (outputs after the price, outside any Kadence button wrapper).
+
+	// 1. Remove Kadence's / WooCommerce's add-to-cart from the loop.
+	add_action( 'wp', function() {
+		remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+	} );
+
+	// 2. Output our plain ORDER link after the price, outside any wrapper.
+	add_action( 'woocommerce_after_shop_loop_item_title', 'snb_loop_order_link_clean', 15 );
+	function snb_loop_order_link_clean() {
+		$url   = ( SNB_ORDER_URL && strpos( SNB_ORDER_URL, '#' ) !== 0 ) ? SNB_ORDER_URL : home_url( '/' );
+		$style = 'display:inline-flex;align-items:center;gap:0.35rem;'
+				. 'background:none;background-color:transparent;border:none;'
+				. 'box-shadow:none;border-radius:0;outline:none;padding:0;margin:0.5rem 0 0;'
+				. 'color:#B8B0A0;font-family:"Bebas Neue",sans-serif;'
+				. 'letter-spacing:0.1em;text-transform:uppercase;font-size:0.85rem;'
+				. 'text-decoration:none;white-space:nowrap;cursor:pointer;';
+		printf(
+			'<a href="%s" class="snb-order-btn" style="%s"'
 			. ' onmouseover="this.style.color=\'#E03602\'"'
-			. ' onmouseout="this.style.color=\'#B8B0A0\'">Order &#x2192;</a>',
-			esc_url( SNB_ORDER_URL ),
+			. ' onmouseout="this.style.color=\'#B8B0A0\'"'
+			. ' target="_blank" rel="noopener noreferrer">Order &#x2192;</a>',
+			esc_url( $url ),
 			esc_attr( $style )
 		);
 	}
