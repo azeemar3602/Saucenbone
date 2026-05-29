@@ -6,7 +6,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'SNB_THEME_VERSION', '2.1.3' );
+define( 'SNB_THEME_VERSION', '2.2.0' );
 
 /**
  * External ordering URL.
@@ -881,14 +881,8 @@ function snb_render_about_section() {
 // Register [snb_about] shortcode so it can be used anywhere.
 add_shortcode( 'snb_about', 'snb_render_about_section' );
 
-// Inject About section after Elementor content on the homepage.
-add_filter( 'the_content', 'snb_inject_about_on_homepage' );
-function snb_inject_about_on_homepage( $content ) {
-	if ( is_front_page() && ! is_admin() ) {
-		$content .= snb_render_about_section();
-	}
-	return $content;
-}
+// Note: About section is added via Elementor template (assets/elementor/about-section.json)
+// not auto-injected, so the client can edit it directly in the visual editor.
 
 /* ============================================================
    CONTACT PAGE — [snb_contact_page] shortcode

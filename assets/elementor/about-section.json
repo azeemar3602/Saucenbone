@@ -1,0 +1,172 @@
+{
+  "version": "0.4",
+  "title": "SNB — About Section (for Homepage)",
+  "type": "section",
+  "content": [
+    {
+      "id": "snbas010",
+      "elType": "container",
+      "settings": {
+        "flex_direction": "row",
+        "flex_wrap": "wrap",
+        "flex_align_items": "center",
+        "content_width": "boxed",
+        "background_background": "classic",
+        "background_color": "#1A1410",
+        "padding": {
+          "unit": "px",
+          "top": "80",
+          "right": "40",
+          "bottom": "80",
+          "left": "40",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "snbas011",
+          "elType": "container",
+          "settings": {
+            "flex_direction": "column",
+            "flex_gap": { "unit": "px", "size": 24 },
+            "width": { "unit": "%", "size": 55 },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "40",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "snbas012",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "OUR STORY",
+                "header_size": "p",
+                "title_color": "#E03602",
+                "typography_typography": "custom",
+                "typography_font_family": "Bebas Neue",
+                "typography_font_size": { "unit": "px", "size": 13 },
+                "typography_letter_spacing": { "unit": "px", "size": 3 },
+                "typography_text_transform": "uppercase"
+              }
+            },
+            {
+              "id": "snbas013",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Bold Flavors.<br>Real People.",
+                "header_size": "h2",
+                "title_color": "#F4EEDF",
+                "typography_typography": "custom",
+                "typography_font_family": "Bebas Neue",
+                "typography_font_size": { "unit": "px", "size": 52 },
+                "typography_line_height": { "unit": "em", "size": 0.95 }
+              }
+            },
+            {
+              "id": "snbas014",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>Sauce N&rsquo; Bone started with one obsession &mdash; wings done right. Every bone-in, boneless, and tender that leaves our kitchen is hand-tossed in house-made sauce and cooked fresh to order. No heat lamps. No shortcuts. Just real food made with real ingredients for people who demand flavor first.</p>",
+                "text_color": "#B8B0A0",
+                "typography_typography": "custom",
+                "typography_font_size": { "unit": "px", "size": 15 },
+                "typography_line_height": { "unit": "em", "size": 1.7 }
+              }
+            },
+            {
+              "id": "snbas020",
+              "elType": "container",
+              "settings": {
+                "flex_direction": "row",
+                "flex_wrap": "wrap",
+                "flex_gap": { "unit": "px", "size": 40 }
+              },
+              "elements": [
+                {
+                  "id": "snbas021",
+                  "elType": "container",
+                  "settings": { "flex_direction": "column", "flex_gap": { "unit": "px", "size": 4 } },
+                  "elements": [
+                    { "id": "snbas022", "elType": "widget", "widgetType": "heading", "settings": { "title": "50+", "header_size": "h3", "title_color": "#E03602", "typography_typography": "custom", "typography_font_family": "Bebas Neue", "typography_font_size": { "unit": "px", "size": 40 } } },
+                    { "id": "snbas023", "elType": "widget", "widgetType": "heading", "settings": { "title": "Sauce &amp; Flavor Options", "header_size": "p", "title_color": "#B8B0A0", "typography_typography": "custom", "typography_font_size": { "unit": "px", "size": 11 }, "typography_letter_spacing": { "unit": "px", "size": 1.5 }, "typography_text_transform": "uppercase" } }
+                  ]
+                },
+                {
+                  "id": "snbas024",
+                  "elType": "container",
+                  "settings": { "flex_direction": "column", "flex_gap": { "unit": "px", "size": 4 } },
+                  "elements": [
+                    { "id": "snbas025", "elType": "widget", "widgetType": "heading", "settings": { "title": "100%", "header_size": "h3", "title_color": "#E03602", "typography_typography": "custom", "typography_font_family": "Bebas Neue", "typography_font_size": { "unit": "px", "size": 40 } } },
+                    { "id": "snbas026", "elType": "widget", "widgetType": "heading", "settings": { "title": "Fresh. Never Frozen.", "header_size": "p", "title_color": "#B8B0A0", "typography_typography": "custom", "typography_font_size": { "unit": "px", "size": 11 }, "typography_letter_spacing": { "unit": "px", "size": 1.5 }, "typography_text_transform": "uppercase" } }
+                  ]
+                },
+                {
+                  "id": "snbas027",
+                  "elType": "container",
+                  "settings": { "flex_direction": "column", "flex_gap": { "unit": "px", "size": 4 } },
+                  "elements": [
+                    { "id": "snbas028", "elType": "widget", "widgetType": "heading", "settings": { "title": "1", "header_size": "h3", "title_color": "#E03602", "typography_typography": "custom", "typography_font_family": "Bebas Neue", "typography_font_size": { "unit": "px", "size": 40 } } },
+                    { "id": "snbas029", "elType": "widget", "widgetType": "heading", "settings": { "title": "Rule: Flavor First.", "header_size": "p", "title_color": "#B8B0A0", "typography_typography": "custom", "typography_font_size": { "unit": "px", "size": 11 }, "typography_letter_spacing": { "unit": "px", "size": 1.5 }, "typography_text_transform": "uppercase" } }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "snbas030",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "See Our Menu →",
+                "link": { "url": "/menu/", "is_external": "" },
+                "align": "left",
+                "background_color": "#E03602",
+                "color": "#F4EEDF",
+                "border_radius": { "unit": "px", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                "text_padding": { "unit": "px", "top": "14", "right": "28", "bottom": "14", "left": "28", "isLinked": false },
+                "typography_typography": "custom",
+                "typography_font_family": "Bebas Neue",
+                "typography_font_size": { "unit": "px", "size": 17 },
+                "typography_letter_spacing": { "unit": "px", "size": 2 },
+                "button_background_hover_color": "#c22e00",
+                "hover_color": "#F4EEDF"
+              }
+            }
+          ]
+        },
+        {
+          "id": "snbas040",
+          "elType": "container",
+          "settings": {
+            "flex_direction": "column",
+            "flex_align_items": "center",
+            "flex_justify_content": "center",
+            "width": { "unit": "%", "size": 45 }
+          },
+          "elements": [
+            {
+              "id": "snbas041",
+              "elType": "widget",
+              "widgetType": "image",
+              "settings": {
+                "image": { "url": "", "id": "", "alt": "Sauce N' Bone" },
+                "image_size": "large",
+                "align": "center",
+                "_css_classes": "snb-about__img",
+                "width": { "unit": "%", "size": 90 }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": {}
+}
