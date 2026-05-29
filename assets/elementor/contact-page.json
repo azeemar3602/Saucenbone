@@ -4,70 +4,27 @@
   "type": "page",
   "content": [
     {
-      "id": "snbcp001",
-      "elType": "container",
+      "id": "snbcp_hero",
+      "elType": "section",
       "settings": {
-        "flex_direction": "row",
-        "flex_wrap": "wrap",
-        "flex_align_items": "center",
-        "content_width": "boxed",
+        "layout": "full_width",
+        "stretch_section": "section-stretched",
+        "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true },
         "background_background": "classic",
-        "background_color": "#0B0B0B",
-        "padding": {
-          "unit": "px",
-          "top": "80",
-          "right": "40",
-          "bottom": "60",
-          "left": "40",
-          "isLinked": false
-        }
+        "background_color": "#0B0B0B"
       },
       "elements": [
         {
-          "id": "snbcp002",
-          "elType": "container",
-          "settings": {
-            "flex_direction": "column",
-            "flex_justify_content": "center",
-            "width": { "unit": "%", "size": 50 }
-          },
+          "id": "snbcp_hero_col",
+          "elType": "column",
+          "settings": { "column_width": { "unit": "%", "size": 100 } },
           "elements": [
             {
-              "id": "snbcp003",
+              "id": "snbcp_hero_html",
               "elType": "widget",
-              "widgetType": "heading",
+              "widgetType": "html",
               "settings": {
-                "title": "LET'S<br><span style=\"color:#E03602;\">TALK.</span>",
-                "header_size": "h1",
-                "title_color": "#F4EEDF",
-                "typography_typography": "custom",
-                "typography_font_family": "Bebas Neue",
-                "typography_font_size": { "unit": "px", "size": 72 },
-                "typography_line_height": { "unit": "em", "size": 0.92 },
-                "typography_letter_spacing": { "unit": "px", "size": 2 }
-              }
-            }
-          ]
-        },
-        {
-          "id": "snbcp004",
-          "elType": "container",
-          "settings": {
-            "flex_direction": "column",
-            "flex_justify_content": "center",
-            "width": { "unit": "%", "size": 50 }
-          },
-          "elements": [
-            {
-              "id": "snbcp005",
-              "elType": "widget",
-              "widgetType": "text-editor",
-              "settings": {
-                "editor": "<p>Questions, catering requests, or just want to talk wings?<br>Fill out the form and we&rsquo;ll get back to you fast.</p>",
-                "text_color": "#B8B0A0",
-                "typography_typography": "custom",
-                "typography_font_size": { "unit": "px", "size": 16 },
-                "typography_line_height": { "unit": "em", "size": 1.65 }
+                "html": "<section style=\"background:#0B0B0B;padding:5rem 2rem 3rem;\">\n  <div style=\"max-width:960px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:2rem;\">\n    <div>\n      <h1 style=\"font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6vw,5rem);color:#F4EEDF;line-height:0.92;letter-spacing:2px;margin:0;\">LET&rsquo;S <span style=\"color:#E03602;\">TALK.</span></h1>\n    </div>\n    <div style=\"max-width:420px;\">\n      <p style=\"color:#B8B0A0;font-size:1rem;line-height:1.65;margin:0;\">Questions, catering requests, or just want to talk wings?<br>Fill out the form and we&rsquo;ll get back to you fast.</p>\n    </div>\n  </div>\n</section>"
               }
             }
           ]
@@ -75,156 +32,27 @@
       ]
     },
     {
-      "id": "snbcp010",
-      "elType": "container",
+      "id": "snbcp_content",
+      "elType": "section",
       "settings": {
-        "flex_direction": "row",
-        "flex_wrap": "wrap",
-        "flex_align_items": "flex-start",
-        "content_width": "boxed",
+        "layout": "full_width",
+        "stretch_section": "section-stretched",
+        "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true },
         "background_background": "classic",
-        "background_color": "#0B0B0B",
-        "padding": {
-          "unit": "px",
-          "top": "60",
-          "right": "40",
-          "bottom": "80",
-          "left": "40",
-          "isLinked": false
-        }
+        "background_color": "#0B0B0B"
       },
       "elements": [
         {
-          "id": "snbcp011",
-          "elType": "container",
-          "settings": {
-            "flex_direction": "column",
-            "flex_gap": { "unit": "px", "size": 28 },
-            "width": { "unit": "%", "size": 38 },
-            "padding": {
-              "unit": "px",
-              "top": "0",
-              "right": "40",
-              "bottom": "0",
-              "left": "0",
-              "isLinked": false
-            }
-          },
+          "id": "snbcp_content_col",
+          "elType": "column",
+          "settings": { "column_width": { "unit": "%", "size": 100 } },
           "elements": [
             {
-              "id": "snbcp012",
+              "id": "snbcp_content_html",
               "elType": "widget",
-              "widgetType": "heading",
+              "widgetType": "html",
               "settings": {
-                "title": "FIND US",
-                "header_size": "p",
-                "title_color": "#E03602",
-                "typography_typography": "custom",
-                "typography_font_family": "Bebas Neue",
-                "typography_font_size": { "unit": "px", "size": 13 },
-                "typography_letter_spacing": { "unit": "px", "size": 3 },
-                "typography_text_transform": "uppercase"
-              }
-            },
-            {
-              "id": "snbcp013",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-                "title": "Get In<br>Touch.",
-                "header_size": "h2",
-                "title_color": "#F4EEDF",
-                "typography_typography": "custom",
-                "typography_font_family": "Bebas Neue",
-                "typography_font_size": { "unit": "px", "size": 48 },
-                "typography_line_height": { "unit": "em", "size": 0.95 }
-              }
-            },
-            {
-              "id": "snbcp014",
-              "elType": "widget",
-              "widgetType": "text-editor",
-              "settings": {
-                "editor": "<table style=\"width:100%;border-collapse:collapse;\"><tr style=\"margin-bottom:16px;\"><td style=\"width:28px;padding-bottom:16px;vertical-align:top;\"><span style=\"color:#E03602;font-size:18px;\">📍</span></td><td style=\"padding-bottom:16px;vertical-align:top;\"><span style=\"display:block;color:#F4EEDF;font-family:Bebas Neue,sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:3px;\">Location</span><span style=\"color:#B8B0A0;font-size:14px;line-height:1.5;\">Coming Soon &mdash; Stay Tuned</span></td></tr><tr><td style=\"width:28px;padding-bottom:16px;vertical-align:top;\"><span style=\"color:#E03602;font-size:18px;\">📞</span></td><td style=\"padding-bottom:16px;vertical-align:top;\"><span style=\"display:block;color:#F4EEDF;font-family:Bebas Neue,sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:3px;\">Phone</span><span style=\"color:#B8B0A0;font-size:14px;\">Coming Soon</span></td></tr><tr><td style=\"width:28px;padding-bottom:16px;vertical-align:top;\"><span style=\"color:#E03602;font-size:18px;\">✉️</span></td><td style=\"padding-bottom:16px;vertical-align:top;\"><span style=\"display:block;color:#F4EEDF;font-family:Bebas Neue,sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:3px;\">Email</span><span style=\"color:#B8B0A0;font-size:14px;\">info@saucenbone.com</span></td></tr><tr><td style=\"width:28px;vertical-align:top;\"><span style=\"color:#E03602;font-size:18px;\">📱</span></td><td style=\"vertical-align:top;\"><span style=\"display:block;color:#F4EEDF;font-family:Bebas Neue,sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:3px;\">Social</span><span style=\"color:#B8B0A0;font-size:14px;\">@saucenbone</span></td></tr></table>",
-                "text_color": "#B8B0A0"
-              }
-            },
-            {
-              "id": "snbcp015",
-              "elType": "widget",
-              "widgetType": "text-editor",
-              "settings": {
-                "editor": "<div style=\"background:#111;border:1px solid rgba(201,162,74,0.28);border-radius:10px;padding:20px 24px;\"><p style=\"font-family:Bebas Neue,sans-serif;font-size:13px;letter-spacing:3px;color:#C9A24A;text-transform:uppercase;margin:0 0 14px;\">Hours</p><div style=\"display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);\"><span style=\"color:#B8B0A0;font-size:14px;\">Monday &ndash; Friday</span><span style=\"color:#F4EEDF;font-size:14px;\">11 AM &ndash; 10 PM</span></div><div style=\"display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);\"><span style=\"color:#B8B0A0;font-size:14px;\">Saturday</span><span style=\"color:#F4EEDF;font-size:14px;\">10 AM &ndash; 11 PM</span></div><div style=\"display:flex;justify-content:space-between;padding:5px 0;\"><span style=\"color:#B8B0A0;font-size:14px;\">Sunday</span><span style=\"color:#F4EEDF;font-size:14px;\">11 AM &ndash; 9 PM</span></div></div>",
-                "text_color": "#B8B0A0"
-              }
-            }
-          ]
-        },
-        {
-          "id": "snbcp020",
-          "elType": "container",
-          "settings": {
-            "flex_direction": "column",
-            "width": { "unit": "%", "size": 62 },
-            "background_background": "classic",
-            "background_color": "#111111",
-            "border_border": "solid",
-            "border_width": {
-              "unit": "px",
-              "top": "1",
-              "right": "1",
-              "bottom": "1",
-              "left": "1",
-              "isLinked": true
-            },
-            "border_color": "rgba(201,162,74,0.28)",
-            "border_radius": {
-              "unit": "px",
-              "top": "12",
-              "right": "12",
-              "bottom": "12",
-              "left": "12",
-              "isLinked": true
-            },
-            "padding": {
-              "unit": "px",
-              "top": "40",
-              "right": "36",
-              "bottom": "40",
-              "left": "36",
-              "isLinked": false
-            }
-          },
-          "elements": [
-            {
-              "id": "snbcp021",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-                "title": "SEND A MESSAGE",
-                "header_size": "p",
-                "title_color": "#C9A24A",
-                "typography_typography": "custom",
-                "typography_font_family": "Bebas Neue",
-                "typography_font_size": { "unit": "px", "size": 13 },
-                "typography_letter_spacing": { "unit": "px", "size": 3 },
-                "typography_text_transform": "uppercase",
-                "_margin": {
-                  "unit": "px",
-                  "top": "0",
-                  "right": "0",
-                  "bottom": "20",
-                  "left": "0",
-                  "isLinked": false
-                }
-              }
-            },
-            {
-              "id": "snbcp022",
-              "elType": "widget",
-              "widgetType": "shortcode",
-              "settings": {
-                "shortcode": "[metform form_id=\"271\"]"
+                "html": "<section class=\"snb-contact\">\n  <div class=\"snb-contact__inner\">\n\n    <!-- LEFT: Contact Info -->\n    <div>\n      <p class=\"snb-contact__label\">FIND US</p>\n      <h2 class=\"snb-contact__title\">Get In<br>Touch.</h2>\n\n      <ul class=\"snb-contact__info-list\">\n        <li class=\"snb-contact__info-item\">\n          <span class=\"snb-icon\">&#128205;</span>\n          <div>\n            <strong>Location</strong>\n            Coming Soon &mdash; Stay Tuned\n          </div>\n        </li>\n        <li class=\"snb-contact__info-item\">\n          <span class=\"snb-icon\">&#128222;</span>\n          <div>\n            <strong>Phone</strong>\n            Coming Soon\n          </div>\n        </li>\n        <li class=\"snb-contact__info-item\">\n          <span class=\"snb-icon\">&#9993;&#65039;</span>\n          <div>\n            <strong>Email</strong>\n            <a href=\"mailto:info@saucenbone.com\" style=\"color:#B8B0A0;text-decoration:none;\">info@saucenbone.com</a>\n          </div>\n        </li>\n        <li class=\"snb-contact__info-item\">\n          <span class=\"snb-icon\">&#128241;</span>\n          <div>\n            <strong>Social</strong>\n            @saucenbone\n          </div>\n        </li>\n      </ul>\n\n      <div class=\"snb-contact__hours\">\n        <p class=\"snb-contact__hours-title\">Hours</p>\n        <div class=\"snb-contact__hours-row\">\n          <span>Monday &ndash; Friday</span>\n          <span style=\"color:#F4EEDF;\">11 AM &ndash; 10 PM</span>\n        </div>\n        <div class=\"snb-contact__hours-row\">\n          <span>Saturday</span>\n          <span style=\"color:#F4EEDF;\">10 AM &ndash; 11 PM</span>\n        </div>\n        <div class=\"snb-contact__hours-row\">\n          <span>Sunday</span>\n          <span style=\"color:#F4EEDF;\">11 AM &ndash; 9 PM</span>\n        </div>\n      </div>\n    </div>\n\n    <!-- RIGHT: Contact Form -->\n    <div class=\"snb-contact__form-wrap\">\n      <p style=\"font-family:'Bebas Neue',sans-serif;font-size:0.8rem;letter-spacing:3px;color:#C9A24A;text-transform:uppercase;margin:0 0 1.25rem;\">SEND A MESSAGE</p>\n      [metform form_id=\"271\"]\n    </div>\n\n  </div>\n</section>"
               }
             }
           ]

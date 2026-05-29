@@ -2165,7 +2165,7 @@ a.snb-order-btn:hover,
    CONTACT PAGE
    ============================================================ */
 .snb-contact {
-  background: var(--snb-charcoal-2);
+  background: var(--snb-black);
   padding: 5rem 2rem;
 }
 .snb-contact__inner {
@@ -2232,7 +2232,7 @@ a.snb-order-btn:hover,
   font-family: var(--snb-font-display);
   font-size: 0.9rem;
   letter-spacing: 0.12em;
-  color: var(--snb-orange);
+  color: var(--snb-gold);
   text-transform: uppercase;
   margin: 0 0 0.75rem;
 }
