@@ -4,259 +4,28 @@
   "type": "section",
   "content": [
     {
-      "id": "snbas010",
-      "elType": "container",
+      "id": "snbas_wrap",
+      "elType": "section",
       "settings": {
-        "flex_direction": "row",
-        "flex_wrap": "wrap",
-        "flex_align_items": "center",
-        "flex_justify_content": "flex-start",
-        "content_width": "boxed",
+        "layout": "full_width",
+        "content_position": "middle",
+        "stretch_section": "section-stretched",
+        "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true },
         "background_background": "classic",
-        "background_color": "#0B0B0B",
-        "padding": {
-          "unit": "px",
-          "top": "80",
-          "right": "40",
-          "bottom": "80",
-          "left": "40",
-          "isLinked": false
-        }
+        "background_color": "#0B0B0B"
       },
       "elements": [
         {
-          "id": "snbas011",
-          "elType": "container",
-          "settings": {
-            "flex_direction": "column",
-            "flex_justify_content": "flex-start",
-            "flex_align_items": "flex-start",
-            "flex_gap": { "unit": "px", "size": 24 },
-            "width": { "unit": "%", "size": 55 },
-            "padding": {
-              "unit": "px",
-              "top": "0",
-              "right": "40",
-              "bottom": "0",
-              "left": "0",
-              "isLinked": false
-            }
-          },
+          "id": "snbas_col",
+          "elType": "column",
+          "settings": { "column_width": { "unit": "%", "size": 100 } },
           "elements": [
             {
-              "id": "snbas012",
+              "id": "snbas_html",
               "elType": "widget",
-              "widgetType": "heading",
+              "widgetType": "html",
               "settings": {
-                "title": "OUR STORY",
-                "header_size": "p",
-                "title_color": "#E03602",
-                "typography_typography": "custom",
-                "typography_font_family": "Bebas Neue",
-                "typography_font_size": { "unit": "px", "size": 13 },
-                "typography_letter_spacing": { "unit": "px", "size": 3 },
-                "typography_text_transform": "uppercase"
-              }
-            },
-            {
-              "id": "snbas013",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-                "title": "Bold Flavors.<br>Real People.",
-                "header_size": "h2",
-                "title_color": "#F4EEDF",
-                "typography_typography": "custom",
-                "typography_font_family": "Bebas Neue",
-                "typography_font_size": { "unit": "px", "size": 52 },
-                "typography_line_height": { "unit": "em", "size": 0.95 }
-              }
-            },
-            {
-              "id": "snbas014",
-              "elType": "widget",
-              "widgetType": "text-editor",
-              "settings": {
-                "editor": "<p>Sauce N&rsquo; Bone started with one obsession &mdash; wings done right. Every bone-in, boneless, and tender that leaves our kitchen is hand-tossed in house-made sauce and cooked fresh to order. No heat lamps. No shortcuts. Just real food made with real ingredients for people who demand flavor first.</p>",
-                "text_color": "#B8B0A0",
-                "typography_typography": "custom",
-                "typography_font_size": { "unit": "px", "size": 15 },
-                "typography_line_height": { "unit": "em", "size": 1.7 }
-              }
-            },
-            {
-              "id": "snbas020",
-              "elType": "container",
-              "settings": {
-                "flex_direction": "row",
-                "flex_wrap": "nowrap",
-                "flex_align_items": "flex-start",
-                "flex_justify_content": "flex-start",
-                "flex_gap": { "unit": "px", "size": 32 },
-                "width": { "unit": "%", "size": 100 }
-              },
-              "elements": [
-                {
-                  "id": "snbas021",
-                  "elType": "container",
-                  "settings": {
-                    "flex_direction": "column",
-                    "flex_align_items": "flex-start",
-                    "flex_gap": { "unit": "px", "size": 4 },
-                    "width": { "unit": "auto" }
-                  },
-                  "elements": [
-                    {
-                      "id": "snbas022",
-                      "elType": "widget",
-                      "widgetType": "heading",
-                      "settings": {
-                        "title": "50+",
-                        "header_size": "h3",
-                        "title_color": "#C9A24A",
-                        "typography_typography": "custom",
-                        "typography_font_family": "Bebas Neue",
-                        "typography_font_size": { "unit": "px", "size": 40 }
-                      }
-                    },
-                    {
-                      "id": "snbas023",
-                      "elType": "widget",
-                      "widgetType": "heading",
-                      "settings": {
-                        "title": "Sauce &amp; Flavor Options",
-                        "header_size": "p",
-                        "title_color": "#B8B0A0",
-                        "typography_typography": "custom",
-                        "typography_font_size": { "unit": "px", "size": 11 },
-                        "typography_letter_spacing": { "unit": "px", "size": 1.5 },
-                        "typography_text_transform": "uppercase"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "id": "snbas024",
-                  "elType": "container",
-                  "settings": {
-                    "flex_direction": "column",
-                    "flex_align_items": "flex-start",
-                    "flex_gap": { "unit": "px", "size": 4 },
-                    "width": { "unit": "auto" }
-                  },
-                  "elements": [
-                    {
-                      "id": "snbas025",
-                      "elType": "widget",
-                      "widgetType": "heading",
-                      "settings": {
-                        "title": "100%",
-                        "header_size": "h3",
-                        "title_color": "#C9A24A",
-                        "typography_typography": "custom",
-                        "typography_font_family": "Bebas Neue",
-                        "typography_font_size": { "unit": "px", "size": 40 }
-                      }
-                    },
-                    {
-                      "id": "snbas026",
-                      "elType": "widget",
-                      "widgetType": "heading",
-                      "settings": {
-                        "title": "Fresh. Never Frozen.",
-                        "header_size": "p",
-                        "title_color": "#B8B0A0",
-                        "typography_typography": "custom",
-                        "typography_font_size": { "unit": "px", "size": 11 },
-                        "typography_letter_spacing": { "unit": "px", "size": 1.5 },
-                        "typography_text_transform": "uppercase"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "id": "snbas027",
-                  "elType": "container",
-                  "settings": {
-                    "flex_direction": "column",
-                    "flex_align_items": "flex-start",
-                    "flex_gap": { "unit": "px", "size": 4 },
-                    "width": { "unit": "auto" }
-                  },
-                  "elements": [
-                    {
-                      "id": "snbas028",
-                      "elType": "widget",
-                      "widgetType": "heading",
-                      "settings": {
-                        "title": "1",
-                        "header_size": "h3",
-                        "title_color": "#C9A24A",
-                        "typography_typography": "custom",
-                        "typography_font_family": "Bebas Neue",
-                        "typography_font_size": { "unit": "px", "size": 40 }
-                      }
-                    },
-                    {
-                      "id": "snbas029",
-                      "elType": "widget",
-                      "widgetType": "heading",
-                      "settings": {
-                        "title": "Rule: Flavor First.",
-                        "header_size": "p",
-                        "title_color": "#B8B0A0",
-                        "typography_typography": "custom",
-                        "typography_font_size": { "unit": "px", "size": 11 },
-                        "typography_letter_spacing": { "unit": "px", "size": 1.5 },
-                        "typography_text_transform": "uppercase"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "snbas030",
-              "elType": "widget",
-              "widgetType": "button",
-              "settings": {
-                "text": "See Our Menu →",
-                "link": { "url": "/menu/", "is_external": "" },
-                "align": "left",
-                "background_color": "#E03602",
-                "color": "#F4EEDF",
-                "border_radius": { "unit": "px", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
-                "text_padding": { "unit": "px", "top": "14", "right": "28", "bottom": "14", "left": "28", "isLinked": false },
-                "typography_typography": "custom",
-                "typography_font_family": "Bebas Neue",
-                "typography_font_size": { "unit": "px", "size": 17 },
-                "typography_letter_spacing": { "unit": "px", "size": 2 },
-                "button_background_hover_color": "#c22e00",
-                "hover_color": "#F4EEDF"
-              }
-            }
-          ]
-        },
-        {
-          "id": "snbas040",
-          "elType": "container",
-          "settings": {
-            "flex_direction": "column",
-            "flex_align_items": "center",
-            "flex_justify_content": "center",
-            "width": { "unit": "%", "size": 45 }
-          },
-          "elements": [
-            {
-              "id": "snbas041",
-              "elType": "widget",
-              "widgetType": "image",
-              "settings": {
-                "image": { "url": "", "id": "", "alt": "Sauce N' Bone" },
-                "image_size": "large",
-                "align": "center",
-                "_css_classes": "snb-about__img",
-                "width": { "unit": "%", "size": 90 }
+                "html": "<section class=\"snb-about\">\n  <div class=\"snb-about__inner\">\n\n    <div class=\"snb-about__text\">\n      <p class=\"snb-about__label\">OUR STORY</p>\n      <h2 class=\"snb-about__title\">Bold Flavors.<br>Real People.</h2>\n      <p class=\"snb-about__body\">Sauce N&rsquo; Bone started with one obsession &mdash; wings done right. Every bone-in, boneless, and tender that leaves our kitchen is hand-tossed in house-made sauce and cooked fresh to order. No heat lamps. No shortcuts. Just real food made with real ingredients for people who demand flavor first.</p>\n\n      <div class=\"snb-about__stats\">\n        <div class=\"snb-about__stat\">\n          <span class=\"snb-about__stat-num\">50+</span>\n          <span class=\"snb-about__stat-label\">Sauce &amp; Flavor Options</span>\n        </div>\n        <div class=\"snb-about__stat\">\n          <span class=\"snb-about__stat-num\">100%</span>\n          <span class=\"snb-about__stat-label\">Fresh. Never Frozen.</span>\n        </div>\n        <div class=\"snb-about__stat\">\n          <span class=\"snb-about__stat-num\">1</span>\n          <span class=\"snb-about__stat-label\">Rule: Flavor First.</span>\n        </div>\n      </div>\n\n      <a href=\"/menu/\" class=\"snb-btn\">See Our Menu &rarr;</a>\n    </div>\n\n    <div class=\"snb-about__img-wrap\">\n      <!-- Replace the placeholder below with your real food photo -->\n      <div class=\"snb-about__img-placeholder\">ADD YOUR PHOTO HERE</div>\n      <!-- Once you have a photo, swap to: <img src=\"YOUR-IMAGE-URL\" alt=\"Sauce N' Bone\" class=\"snb-about__img\"> -->\n    </div>\n\n  </div>\n</section>"
               }
             }
           ]

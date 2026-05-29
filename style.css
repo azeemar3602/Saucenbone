@@ -2067,7 +2067,7 @@ a.snb-order-btn:hover,
    ABOUT US — section (homepage inject + standalone page)
    ============================================================ */
 .snb-about {
-  background: var(--snb-charcoal-2);
+  background: var(--snb-black);
   padding: 5rem 2rem;
 }
 .snb-about__inner {
@@ -2109,7 +2109,7 @@ a.snb-order-btn:hover,
 .snb-about__stat-num {
   font-family: var(--snb-font-display);
   font-size: 2.2rem;
-  color: var(--snb-orange);
+  color: var(--snb-gold);
   line-height: 1;
   display: block;
 }
