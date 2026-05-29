@@ -2004,7 +2004,7 @@ li.snb-btn.menu-item:hover > a {
   color: var(--snb-cream) !important;
 }
 
-/* Kadence theme header cart widget (all common selectors) */
+/* Kadence theme header cart widget — hide ALL possible selectors */
 .header-cart-open-btn,
 .kadence-header-cart-wrap,
 .header-cart-wrap,
@@ -2012,8 +2012,31 @@ li.snb-btn.menu-item:hover > a {
 .kadence-woo-cart,
 .header-cart-total,
 .header-button-wrap .cart-link,
-.site-header .cart-contents {
+.site-header .cart-contents,
+/* WooCommerce mini-cart block (Gutenberg block in header) */
+.wc-block-mini-cart,
+.wc-block-mini-cart__button,
+.wc-block-mini-cart__quantity-badge,
+.wp-block-woocommerce-mini-cart,
+/* Kadence header button / icon widgets */
+.site-header .header-button-wrap,
+.site-header .kadence-header-button-wrap,
+.site-header .wp-block-kadence-header-cart,
+/* Any remaining cart link/icon in header */
+.site-header a.cart-contents,
+.site-header .cart-icon,
+#site-header .header-cart,
+header .cart-link,
+header .woocommerce-mini-cart-item,
+/* Kadence header row right-side widget area with cart */
+.kadence-header-row .header-cart,
+.header-mobile-cart {
   display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
 }
 
 /* WooCommerce "Added to cart" / notice bar (shouldn't appear but just in case) */
