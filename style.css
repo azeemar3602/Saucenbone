@@ -2125,6 +2125,7 @@ a.snb-order-btn:hover,
   justify-content: center;
   align-items: center;
 }
+/* Circular food photo — standalone or inside placeholder wrapper */
 .snb-about__img {
   width: 100%;
   max-width: 440px;
@@ -2134,7 +2135,7 @@ a.snb-order-btn:hover,
   border: 4px solid var(--snb-orange);
   display: block;
 }
-/* placeholder when no real image yet */
+/* Wrapper — clips the image to a circle */
 .snb-about__img-placeholder {
   width: 100%;
   max-width: 440px;
@@ -2142,6 +2143,7 @@ a.snb-order-btn:hover,
   border-radius: 50%;
   border: 4px solid var(--snb-orange);
   background: var(--snb-charcoal-3);
+  overflow: hidden;           /* ← clips image to circle */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2149,6 +2151,18 @@ a.snb-order-btn:hover,
   font-size: 1.1rem;
   letter-spacing: 0.1em;
   color: var(--snb-cream-dim);
+}
+/* When an <img> is inside the placeholder, fill + remove its own border
+   (the wrapper already provides the border) */
+.snb-about__img-placeholder img,
+.snb-about__img-placeholder .snb-about__img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  border-radius: 0;
+  border: none;
+  object-fit: cover;
+  display: block;
 }
 @media (max-width: 768px) {
   .snb-about__inner {
